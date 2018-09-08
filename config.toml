@@ -1,6 +1,6 @@
 baseurl = "https://example.org/"
 languageCode = "en-us"
-title = "Material Docs"
+title = "myDocs"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -9,16 +9,16 @@ googleAnalytics = ""
 
 [params]
 	# General information
-	author = "Digitalcraftsman"
-	description = "A material design theme for documentations."
-	copyright = "Released under the MIT license"
+	author = "Amintas Victor"
+	description = "Site estático de documentação em português brasileiro."
+	copyright = "Amintas Victor"
 
 	# Repository
 	provider = "GitHub"
-	repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
+	repo_url = "https://github.com/amintasvrp/myDocs"
 
 	version = "1.0.0"
-	logo = "images/logo.png"
+	logo = "images/logo.jpeg"
 	favicon = ""
 
 	permalink = "#"
@@ -28,11 +28,11 @@ googleAnalytics = ""
 	custom_js  = []
 
 	# Syntax highlighting theme
-	highlight_css  = ""
+	highlight_css  = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css"
 
 	[params.palette]
-    	primary = "red"
-    	accent  = "teal"
+    	primary = "light-blue"
+    	accent  = "cyan"
 
     [params.font]
     	text = "Ubuntu"
@@ -41,35 +41,39 @@ googleAnalytics = ""
 
 [social]
 	twitter = ""
-	github  = "digitalcraftsman"
-	email   = "hello@email.com"
+	github  = "amintasvrp"
+	email   = "amintas.pereira@ccc.ufcg.edu.br"
 
 
 [[menu.main]]
-	name   = "Material"
+	name   = "Home"
 	url    = "/"
-	weight = 0
+	weight = 1
 
 [[menu.main]]
-	name   = "Getting started"
-	url    = "getting-started/"
-	weight = 10
+	name   = "Linux"
+	url    = "linux/"
+	weight = 2
 
 [[menu.main]]
-	name   = "Adding content"
-	url    = "adding-content/"
-	weight = 20
+	name   = "Hugo"
+	url    = "hugo/"
+	weight = 2
 
 [[menu.main]]
-	name   = "Roadmap"
-	url    = "roadmap/"
-	weight = 30
+	name   = "C"
+	url    = "c/"
+	weight = 2
 
 [[menu.main]]
-	name   = "License"
-	url    = "license/"
-	weight = 40
+	name   = "Prolog"
+	url    = "prolog/"
+	weight = 2
 
+[[menu.main]]
+	name   = "Haskell"
+	url    = "haskell/"
+	weight = 2
 
 [blackfriday]
 	smartypants	= true
