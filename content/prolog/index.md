@@ -1,69 +1,72 @@
 ---
-title: "Logical Paradigm and Prolog"
+title: "Prolog e o Paradigma Lógico"
 date: 2018-08-06
 author: "Amintas Victor"
 type: "post"
 ---
 
-Even different paradigms like Functional and Imperative have something in common: both perform mapping, that is, read inputs and generate outputs. However, a program according to the **logical paradigm implements relationships**, which are more general than mappings. In other words, when it comes to logic programming, the level is higher than the imperative or functional programming.
+Mesmo diferentes paradigmas como Funcional e Imperativo têm algo em comum: ambos realizam mapeamento, isto é, lêem entradas e geram saídas. No entanto, um programa de acordo com o paradigma lógico **implementa relacionamentos**, que são mais gerais do que os mapeamentos. Em outras palavras, quando se trata de programação lógica, o nível é superior ao da programação imperativa ou funcional.
 
-<!--more-->
+### Paradigma Lógico
 
-# Logical Paradigm
+Definimos as relações da seguinte forma: _Considerando dois conjuntos S e T, dizemos que existe uma relação r entre S e T se, para cada x em S e y em T, a avaliação r(x, y) é verdadeira ou falsa_.
 
-We define relations as follows: _Considering two sets S and T, we say that there exists a relation r between S and T if, for each x in S and y in T, the evaluation r(x, y) is true or false_.
+Tendo implementado a relação r, podemos fazer consultas como:
 
-Having implemented the relation r, we can make queries like:
+  1. Dado x e y, determine se r(x, y) é verdadeiro;
+  2. Dado x, encontre todo y onde r(x, y) é verdadeiro, e vice-versa;
+  3. Encontre todos os x e y onde r(x, y) é verdadeiro.
 
-  1. Given x and y, determine if r (x, y) is true;
-  2. Given x, find all y where r (x, y) is true, and vice versa;
-  3. Find all x and y where r (x, y) is true.
+Linguagens de programação lógicas são restritas a **Cláusulas de Horn**, que possuem o seguinte formato: **A0 se A1 e ... e An**, onde **Ai** é uma afirmação do formulário **Ri(...)**, com **Ri** sendo o nome de um relacionamento. Se **A1, ..., An** forem verdadeiras, inferimos que **A0** também é verdadeiro, caso contrário, falso. Se a cláusula for igual a **A0**, é considerado um **fato**.
 
-Logic programming languages ​​are restricted to **Horn Clauses**, which have the following format: **A0 if A1 and ... and An**, where **Ai** is an assertion of the form **Ri(...)**, with **Ri** being the name of a relationship. If **A1, ..., An** are true, we infer that **A0** is also true. Otherwise, **A0** is false. If the clause sums up to **A0**, this is said to be a **fact**.
+O Paradigma Lógico faz parte da subcategoria "Paradigma Declarativo", preocupada com fatos e não com procedimentos, de modo que o conhecimento sobre o problema é descrito usando a lógica simbólica.
 
-Logical Paradigm is part of the "declarative paradigm" subcategory, concerned with facts rather than with procedures, so that knowledge about the problem is described using symbolic logic.
+O formalismo lógico-computacional é baseado em três princípios:
 
-Logical-computational formalism is based on three principles:
 
-1. Use of formal language for knowledge representation;
+1. Uso de linguagem formal para representação do conhecimento;
 
-    >A formal language is precise, as it has sentences with well defined syntax and semantics, although it is less expressive in comparison with natural language.
+     > Uma linguagem formal é precisa, pois tem sentenças com sintaxe e semântica bem definidas, embora seja menos expressiva em comparação com a linguagem natural.
 
-2. Use of inference rules to manipulate knowledge;
+2. Uso de regras de inferência para manipular conhecimento;
 
-    >An inference rule is a pattern of syntactic manipulation that allows you to create new formulas from existing ones and to simulate valid reasoning forms.
-3. Use of a search strategy to control inferences.
+     > Uma regra de inferência é um padrão de manipulação sintática que permite criar novas fórmulas a partir de fórmulas existentes e simular formas de raciocínio válidas.
 
-    >An agent can have a huge amount of stored knowledge. Usually, it needs to use only part of it to solve a problem. In this sense, the search strategy serves to decide which part of the stored knowledge should be explored in search of the solution.
+3. Uso de uma estratégia de busca para controlar inferências.
 
-The programmer should be concerned with describing the problem to be solved (specification), leaving the machine to search for the solution.
+     > Um agente pode ter uma enorme quantidade de conhecimento armazenado. Normalmente, ele precisa usar apenas parte dele para resolver um problema. Nesse sentido, a estratégia de busca serve para decidir qual parte do conhecimento armazenado deve ser explorada em busca da solução.
 
-# Prolog
+O programador deve se preocupar em descrever o problema a ser resolvido (especificação), deixando a máquina para procurar a solução.
 
-Generally associated with the context of AI or linguistics or both, it has its roots in first-order logic.
+### Prolog
 
-As an advantage, it allows to represent the knowledge that an agent has about its world in a simple, direct and high level.
+Geralmente associado ao contexto de IA ou linguística ou ambos, tem suas raízes na lógica de primeira ordem. Como vantagem, permite representar o conhecimento que um agente tem sobre seu mundo em um nível simples, direto e alto.
 
-## Horn Clause
-
-In prolog, this is the Horn Clauses syntax:
+### Cláusulas de Horn
 
 ```prolog
-    B: - A1, A2, ..., An.
+    B :- A1, A2, ..., An.  % B = A1 and A2 and ... An
+    B :- A1; A2; ...; An.  % B = A1 or A2 or ... An
+    B :- A1 -> A2 ; A3.    % B = if A1 then A2 else A3
 ```
 
-## Unification
+### Unificação
 
-When responding to a query, the Prolog interpreter may need to assign values ​​to the variables. Unification is the mechanism used to determine if there is a way to instantiate the variables of two predicates in order to make them equal. Two terms can be unified if:
+Ao responder a uma consulta, o interpretador de Prolog pode precisar atribuir valores às variáveis. Unificação é o mecanismo usado para determinar se existe uma maneira de instanciar as variáveis de dois predicados para torná-los iguais. Dois termos podem ser unificados se:
 
-1. Both are constants;
-2. One of the terms is a variable;
-3. Both are complex terms with the same name and number of arguments
+1. Ambos são constantes;
+2. Um dos termos é uma variável;
+3. Ambos são termos complexos com o mesmo nome e número de argumentos.
 
-## Lists
+### Listas
 
-Lists consist of a structure representing a sequence of elements of any length. In prolog, the atom **[]** denotes an empty list and the structure **[h|t]** denotes a list whose head is **h** whose tail is **t**, so that the vertical bar notation is provided to separate some elements from the list from the rest of the list .
+As listas consistem em uma estrutura que representa uma sequência de elementos de qualquer tamanho. Uma lista é definida recursivamente da seguinte maneira:
 
-In this language, the lists are heterogeneous, that is, they can contain values ​​of different types. We can even compare values ​​of different types using the relation "=", but the result will be false.
+```prolog
+    []    % lista vazia
+    [h|t] % lista com cabeça e cauda                                           
+```
 
-To see examples of implementations, [click here] (https://github.com/amintasvrp/Dirlididi_PLP/tree/master/questoesProlog). To learn about the _Prolog Story: Colosseum of Champions_ project, which consists of a Marvel characters shuffling battle game, implemented in Prolog, [click here](https://github.com/amintasvrp/A_Prolog_Story_CoC).
+Nessa linguagem, as listas são heterogêneas, ou seja, podem conter valores de diferentes tipos. Podemos até comparar valores de diferentes tipos usando a relação "=", mas o resultado será falso.
+
+Para ver exemplos de implementações, [clique aqui] (https://github.com/amintasvrp/Dirlididi_PLP/tree/master/questoesProlog). Para saber mais sobre o projeto _Prolog Story: Colosseum of Champions_, que consiste em um jogo de batalha de personagens da Marvel, implementado no Prolog, [clique aqui] (https://github.com/amintasvrp/A_Prolog_Story_CoC).
