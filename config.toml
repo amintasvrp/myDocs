@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "http://localhost:1313/"
 languageCode = "en-us"
 title = "myDocs"
 theme = "hugo-material-docs"
@@ -10,7 +10,7 @@ googleAnalytics = ""
 [params]
 	# General information
 	author = "Amintas Victor"
-	description = "Site estático de documentação em português brasileiro."
+	description = "Uma Documentação em Português: Simples e Direta."
 	copyright = "Amintas Victor"
 
 	# Repository
@@ -43,12 +43,6 @@ googleAnalytics = ""
 	twitter = ""
 	github  = "amintasvrp"
 	email   = "amintas.pereira@ccc.ufcg.edu.br"
-
-
-[[menu.main]]
-	name   = "Home"
-	url    = "/"
-	weight = 1
 
 [[menu.main]]
 	name   = "Linux"

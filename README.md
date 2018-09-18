@@ -1,2 +1,2 @@
 # myDocs
-Site estático de documentação em português brasileiro.
+Uma Documentação em Português: Simples e Direta.
