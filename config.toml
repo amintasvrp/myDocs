@@ -31,8 +31,8 @@ googleAnalytics = ""
 	highlight_css  = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css"
 
 	[params.palette]
-    	primary = "light-blue"
-    	accent  = "cyan"
+    	primary = "blue"
+    	accent  = "light-blue"
 
     [params.font]
     	text = "Ubuntu"
@@ -45,8 +45,8 @@ googleAnalytics = ""
 	email   = "amintas.pereira@ccc.ufcg.edu.br"
 
 [[menu.main]]
-	name   = "Linux"
-	url    = "linux/"
+	name   = "Linux I"
+	url    = "linux1/"
 	weight = 2
 
 [[menu.main]]
@@ -60,13 +60,13 @@ googleAnalytics = ""
 	weight = 2
 
 [[menu.main]]
-	name   = "Prolog e o Paradigma Lógico"
+	name   = "Prolog"
 	url    = "prolog/"
 	weight = 2
 
 [[menu.main]]
-	name   = "Haskell"
-	url    = "haskell/"
+	name   = "Haskell I"
+	url    = "haskell1/"
 	weight = 2
 
 [blackfriday]
