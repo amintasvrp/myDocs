@@ -1,56 +1,56 @@
 ---
-title: "Hugo: A Static Site Generator"
+title: "Hugo: Um Gerador de Sites Estáticos"
 date: 2018-08-05
 author: "Amintas Victor"
 type: "post"
 ---
 
-A static websites consists of a simple web application where the content exposed is the same for all those who access, such as blogs, journals, portfolios, news portals. However, in WordPress we find a platform too robust for such, already on tumblr. and in the blogger we find the opposite: **that's why we use Hugo, a static site generator**.
+Um site estático consiste em um aplicativo da Web simples, no qual o conteúdo exposto é o mesmo para todos os que acessam, como blogs, periódicos, portfólios e portais de notícias. No entanto, no **WordPress** encontramos uma plataforma muito robusta para tal, já no **tumblr** e no **blogger** encontramos o oposto: é por isso que usamos o **Hugo, um gerador de site estático**.
 
-<!--more-->
+## Pré-requisitos
+Breves noções de HTML e Markdown.
 
-# Prerequisites
-Brief notion of HTML and Markdown.
+## Configurando Hugo
+1. Baixe e extraia o Hugo do diretório ```Hugo/bin/```;
+2. Vá para o diretório ```Hugo/PATH/```.
 
-# Setting up Hugo
-1. Download and extract Hugo from the ```Hugo/bin/``` directory;
-2. Place the ```Hugo/PATH/``` directory.
+## Criando o Site
+No terminal, use o comando ```hugo new site site_name```.
 
-# Create Site
-In the terminal, use the command ```hugo new site site_name```.
-
-# Add Topic
-1. In [Hugo Themes](https://themes.gohugo.io/), clone the git theme and put it in the directory ```site_name/themes/```;
-2. In ```config.toml```, include the tag:
+## Adicionar Tópico
+1. Em [Hugo Themes](https://themes.gohugo.io/), clone o repositório git do tema e ponha-o no diretório ```site_name/themes/```;
+2. Em ```config.toml```, inclua a tag:
 
     >```toml
     >theme = "theme_name"
     >```
 
+3. Configurações adicionais podem ser necessárias dependendo do tema.
 
-3. Additional settings may be required depending on the theme.
+## Hospedando Localmente
+Na raiz do projeto (site), use o comando no terminal: ```hugo server```.
 
-# Hosting Locally
-In the project root (site), use the command in the terminal: ```hugo server```.
+## Criando Arquivo de Conteúdo
+1. Vá para a raiz do projeto;
+2. Use o comando no terminal ```hugo new file.md``` para criar um arquivo em ```content/```;
+3. Use o comando no terminal ```hugo new directory/file.md``` para criar um arquivo em ```content/directory/```.
 
-# Create a content file
-1. Go to the root of the project
-2. Use the command in the terminal ```hugo new file.md``` to create a file in ```content/```;
-3. Use the command in the terminal ```hugo new directory/file.md``` to create a file in ```content/directory/```;
+A árvore de diretórios em ```content/``` corresponde à navegação nas URLs.
 
-The directory tree in ```content/``` matches url navigation.
-
-# Upload draft files (drafts)
+## Carregando Rascunhos
 In the terminal, use the command: ```hugo server -D```.
 
-# Types of pages
-1. Single Pages: Pages responsible for the content of a markdown file;
-2. List Pages: Pages responsible for indexing markdown files.
+## Tipos de Páginas
+1. Single Pages: Páginas responsáveis ​​pelo conteúdo de um arquivo Markdown;
+2. List Pages: Páginas responsáveis ​​por indexar arquivos Markdown.
 
-Note: Hugo can index the files located in ```content/``` and its subdirectories. However, it can not index any further. To do this, you must create a ```_index.md``` using the following command in the terminal: ```hugo new content/sub-subdirectory/_index.md```.
+{{< note title="Lembre-se" >}}
+Hugo pode indexar os arquivos localizados em ```content/``` e seus subdiretórios. No entanto, não pode indexar mais. Para fazer isso, você deve criar um arquivo ```_index.md``` usando o seguinte comando no terminal: ```hugo new content/sub-subdiretório/ _index.md```.
+{{< /note >}}
 
-# Front Matter
-Corresponds to the set of metadata located at the top of the markdown file used for better site organization. They have the following structure:
+
+## Front Matter
+Corresponde ao conjunto de metadados localizado na parte superior do arquivo de remarcação usado para melhorar a organização do site. Eles têm a seguinte estrutura:
 
 1. YAML:
 
@@ -74,29 +74,73 @@ Corresponds to the set of metadata located at the top of the markdown file used 
     >}
     >```
 
-# Archetypes (archetypes)
-Front matter default template  when creating a file. If there are modifications, only the new files will be changed. We can create patterns that are not default:
+## Arquétipos
+Modelo padrão do Front Matter ao criar um arquivo. Se houver modificações, somente os novos arquivos serão alterados. Podemos criar padrões que não são padrão:
 
-1. Create a new markdown file in archetypes;
-2. Create a directory in ```content/``` with the same name as the chosen archetype;
-3. Create files in this directory, which will follow the chosen pattern.
+1. Crie um novo arquivo Markdown em ```archetypes/```;
+2. Crie um diretório em ```content/``` com o mesmo nome do arquétipo escolhido;
+3. Crie arquivos nesse diretório, que seguirá o padrão escolhido.
 
-# Shortcodes
-Instead of writing HTML code, Hugo allows you to use pre-defined shortcuts. Here's the syntax:
+## Shortcodes
+Em vez de escrever código HTML, Hugo permite que você use atalhos pré-definidos. Aqui está a sintaxe:
 
-1. Without markdown:
+1. Sem Markdown:
 
     >```markdown
     >{{ < name params > }}
     >```
-2. With markdown:
+2. Com Markdown:
 
     >```markdown
     >{{ % name params % }}
     >```
 
-# Taxonomy
-We can generate links automatically for grouping according to tags and categories (list pages).
+Podemos parafrasear códigos para sintaxe:
+
+  >```markdown
+  >{{ < filename > }}
+  >```
+
+Nós podemos passar parâmetros:
+
+1. Referenciador:
+
+    >```markdown
+    >{{ < shortcode color = 'blue'> }}
+    >```
+
+2. Referenciado (shortcode):
+
+    >```markdown
+    >{{ .Get color }}
+    >```
+
+Podemos definir escopos:
+
+1. Referenciador:
+
+    >```markdown
+    >{{ < shortcode > }}
+    >...
+    >{{ < shortcode > }}
+    >```
+
+2. Referenciado (shortcode):
+
+    >```markdown
+    >{{ .Inner }}
+    >```
+
+Podemos inserir o comando markdown no escopo do referenciador:
+
+  >```markdown
+  >{{ % shortcode % }}
+  > ...
+  >{{ % shortcode % }}
+  >```
+
+## Taxonomia
+Podemos gerar links automaticamente para agrupamento de acordo com tags e categorias (list pages).
 
 1. Tags:
 
@@ -118,9 +162,9 @@ We can generate links automatically for grouping according to tags and categorie
     >```
 
 
-We can even generate custom taxonomies:
+Podemos até gerar taxonomias personalizadas:
 
-1. In config.toml, we configure:
+1. No config.toml, nós configuramos:
 
     >```toml
     >[taxonomies]
@@ -128,7 +172,7 @@ We can even generate custom taxonomies:
     >mood = "types"
     >```
 
-2. We use the new taxonomy:
+2. E nós usamos a nova taxonomia dessa forma:
 
     >```markdown
     >---
@@ -138,23 +182,23 @@ We can even generate custom taxonomies:
     >---
     >```
 
-# Templates
+## Modelos (Templates)
 
-They are defined in ```layouts/_default/```. In this directory, we are presented to the files responsible for the lists and single pages. More information about templates, [click here](https://gohugo.io/templates/).
+Eles são definidos em ```layouts/_default/```. Neste diretório, somos apresentados aos arquivos responsáveis ​​pelas listas e páginas únicas. Mais informações sobre templates, [clique aqui] (https://gohugo.io/templates/).
 
-# Home Page
+## Pagina Inicial
 
-Defined by theme as default. But we can define ours in ```layouts/index.html```.
+Definido por tema como padrão. Mas nós podemos definir o nosso em ```layouts/index.html```.
 
-# Section
+## Seção
 
-A directory of content can be indexed from a template itself. To do this, simply create a new HTML file in ```layouts/directory_name/```.
+Um diretório de conteúdo pode ser indexado a partir de um modelo em si. Para fazer isso, simplesmente crie um novo arquivo HTML em ```layouts/diretório/```.
 
-# Base and Blocks
+## Base e Blocos
 
-We can make the project more modular and powerful by using the following logic: we have a base that is filled with blocks. We use the following syntax:
+Podemos tornar o projeto mais modular e poderoso usando a seguinte lógica: temos uma base que é preenchida com blocos. Nós usamos a seguinte sintaxe:
 
-1. On the basis:
+1. Na Base:
 
     >```markdown
     >...
@@ -163,7 +207,7 @@ We can make the project more modular and powerful by using the following logic: 
     >...
     >```
 
-2. In the blocks:
+2. Nos Blocos:
 
     >```markdown
     >...
@@ -172,11 +216,11 @@ We can make the project more modular and powerful by using the following logic: 
     >...
     > ```
 
-More information about templates, [click here](https://gohugo.io/templates/).
+Mais informações sobre templates, [clique aqui] (https://gohugo.io/templates/).
 
-# Variables
+## Variáveis
 
-In HTML templates we can use what was defined in the markdown header as variables. We use the following syntax:
+Nos modelos HTML, podemos usar o que foi definido no cabeçalho da marcação como variáveis. Nós usamos a seguinte sintaxe:
 
 1. Built-ins:
 
@@ -184,39 +228,39 @@ In HTML templates we can use what was defined in the markdown header as variable
     >{{.var}}
     >```
 
-2. Created by us:
+2. Personalizadas:
 
     >```markdown
     >{{ .Params.var }}
     >```
 
-We can also define and access variables created in the template itself:
+Também podemos definir e acessar variáveis ​​criadas no próprio modelo:
 
-1. Defining:
+1. Definindo:
 
     >```markdown
     >{{ $ myVar: = value }}
     >```
 
-2. Accessing:
+2. Acessando:
 
     >```
     >{{ $ myVar }}
     >```
 
-More information about variables, [click here](https://gohugo.io/variables/).
+Mais informações sobre variáveis, [clique aqui] (https://gohugo.io/variables/).
 
-# Functions
+## Funções
 
-We can use functions in HTML through syntax:
+Podemos usar funções em HTML por meio da sintaxe:
 
   >```markdown
   >{{ function params }}
   >```
 
-Some functions: ```truncate```, ```add```, ```sub```, ```singularize```.
+Algumas funções: ```truncate```, ```add```, ```sub```, ```singularize```.
 
-We can perform iterations as follows:
+Podemos executar iterações da seguinte maneira:
 
   >```markdown
   >{{ range .array }}
@@ -224,11 +268,11 @@ We can perform iterations as follows:
   >{{ end }}
   >```
 
-More information about functions, [click here](https://gohugo.io/functions/).
+Mais informações sobre funções, [clique aqui] (https://gohugo.io/functions/).
 
-# Conditionals
+## Conditionals
 
-Some operations we can use are: ```and```, ```eq```, ```lt```, ```le```, ```gt```, ```ge```, ```not```. The syntax is as follows:
+Algumas operações que podemos usar são: ```and```, ```eq```, ```lt```, ```le```, ```gt```, ```ge```, ```not```. A sintaxe é a seguinte:
 
   >```markdown
   >{{ if params operation }}
@@ -240,100 +284,56 @@ Some operations we can use are: ```and```, ```eq```, ```lt```, ```le```, ```gt``
   >{{ end }}
   >```
 
-Note: Parentheses can be used for precedence. Also, we can use conditionals in HTML.
+{{< note title="Lembre-se" >}}
+Os parênteses podem ser usados ​​para precedência. Além disso, podemos usar condicionais em HTML.
+{{< /note >}}
 
-# Data
+## Banco de Dados
 
-We use the ```data/``` directory to deposit files that serve as a database. These files can be YAML, TOML or JSON. In them, we iterate about their data as follows:
+Usamos o diretório ```data/``` para depositar arquivos que servem como banco de dados. Esses arquivos podem ser YAML, TOML ou JSON. Neles, nós iteramos sobre seus dados da seguinte forma:
 
   >```markdown
   >{{ range .Site.Data.File }}
   >```
 
-# Partials
+## Parciais
 
-We can modularize the layout as follows:
+Podemos modularizar o layout da seguinte forma:
 
-1. We created the directory ```layouts/partials/```;
-2. Create the partial file;
-3. Inject templates into ```layouts/_default/```.
+1. Criamos o diretório ```layouts/partials/```;
+2. Crie o arquivo parcial;
+3. Injete templates em ```layouts/_default/```.
 
-At ```partials/header.html```:
+Em ```partials/header.html```:
 
   >```markdown
   ><h1> {{ .Title }} </ h1>
   >...
   >```
 
-In ```_default/single.html```:
+Em ```_default/single.html```:
 
   >```markdown
   >{{ partial "header". }}
   >...
   >```
 
-We can also handle customizable variables:
+Também podemos manipular variáveis ​​personalizáveis:
 
-At ```partials/header.html```:
+Em ```partials/header.html```:
 
   >```markdown
   ><h1> {{ .myTitle }} </h1>
   ><p> {{ .myDate }} </ p>
   >```
 
-In ```_default/single.html```:
+Em ```_default/single.html```:
 
   >```markdown
   >{{ partial "header" (dict "myTitle" "TITLE" "myDate" "DD / MM / YYYY") }}
   >```
 
-# Shortcodes
+## Construindo o Site
 
-We can paraphrase codes for syntax:
-
-  >```markdown
-  >{{ < filename > }}
-  >```
-
-We can pass parameters:
-
-1. Referrer:
-
-    >```markdown
-    >{{ < shortcode color = 'blue'> }}
-    >```
-
-2. Referenced (shortcode):
-
-    >```markdown
-    >{{ .Get color }}
-    >```
-
-We can define scopes:
-
-1. Referrer:
-
-    >```markdown
-    >{{ < shortcode > }}
-    >...
-    >{{ < shortcode > }}
-    >```
-
-2. Referenced (shortcode):
-
-    >```markdown
-    >{{ .Inner }}
-    >```
-
-We can enter markdown command in referrer scope:
-
-  >```markdown
-  >{{ % shortcode % }}
-  > ...
-  >{{ % shortcode % }}
-  > ```
-
-# Building the Site
-
-To generate the site just go to the root of the project and use the following command in the terminal: ```hugo```.
-A ```public/``` directory will be generated, now just host it on a web server.
+Para gerar o site, basta acessar a raiz do projeto e usar o seguinte comando no terminal: ```hugo```.
+Um diretório ```public/``` será gerado, agora basta hospedá-lo em um servidor web.
