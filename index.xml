@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>myDocs</title>
-    <link>http://localhost:1313/</link>
+    <link>https://amintasvrp.github.io/myDocs/</link>
     <description>Recent content on myDocs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Mar 2016 21:07:13 +0100</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://amintasvrp.github.io/myDocs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>C: Programação Imperativa em Baixo Nível</title>
-      <link>http://localhost:1313/c/</link>
+      <link>https://amintasvrp.github.io/myDocs/c/</link>
       <pubDate>Tue, 21 Aug 2018 16:50:59 -0300</pubDate>
       
-      <guid>http://localhost:1313/c/</guid>
+      <guid>https://amintasvrp.github.io/myDocs/c/</guid>
       <description>Introdução C é uma linguagem de programação imperativa de propósito geral, com tipagem estática. Além disso, é uma linguagem de baixo nível, o que significa que fornece construções que mapeiam de forma eficiente para as instruções típicas da máquina. Basicamente, é uma maneira mais fácil de escrever programas de baixo nível. Em vez de escrever código de baixo nível em uma linguagem de montagem, você pode abstrair muito e escrever programas equivalentes em C.</description>
     </item>
     
     <item>
       <title>Haskell I: Introdução ao Paradigma Funcional</title>
-      <link>http://localhost:1313/haskell1/</link>
+      <link>https://amintasvrp.github.io/myDocs/haskell1/</link>
       <pubDate>Tue, 21 Aug 2018 16:50:59 -0300</pubDate>
       
-      <guid>http://localhost:1313/haskell1/</guid>
+      <guid>https://amintasvrp.github.io/myDocs/haskell1/</guid>
       <description>Básico Operadores Básicos  + - * / mod sqrt  Operadores Lógicos  &amp;amp;&amp;amp; || not  Operadores Relacionais  &amp;gt; &amp;lt; &amp;gt;= &amp;lt;= == /=  Declarando Valores  x = a  Comentários  -- linha comentada {- - bloco comentado -}  Funções Aplicação  f x y == (f x) y == x &#39;f&#39; y  Expressões Condicionais  nomeFuncao param = if cond then resultado1 else resultado2  Equações Guardadas  nomeFuncao param | cond = resultado1 | otherwise = resultado2  Expressões Case  funcao xs = case expression of pattern1 -&amp;gt; result1 pattern2 -&amp;gt; result2  Definição local  // relacionamos expressões com variáveis, melhorando visibilidade e escopo locais // (where) funcao xs = .</description>
     </item>
     
     <item>
       <title>Linux I: Conhecendo e Usando o Terminal</title>
-      <link>http://localhost:1313/linux1/</link>
+      <link>https://amintasvrp.github.io/myDocs/linux1/</link>
       <pubDate>Thu, 09 Aug 2018 21:19:00 -0300</pubDate>
       
-      <guid>http://localhost:1313/linux1/</guid>
+      <guid>https://amintasvrp.github.io/myDocs/linux1/</guid>
       <description>Para aqueles que agora estão sendo introduzidos ao Linux, o manuseio do terminal pode, ao mesmo tempo, fascinar e dar um frio na barriga. A fim de aprender o básico sobre como lidar com essa ferramenta muito importante no uso de qualquer distribuição Linux, e claro, de perdermos qualquer preconceito sobre o prompt de comando, veremos neste artigo os principais comandos no terminal Linux
 Arquivos e Diretórios Para encontrar o diretório atual, use o comando:</description>
     </item>
     
     <item>
       <title>Prolog e o Paradigma Lógico</title>
-      <link>http://localhost:1313/prolog/</link>
+      <link>https://amintasvrp.github.io/myDocs/prolog/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/prolog/</guid>
+      <guid>https://amintasvrp.github.io/myDocs/prolog/</guid>
       <description>Mesmo diferentes paradigmas como Funcional e Imperativo têm algo em comum: ambos realizam mapeamento, isto é, lêem entradas e geram saídas. No entanto, um programa de acordo com o paradigma lógico implementa relacionamentos, que são mais gerais do que os mapeamentos. Em outras palavras, quando se trata de programação lógica, o nível é superior ao da programação imperativa ou funcional.
 Paradigma Lógico Definimos as relações da seguinte forma:
  Considerando dois conjuntos S e T, dizemos que existe uma relação r entre S e T se, para cada x em S e y em T, a avaliação r(x, y) é verdadeira ou falsa.</description>
@@ -52,10 +52,10 @@ Paradigma Lógico Definimos as relações da seguinte forma:
     
     <item>
       <title>Hugo: Um Gerador de Sites Estáticos</title>
-      <link>http://localhost:1313/hugo/</link>
+      <link>https://amintasvrp.github.io/myDocs/hugo/</link>
       <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/hugo/</guid>
+      <guid>https://amintasvrp.github.io/myDocs/hugo/</guid>
       <description>Um site estático consiste em um aplicativo da Web simples, no qual o conteúdo exposto é o mesmo para todos os que acessam, como blogs, periódicos, portfólios e portais de notícias. No entanto, no WordPress encontramos uma plataforma muito robusta para tal, já no tumblr e no blogger encontramos o oposto: é por isso que usamos o Hugo, um gerador de site estático.
 Pré-requisitos Breves noções de HTML e Markdown.</description>
     </item>
