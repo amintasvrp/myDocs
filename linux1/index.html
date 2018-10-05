@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Linux I: Conhecendo e Usando o Terminal - myDocs</title>
+    <meta name="generator" content="Hugo 0.46" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="http://localhost:1313/linux1/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="http://localhost:1313/linux1/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="http://localhost:1313/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/images/round.png">
+    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('http://localhost:1313/fonts/icon.eot');
+        src: url('http://localhost:1313/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('http://localhost:1313/fonts/icon.woff')
+               format('woff'),
+             url('http://localhost:1313/fonts/icon.ttf')
+               format('truetype'),
+             url('http://localhost:1313/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="http://localhost:1313/stylesheets/application.css">
+    <link rel="stylesheet" href="http://localhost:1313/stylesheets/temporary.css">
+    <link rel="stylesheet" href="http://localhost:1313/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="http://localhost:1313/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Linux I: Conhecendo e Usando o Terminal
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="http://localhost:1313/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="http://localhost:1313/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="http://localhost:1313/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell I" href="http://localhost:1313/haskell1/">
+	
+	Haskell I
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="http://localhost:1313/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Linux I" href="http://localhost:1313/linux1/">
+	
+	Linux I
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="http://localhost:1313/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Linux I: Conhecendo e Usando o Terminal </h1>
+
+			
+
+<p>Para aqueles que agora estão sendo introduzidos ao Linux, o manuseio do terminal pode, ao mesmo tempo, fascinar e dar um frio na barriga. A fim de aprender o básico sobre como lidar com essa ferramenta muito importante no uso de qualquer distribuição Linux, e claro, de perdermos qualquer preconceito sobre o prompt de comando, veremos neste artigo os <strong>principais comandos no terminal Linux</strong></p>
+
+<h2 id="arquivos-e-diretórios">Arquivos e Diretórios</h2>
+
+<p>Para encontrar o diretório atual, use o comando:</p>
+
+<pre><code class="language-bash">pwd
+</code></pre>
+
+<p>Se quisermos listar os arquivos e diretórios no diretório atual, use o comando:</p>
+
+<pre><code class="language-bash">ls
+</code></pre>
+
+<p>Da mesma forma, podemos listar os arquivos e diretórios no diretório atual em detalhes através do comando:</p>
+
+<pre><code class="language-bash">ls -l
+</code></pre>
+
+<p>De maneira similar, podemos incluir na listagem detalhada os arquivos ocultos:</p>
+
+<pre><code class="language-bash">ls -la
+</code></pre>
+
+<p>Podemos listar os arquivos e diretórios em um diretório específico com o comando:</p>
+
+<pre><code class="language-bash">ls diretório
+</code></pre>
+
+<p>Podemos imprimir uma mensagem no terminal através do comando:</p>
+
+<pre><code class="language-bash">echo &quot;message&quot;
+</code></pre>
+
+<p>Podemos criar e sobrescrever um arquivo usando o comando:</p>
+
+<pre><code class="language-bash">echo &quot;message&quot; &gt; arquivo.extensão
+</code></pre>
+
+<p>Se quisermos ler um arquivo no diretório, mostrando seu conteúdo no terminal, podemos usar o comando:</p>
+
+<pre><code class="language-bash">cat arquivo.extensão
+</code></pre>
+
+<p>Para limpar a tela, usamos o comando:</p>
+
+<pre><code class="language-bash">clear
+</code></pre>
+
+<p>Para obter a documentação de um comando em particular, usamos o seguinte comando:</p>
+
+<pre><code class="language-bash">man command
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Para navegar pela documentação, usamos <code>cima</code> e <code>baixo</code> .
+Para sair, <code>q</code> .</p>
+</div>
+
+<p>Para obter o nome de usuário, usamos o comando:</p>
+
+<pre><code class="language-bash">whoami
+</code></pre>
+
+<h2 id="redirecionamento-e-curingas">Redirecionamento e Curingas</h2>
+
+<p>Para entrar em um diretório, usamos o comando abaixo, onde o PATH do diretório é relativo ao diretório atual.</p>
+
+<pre><code class="language-bash">cd path
+</code></pre>
+
+<p>Também podemos usar o comando abaixo, onde o PATH do diretório é relativo ao diretório base.</p>
+
+<pre><code class="language-bash">cd ~/path
+</code></pre>
+
+<p>Usamos o mesmo comando abaixo, onde o PATH do diretório é relativo ao diretório raiz.</p>
+
+<pre><code class="language-bash">cd home/user/path
+</code></pre>
+
+<p>Adicionamos uma linha a um arquivo com o comando:</p>
+
+<pre><code class="language-bash">echo &quot;message&quot; &gt;&gt; arquivo.extensão
+</code></pre>
+
+<p>Retorne ao diretório atual usando o comando:</p>
+
+<pre><code class="language-bash">cd ..
+</code></pre>
+
+<p>Da mesma forma, podemos ir ao diretório de usuários usando o comando:</p>
+
+<pre><code class="language-bash">cd
+</code></pre>
+
+<p>Algumas referências aos diretórios:</p>
+
+<ol>
+<li>Diretório atual: <code>.</code>.</li>
+<li>Diretório anterior, ou superior: <code>..</code>.</li>
+<li>Diretório raiz: <code>/</code>.</li>
+<li>Diretório do usuário: <code>/ home</code>.</li>
+</ol>
+
+<p>Para criar um diretório, usamos o comando:</p>
+
+<pre><code class="language-bash">mkdir diretório_name
+</code></pre>
+
+<p>Para remover um arquivo, usamos o comando:</p>
+
+<pre><code class="language-bash">rm arquivo.extensão
+</code></pre>
+
+<p>Para remover um diretório sem subdiretórios, usamos o comando:</p>
+
+<pre><code class="language-bash">rmdir diretório
+</code></pre>
+
+<p>Para remover um diretório e seus subdiretórios recursivamente, usamos o comando:</p>
+
+<pre><code class="language-bash">rm -r diretório
+</code></pre>
+
+<p>Aqui estão alguns caracteres curinga no bash:</p>
+
+<ol>
+<li>Usamos <code>?</code> Para representar qualquer caractere.</li>
+<li>Usamos <code>*</code> para representar qualquer substring.</li>
+</ol>
+
+<h2 id="manipulação-e-compactação">Manipulação e Compactação</h2>
+
+<p>Para fazer uma cópia de um arquivo, usamos o seguinte comando:</p>
+
+<pre><code class="language-bash">cp original.extensão copy.extensão
+</code></pre>
+
+<p>Renomeie um arquivo usando o seguinte comando:</p>
+
+<pre><code class="language-bash">mv old_name.extensão new_name.extensão
+</code></pre>
+
+<p>Nós movemos os arquivos usando o comando:</p>
+
+<pre><code class="language-bash">mv arquivo.extensão diretório/
+</code></pre>
+
+<p>Nós também podemos renomear o arquivo movendo-o usando o comando:</p>
+
+<pre><code class="language-bash">mv old_name.extensão diretório/new_name.extensão
+</code></pre>
+
+<p>Podemos listar os arquivos do diretório corrente e dos subdiretórios recursivamente com o comando:</p>
+
+<pre><code class="language-bash">ls *
+</code></pre>
+
+<p>Nós fazemos uma cópia de um diretório com o comando:</p>
+
+<pre><code class="language-bash">cp -r original_diretório copy_diretório
+</code></pre>
+
+<p>Nós podemos compactar um arquivo como zip com o comando:</p>
+
+<pre><code class="language-bash">zip arquivo_comprimido.zip arquivo.extensão
+</code></pre>
+
+<p>Da mesma forma, podemos &ldquo;zipar&rdquo; um diretório recursivamente com o comando:</p>
+
+<pre><code class="language-bash">zip -r compressed_arquivo.zip diretório/
+</code></pre>
+
+<p>Podemos listar o interior de um arquivo zip com o comando:</p>
+
+<pre><code class="language-bash">unzip -l arquivo.zip
+</code></pre>
+
+<p>Descompacte um arquivo zip com o comando:</p>
+
+<pre><code class="language-bash">unzip.zip
+</code></pre>
+
+<p>Nós podemos tornar o processo silencioso com o comando:</p>
+
+<pre><code class="language-bash">unzip -q arquivo.zip
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Nós podemos combinar flags, então o comando <code>zip -r -q arquivo_compactado.zip diretório/</code> pode ser escrito como <code>zip -rq arquivo_compactado.zip diretório/</code> .</p>
+</div>
+
+<h2 id="manipulando-tar">Manipulando .tar</h2>
+
+<p>Podemos comprimir usando tar com o seguinte comando:</p>
+
+<pre><code class="language-bash">tar -cz diretório &gt; arquivo.tar.gz
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Por padrão, esse é um processo recursivo e silencioso.</p>
+</div>
+
+<p>Podemos descompactar usando tar do seguinte comando:</p>
+
+<pre><code class="language-bash">tar -xz &lt; arquivo.tar.gz
+</code></pre>
+
+<p>Este mesmo comando pode ser escrito como</p>
+
+<pre><code class="language-bash">tar -x &lt; arquivo.tar.gz
+</code></pre>
+
+<p>Se não quisermos trabalhar com redirecionamentos de entrada de dados (<code>&lt;</code>) e saída de dados (<code>&gt;</code>), podemos usar os seguintes comandos:</p>
+
+<ol>
+<li><code>tar -czf arquivo.tar.gz diretório/</code>, para comprimir usando tar.</li>
+<li><code>tar -xzf arquivo.tar.gz</code> ou <code>tar -xf arquivo.tar.gz</code>, para descompactar usando tar.</li>
+<li><code>tar -vczf arquivo.tar.gz diretório/</code>, para compactar com detalhes usando tar.</li>
+<li><code>tar -vxzf arquivo.tar.gz</code> ou <code>tar -vxf arquivo.tar.gz</code>, para descompactar manualmente usando o tar.</li>
+</ol>
+
+<div class="admonition warning">
+<p class="admonition-title">Atenção</p>
+<p>Na realidade, o tar apenas empacota dados e usa compactadores como o gzip (.gz). Existem outros compactadores externos como o bzip2 (.bz2). Para usá-lo em comandos, simplesmente substitua <code>-z</code> com <code>-j</code> e a extensão <code>tar.gz</code> com <code>.tar.bz2</code>.</p>
+</div>
+
+<h2 id="metadados-e-lendo-arquivos">Metadados e Lendo Arquivos</h2>
+
+<p>Podemos alterar a data e hora da última modificação de um arquivo com o comando:</p>
+
+<pre><code class="language-bash">touch arquivo.extensão
+</code></pre>
+
+<p>Podemos verificar a data e hora atual do sistema com o comando:</p>
+
+<pre><code class="language-bash">date
+</code></pre>
+
+<p>Podemos exibir dados atuais de data e hora com o comando:</p>
+
+<pre><code class="language-bash">date &quot;+formato&quot;
+</code></pre>
+
+<p>Use o seguinte comando para ver quais dados podem ser exibidos no terminal:</p>
+
+<pre><code class="language-bash">date --help
+</code></pre>
+
+<p>Podemos acessar ajuda rápida com os seguintes comandos:</p>
+
+<pre><code class="language-bash">help command
+# ou
+--help command
+</code></pre>
+
+<p>Podemos ler as primeiras 10 linhas de um arquivo através do comando:</p>
+
+<pre><code class="language-bash">head arquivo.extensão
+</code></pre>
+
+<p>Podemos ler as primeiras x linhas de um arquivo através do comando:</p>
+
+<pre><code class="language-bash">head -n x arquivo.extensão
+</code></pre>
+
+<p>Podemos ler as últimas 10 linhas de um arquivo através do comando:</p>
+
+<pre><code class="language-bash">tail arquivo.extensão
+</code></pre>
+
+<p>Podemos ler as últimas x linhas de um arquivo através do comando:</p>
+
+<pre><code class="language-bash">tail -n x arquivo.extensão
+</code></pre>
+
+<p>Nós podemos ler um arquivo inteiro usando o leitor <code>less</code> via o comando:</p>
+
+<pre><code class="language-bash">less arquivo.extensão
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Para navegar pelo leitor <code>less</code>, basta usar as setas para cima e para baixo.</p>
+</div>
+
+<h2 id="usando-o-vi">Usando o VI</h2>
+
+<p>Para abrir um arquivo com o VI, usamos o comando:</p>
+
+<pre><code class="language-bash">vi arquivo.extensão
+</code></pre>
+
+<p>Passamos do <strong>modo de navegação e comandos</strong>, que é aberto por padrão, para o <strong>modo de inserção</strong> com <code>i</code> ou <code>a</code> e vice-versa com <code>esc</code>.</p>
+
+<p>Para fazer letras maiúsculas fazemos<code>Shift + letter</code>, em vez de <code>Caps lock</code>.</p>
+
+<p>Os comandos de edição mais utilizados no <strong>modo de navegação e comandos</strong> estão listados abaixo:</p>
+
+<ol>
+<li><code>w</code>, para salvar.</li>
+<li><code>q</code>, para sair. Podemos sair sem salvar com o comando <code>q!</code>.</li>
+<li><code>x</code>, para remover o caractere atual. Nós podemos remover n caracteres com o comando <code>nx</code>.</li>
+<li><code>i</code>, para inserir no caractere atual.</li>
+<li><code>a</code>, para entrar no próximo caractere.</li>
+<li><code>dd</code>, para remover a linha atual. Nós podemos remover n linhas com o comando <code>ndd</code>.</li>
+<li><code>A</code>, para entrar no final da linha.</li>
+</ol>
+
+<p>Os comandos de navegação mais utilizados no <strong>modo de navegação e comandos</strong> estão listados abaixo:</p>
+
+<ol>
+<li><code>G</code>, para ir para a última linha. Podemos ir para a enésima linha com o comando <code>nG</code>.</li>
+<li><code>gg</code>, para ir ao começo do arquivo.</li>
+<li><code>$</code>, para ir até o final da linha atual.</li>
+<li><code>O</code>, para ir ao começo da linha atual.</li>
+<li><code>/word</code>, para procurar uma palavra no texto.</li>
+<li><code>n</code>, para ir para a próxima ocorrência.</li>
+<li><code>N</code>, para ir para a ocorrência anterior.</li>
+<li><code>yy</code>, para copiar a linha atual. Podemos copiar 2 linhas com o comando <code>y</code> e n linhas com <code>nyy</code>.</li>
+<li><code>p</code> para colar e <code>np</code> para colar n vezes.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Podemos combinar comandos. Por exemplo, para salvar e sair, usamos o comando <code>wq</code>.</p>
+</div>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="http://localhost:1313/haskell1/" title="Haskell I: Introdução ao Paradigma Funcional">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Haskell I: Introdução ao Paradigma Funcional
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="http://localhost:1313/prolog/" title="Prolog e o Paradigma Lógico">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Prolog e o Paradigma Lógico
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'http:\/\/localhost:1313\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="http://localhost:1313/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

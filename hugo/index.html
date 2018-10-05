@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Hugo: Um Gerador de Sites Estáticos - myDocs</title>
+    <meta name="generator" content="Hugo 0.46" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="http://localhost:1313/hugo/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="http://localhost:1313/hugo/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="http://localhost:1313/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:1313/images/round.png">
+    <link rel="icon" type="image/x-icon" href="http://localhost:1313/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('http://localhost:1313/fonts/icon.eot');
+        src: url('http://localhost:1313/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('http://localhost:1313/fonts/icon.woff')
+               format('woff'),
+             url('http://localhost:1313/fonts/icon.ttf')
+               format('truetype'),
+             url('http://localhost:1313/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="http://localhost:1313/stylesheets/application.css">
+    <link rel="stylesheet" href="http://localhost:1313/stylesheets/temporary.css">
+    <link rel="stylesheet" href="http://localhost:1313/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="http://localhost:1313/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Hugo: Um Gerador de Sites Estáticos
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="http://localhost:1313/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="http://localhost:1313/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="http://localhost:1313/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell I" href="http://localhost:1313/haskell1/">
+	
+	Haskell I
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Hugo" href="http://localhost:1313/hugo/">
+	
+	Hugo
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux I" href="http://localhost:1313/linux1/">
+	
+	Linux I
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="http://localhost:1313/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Hugo: Um Gerador de Sites Estáticos </h1>
+
+			
+
+<p>Um site estático consiste em um aplicativo da Web simples, no qual o conteúdo exposto é o mesmo para todos os que acessam, como blogs, periódicos, portfólios e portais de notícias. No entanto, no <strong>WordPress</strong> encontramos uma plataforma muito robusta para tal, já no <strong>tumblr</strong> e no <strong>blogger</strong> encontramos o oposto: é por isso que usamos o <strong>Hugo, um gerador de site estático</strong>.</p>
+
+<h2 id="pré-requisitos">Pré-requisitos</h2>
+
+<p>Breves noções de HTML e Markdown.</p>
+
+<h2 id="configurando-hugo">Configurando Hugo</h2>
+
+<ol>
+<li>Baixe e extraia o Hugo do diretório <code>Hugo/bin/</code>;</li>
+<li>Vá para o diretório <code>Hugo/PATH/</code>.</li>
+</ol>
+
+<h2 id="criando-o-site">Criando o Site</h2>
+
+<p>No terminal, use o comando <code>hugo new site site_name</code>.</p>
+
+<h2 id="adicionar-tópico">Adicionar Tópico</h2>
+
+<ol>
+<li>Em <a href="https://themes.gohugo.io/">Hugo Themes</a>, clone o repositório git do tema e ponha-o no diretório <code>site_name/themes/</code>;</li>
+
+<li><p>Em <code>config.toml</code>, inclua a tag:</p>
+
+<blockquote>
+<pre><code class="language-toml">theme = &quot;theme_name&quot;
+</code></pre>
+</blockquote></li>
+
+<li><p>Configurações adicionais podem ser necessárias dependendo do tema.</p></li>
+</ol>
+
+<h2 id="hospedando-localmente">Hospedando Localmente</h2>
+
+<p>Na raiz do projeto (site), use o comando no terminal: <code>hugo server</code>.</p>
+
+<h2 id="criando-arquivo-de-conteúdo">Criando Arquivo de Conteúdo</h2>
+
+<ol>
+<li>Vá para a raiz do projeto;</li>
+<li>Use o comando no terminal <code>hugo new file.md</code> para criar um arquivo em <code>content/</code>;</li>
+<li>Use o comando no terminal <code>hugo new directory/file.md</code> para criar um arquivo em <code>content/directory/</code>.</li>
+</ol>
+
+<p>A árvore de diretórios em <code>content/</code> corresponde à navegação nas URLs.</p>
+
+<h2 id="carregando-rascunhos">Carregando Rascunhos</h2>
+
+<p>In the terminal, use the command: <code>hugo server -D</code>.</p>
+
+<h2 id="tipos-de-páginas">Tipos de Páginas</h2>
+
+<ol>
+<li>Single Pages: Páginas responsáveis ​​pelo conteúdo de um arquivo Markdown;</li>
+<li>List Pages: Páginas responsáveis ​​por indexar arquivos Markdown.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Hugo pode indexar os arquivos localizados em <code>content/</code> e seus subdiretórios. No entanto, não pode indexar mais. Para fazer isso, você deve criar um arquivo <code>_index.md</code> usando o seguinte comando no terminal: <code>hugo new content/sub-subdiretório/ _index.md</code>.</p>
+</div>
+
+<h2 id="front-matter">Front Matter</h2>
+
+<p>Corresponde ao conjunto de metadados localizado na parte superior do arquivo de remarcação usado para melhorar a organização do site. Eles têm a seguinte estrutura:</p>
+
+<ol>
+<li><p>YAML:</p>
+
+<blockquote>
+<pre><code class="language-yaml">---
+config: value
+---
+</code></pre>
+</blockquote></li>
+
+<li><p>TOML:</p>
+
+<blockquote>
+<pre><code class="language-toml">config = value
+</code></pre>
+</blockquote></li>
+
+<li><p>JSON:</p>
+
+<blockquote>
+<pre><code class="language-json">{
+config: value
+}
+</code></pre>
+</blockquote></li>
+</ol>
+
+<h2 id="arquétipos">Arquétipos</h2>
+
+<p>Modelo padrão do Front Matter ao criar um arquivo. Se houver modificações, somente os novos arquivos serão alterados. Podemos criar padrões que não são padrão:</p>
+
+<ol>
+<li>Crie um novo arquivo Markdown em <code>archetypes/</code>;</li>
+<li>Crie um diretório em <code>content/</code> com o mesmo nome do arquétipo escolhido;</li>
+<li>Crie arquivos nesse diretório, que seguirá o padrão escolhido.</li>
+</ol>
+
+<h2 id="shortcodes">Shortcodes</h2>
+
+<p>Em vez de escrever código HTML, Hugo permite que você use atalhos pré-definidos. Aqui está a sintaxe:</p>
+
+<ol>
+<li><p>Sem Markdown:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ &lt; name params &gt; }}
+</code></pre>
+</blockquote></li>
+
+<li><p>Com Markdown:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ % name params % }}
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Podemos parafrasear códigos para sintaxe:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ &lt; filename &gt; }}
+</code></pre>
+</blockquote>
+
+<p>Nós podemos passar parâmetros:</p>
+
+<ol>
+<li><p>Referenciador:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ &lt; shortcode color = 'blue'&gt; }}
+</code></pre>
+</blockquote></li>
+
+<li><p>Referenciado (shortcode):</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ .Get color }}
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Podemos definir escopos:</p>
+
+<ol>
+<li><p>Referenciador:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ &lt; shortcode &gt; }}
+...
+{{ &lt; shortcode &gt; }}
+</code></pre>
+</blockquote></li>
+
+<li><p>Referenciado (shortcode):</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ .Inner }}
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Podemos inserir o comando markdown no escopo do referenciador:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ % shortcode % }}
+...
+{{ % shortcode % }}
+</code></pre>
+</blockquote>
+
+<h2 id="taxonomia">Taxonomia</h2>
+
+<p>Podemos gerar links automaticamente para agrupamento de acordo com tags e categorias (list pages).</p>
+
+<ol>
+<li><p>Tags:</p>
+
+<blockquote>
+<pre><code class="language-markdown">---
+....
+tags: [&quot;t1&quot;, ..., &quot;tn&quot;]
+...
+---
+</code></pre>
+</blockquote></li>
+
+<li><p>Categories:</p>
+
+<blockquote>
+<pre><code class="language-markdown">---
+...
+categories: [&quot;c1&quot;, ..., &quot;cn&quot;]
+...
+---
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Podemos até gerar taxonomias personalizadas:</p>
+
+<ol>
+<li><p>No config.toml, nós configuramos:</p>
+
+<blockquote>
+<pre><code class="language-toml">[taxonomies]
+...
+mood = &quot;types&quot;
+</code></pre>
+</blockquote></li>
+
+<li><p>E nós usamos a nova taxonomia dessa forma:</p>
+
+<blockquote>
+<pre><code class="language-markdown">---
+...
+types: [&quot;type1&quot;, ..., &quot;typen&quot;]
+...
+---
+</code></pre>
+</blockquote></li>
+</ol>
+
+<h2 id="modelos-templates">Modelos (Templates)</h2>
+
+<p>Eles são definidos em <code>layouts/_default/</code>. Neste diretório, somos apresentados aos arquivos responsáveis ​​pelas listas e páginas únicas. Mais informações sobre templates, <a href="https://gohugo.io/templates/">clique aqui</a>.</p>
+
+<h2 id="pagina-inicial">Pagina Inicial</h2>
+
+<p>Definido por tema como padrão. Mas nós podemos definir o nosso em <code>layouts/index.html</code>.</p>
+
+<h2 id="seção">Seção</h2>
+
+<p>Um diretório de conteúdo pode ser indexado a partir de um modelo em si. Para fazer isso, simplesmente crie um novo arquivo HTML em <code>layouts/diretório/</code>.</p>
+
+<h2 id="base-e-blocos">Base e Blocos</h2>
+
+<p>Podemos tornar o projeto mais modular e poderoso usando a seguinte lógica: temos uma base que é preenchida com blocos. Nós usamos a seguinte sintaxe:</p>
+
+<ol>
+<li><p>Na Base:</p>
+
+<blockquote>
+<pre><code class="language-markdown">...
+{{block &quot;name&quot;. }}
+{{end}}
+...
+</code></pre>
+</blockquote></li>
+
+<li><p>Nos Blocos:</p>
+
+<blockquote>
+<pre><code class="language-markdown">...
+{{define &quot;name&quot;}}
+{{end}}
+...
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Mais informações sobre templates, <a href="https://gohugo.io/templates/">clique aqui</a>.</p>
+
+<h2 id="variáveis">Variáveis</h2>
+
+<p>Nos modelos HTML, podemos usar o que foi definido no cabeçalho da marcação como variáveis. Nós usamos a seguinte sintaxe:</p>
+
+<ol>
+<li><p>Built-ins:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{.var}}
+</code></pre>
+</blockquote></li>
+
+<li><p>Personalizadas:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ .Params.var }}
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Também podemos definir e acessar variáveis ​​criadas no próprio modelo:</p>
+
+<ol>
+<li><p>Definindo:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ $ myVar: = value }}
+</code></pre>
+</blockquote></li>
+
+<li><p>Acessando:</p>
+
+<blockquote>
+<pre><code>{{ $ myVar }}
+</code></pre>
+</blockquote></li>
+</ol>
+
+<p>Mais informações sobre variáveis, <a href="https://gohugo.io/variables/">clique aqui</a>.</p>
+
+<h2 id="funções">Funções</h2>
+
+<p>Podemos usar funções em HTML por meio da sintaxe:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ function params }}
+</code></pre>
+</blockquote>
+
+<p>Algumas funções: <code>truncate</code>, <code>add</code>, <code>sub</code>, <code>singularize</code>.</p>
+
+<p>Podemos executar iterações da seguinte maneira:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ range .array }}
+...
+{{ end }}
+</code></pre>
+</blockquote>
+
+<p>Mais informações sobre funções, <a href="https://gohugo.io/functions/">clique aqui</a>.</p>
+
+<h2 id="conditionals">Conditionals</h2>
+
+<p>Algumas operações que podemos usar são: <code>and</code>, <code>eq</code>, <code>lt</code>, <code>le</code>, <code>gt</code>, <code>ge</code>, <code>not</code>. A sintaxe é a seguinte:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ if params operation }}
+...
+{{ else if ... }}
+...
+{{ else }}
+...
+{{ end }}
+</code></pre>
+</blockquote>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p>Os parênteses podem ser usados ​​para precedência. Além disso, podemos usar condicionais em HTML.</p>
+</div>
+
+<h2 id="banco-de-dados">Banco de Dados</h2>
+
+<p>Usamos o diretório <code>data/</code> para depositar arquivos que servem como banco de dados. Esses arquivos podem ser YAML, TOML ou JSON. Neles, nós iteramos sobre seus dados da seguinte forma:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ range .Site.Data.File }}
+</code></pre>
+</blockquote>
+
+<h2 id="parciais">Parciais</h2>
+
+<p>Podemos modularizar o layout da seguinte forma:</p>
+
+<ol>
+<li>Criamos o diretório <code>layouts/partials/</code>;</li>
+<li>Crie o arquivo parcial;</li>
+<li>Injete templates em <code>layouts/_default/</code>.</li>
+</ol>
+
+<p>Em <code>partials/header.html</code>:</p>
+
+<blockquote>
+<pre><code class="language-markdown">&lt;h1&gt; {{ .Title }} &lt;/ h1&gt;
+...
+</code></pre>
+</blockquote>
+
+<p>Em <code>_default/single.html</code>:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ partial &quot;header&quot;. }}
+...
+</code></pre>
+</blockquote>
+
+<p>Também podemos manipular variáveis ​​personalizáveis:</p>
+
+<p>Em <code>partials/header.html</code>:</p>
+
+<blockquote>
+<pre><code class="language-markdown">&lt;h1&gt; {{ .myTitle }} &lt;/h1&gt;
+&lt;p&gt; {{ .myDate }} &lt;/ p&gt;
+</code></pre>
+</blockquote>
+
+<p>Em <code>_default/single.html</code>:</p>
+
+<blockquote>
+<pre><code class="language-markdown">{{ partial &quot;header&quot; (dict &quot;myTitle&quot; &quot;TITLE&quot; &quot;myDate&quot; &quot;DD / MM / YYYY&quot;) }}
+</code></pre>
+</blockquote>
+
+<h2 id="construindo-o-site">Construindo o Site</h2>
+
+<p>Para gerar o site, basta acessar a raiz do projeto e usar o seguinte comando no terminal: <code>hugo</code>.
+Um diretório <code>public/</code> será gerado, agora basta hospedá-lo em um servidor web.</p>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="http://localhost:1313/prolog/" title="Prolog e o Paradigma Lógico">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Prolog e o Paradigma Lógico
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'http:\/\/localhost:1313\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="http://localhost:1313/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+
