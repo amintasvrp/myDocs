@@ -164,7 +164,7 @@ Strings são arrays de caracteres.
     // junta duas listas em uma lista de pares (índice com índice)
     zip xs ys
 ````
-## Tipos de Dados Ordenáveis
+## Tipos Ordenáveis
 ### Definição
 ````
     // podemos definir um tipo ordenável no escopo da função

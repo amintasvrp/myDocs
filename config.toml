@@ -69,6 +69,11 @@ googleAnalytics = ""
 	url    = "haskell1/"
 	weight = 2
 
+[[menu.main]]
+	name   = "Haskell II"
+	url    = "haskell2/"
+	weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
