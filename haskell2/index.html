@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Haskell I: Introdução ao Paradigma Funcional - myDocs</title>
+    <title>Lambda Calculus, Tipos de Dados e Módulos em Haskell - myDocs</title>
     <meta name="generator" content="Hugo 0.49" />
 
     
     <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
     
-    <link rel="canonical" href="http://localhost:1313/haskell1/">
+    <link rel="canonical" href="http://localhost:1313/haskell2/">
     
     <meta name="author" content="Amintas Victor">
     
 
-    <meta property="og:url" content="http://localhost:1313/haskell1/">
+    <meta property="og:url" content="http://localhost:1313/haskell2/">
     <meta property="og:title" content="myDocs">
     <meta property="og:image" content="http://localhost:1313/images/logo.jpeg">
     <meta name="apple-mobile-web-app-title" content="myDocs">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Haskell I: Introdução ao Paradigma Funcional
+        Lambda Calculus, Tipos de Dados e Módulos em Haskell
       </div>
     </div>
 
@@ -200,14 +200,11 @@
 
 
 
-<a class="current" title="Haskell I" href="http://localhost:1313/haskell1/">
+<a  title="Haskell I" href="http://localhost:1313/haskell1/">
 	
 	Haskell I
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -221,11 +218,14 @@
 
 
 
-<a  title="Haskell II" href="http://localhost:1313/haskell2/">
+<a class="current" title="Haskell II" href="http://localhost:1313/haskell2/">
 	
 	Haskell II
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -322,205 +322,172 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Haskell I: Introdução ao Paradigma Funcional </h1>
+			<h1>Lambda Calculus, Tipos de Dados e Módulos em Haskell </h1>
 
 			
 
-<h2 id="básico">Básico</h2>
+<h2 id="lambda-calculus">Lambda Calculus</h2>
 
-<h3 id="operadores-básicos">Operadores Básicos</h3>
+<h3 id="conceito">Conceito</h3>
 
-<pre><code>    + - * / mod sqrt
+<p>Possui <strong>semântica</strong> de linguagens de programação. Surgiu na lógica matemática, baseada na Teoria das funções, a qual consiste em manipular funções de forma puramente sintática.</p>
+
+<p>Contribuições:
+1. Poder de representação, veículo de estudo de semântica de conceitos de linguagens de programação;
+2. Todas linguagens funcionais são vistas como variações do lambda calculus;
+3. Semântica denotacional usa conceitos do lambda calculus;
+4. Menor linguagem de programação universal existente: Uma regra de definição de função e uma regra de transformação (substituição).</p>
+
+<h3 id="sintaxe">Sintaxe</h3>
+
+<pre><code>&lt;expressão&gt; | &lt;variável&gt;                 : identificadores minúsculos
+            | &lt;constante&gt;                : objetos pré-definidos
+            | (&lt;expressão&gt; &lt;expressão&gt;)  : combinações
+            | (\&lt;variável&gt;.&lt;expressão&gt;)  : abstrações
 </code></pre>
 
-<h3 id="operadores-lógicos">Operadores Lógicos</h3>
+<h3 id="expressões-lambda-em-haskell">Expressões Lambda em Haskell</h3>
 
-<pre><code>    &amp;&amp; || not
+<pre><code>(\x -&gt; f x) y  ==  f y  
 </code></pre>
 
-<h3 id="operadores-relacionais">Operadores Relacionais</h3>
+<h3 id="recursões-em-expressões-lambda">Recursões em Expressões Lambda</h3>
 
-<pre><code>    &gt; &lt; &gt;= &lt;= == /=
+<p>Para tal, fazemos uso do <strong>Ponto Fixo</strong>, que é o ponto mapeado para ele mesmo pela função. Nem toda função possui ponto fixo, mas existem funções que podem ter mais de um ponto fixo.</p>
+
+<h3 id="combinador-de-ponto-fixo-em-haskell">Combinador de Ponto Fixo em Haskell</h3>
+
+<h4 id="implementação">Implementação</h4>
+
+<pre><code>fix :: (a -&gt; a) -&gt; a
+fix f = f (fix f)                -- lambda lifted
+
+-- alternativamente:
+
+fix' f = let x = f x in x        -- lambda dropped
 </code></pre>
 
-<h3 id="declarando-valores">Declarando Valores</h3>
+<h4 id="aplicação">Aplicação</h4>
 
-<pre><code>    x = a
+<pre><code>funcao x = fix funcao'
+    where   funcao' &lt;caso base&gt;
+            funcao' &lt;caso recursivo&gt;
+
+-- alternativamente:
+
+funcao = \x -&gt; if (&lt;caso base&gt;) then &lt;caso base&gt; else &lt;caso recursivo&gt;  
 </code></pre>
 
-<h3 id="comentários">Comentários</h3>
+<h2 id="tipos-de-dados">Tipos de Dados</h2>
 
-<pre><code>    -- linha comentada
-    {-
-    - bloco comentado  
-    -}
+<p>Provém representação de estruturas comuns da programação. As linguagens possuem tipos básicos, mas é desejável criar suas próprias estruturas de dados.</p>
+
+<h3 id="sintaxe-1">Sintaxe</h3>
+
+<pre><code>data NomeDoTipo tipoParam1 tipoParam 2 = NomeConstrutor tipoParam1 tipoParam 2
 </code></pre>
 
-<h2 id="funções">Funções</h2>
+<p>Múltiplos construtores: lidar com situações particulares de um tipo de dado.</p>
 
-<h3 id="aplicação">Aplicação</h3>
-
-<pre><code>    f x y == (f x) y == x 'f' y
+<pre><code>data NomeDoTipo tipoParam = Construtor1 | Construtor2 tipoParam
 </code></pre>
 
-<h3 id="expressões-condicionais">Expressões Condicionais</h3>
+<h3 id="tipos-de-dados-recursivos">Tipos de Dados Recursivos</h3>
 
-<pre><code>    nomeFuncao param = if cond then resultado1 else resultado2
+<pre><code>data List a = Nil | Cons a (List a) deriving (Eq,Show)
+data BinaryTree a = NIL | Node a (BinaryTree a) (BinaryTree a) deriving (Eq,Show)
 </code></pre>
 
-<h3 id="equações-guardadas">Equações Guardadas</h3>
+<h3 id="conjuntos-enumerados">Conjuntos Enumerados</h3>
 
-<pre><code>    nomeFuncao param | cond = resultado1
-                     | otherwise = resultado2
+<p>Tipos de Dados com finitos valores possíveis. Um exemplo clássico é o Color:</p>
+
+<pre><code>data Color
+= Red
+| Orange
+| Yellow
+| Green
+| Blue
+| Purple
+| White
+| Black
+| Custom Int Int Int -- R G B components
 </code></pre>
 
-<h3 id="expressões-case">Expressões Case</h3>
+<h3 id="sinônimos">Sinônimos</h3>
 
-<pre><code>    funcao xs = case expression of pattern1 -&gt; result1
-                               pattern2 -&gt; result2
+<p>Criação de novos tipos usando tipos pré-existentes, melhorando legibilidade.</p>
+
+<pre><code>type ID = Int
+type BadType = Int -&gt; BadType  -- Tipo Infinito
+type List3D a = [(a,a,a)]      -- Tipo Parametrizado
 </code></pre>
 
-<h3 id="definição-local">Definição local</h3>
+<h3 id="typeclasses">Typeclasses</h3>
 
-<pre><code>    // relacionamos expressões com variáveis, melhorando visibilidade e escopo locais
-    // (where)
-    funcao xs = ...
-      where xs = ...
-    // (let)
-    funcao xs = let &lt;bindings&gt; in &lt;expression&gt;
+<p>Definem interfaces genéricas com feições comuns (análogo aos serviços). Conceito análogo a Objetos em Programação Orientada a Objetos.</p>
+
+<pre><code>-- Caso Geral e Assinaturas
+-- Definição minimamente completa
+class Servico a where
+      metodo :: a -&gt; a -&gt; Int
+
+-- Caso Particular
+instance Servico bool where
+      metodo True = 1
+      metodo False = 0
 </code></pre>
 
-<h3 id="composição-de-funções">Composição de Funções</h3>
+<h4 id="built-in-typeclasses">Built-in Typeclasses</h4>
 
-<pre><code>    f (g xs) == (f . g) xs
-</code></pre>
-
-<h2 id="listas">Listas</h2>
-
-<h3 id="definição-recursiva">Definição Recursiva</h3>
-
-<pre><code>    array = []
-    array = head:array
-</code></pre>
-
-<h3 id="definição-funcional">Definição Funcional</h3>
-
-<pre><code>    arrayCompleto = (x:xs)
-    arraySemCabeca = (_:xs)
-    arraySemCauda = (x:_)
+<pre><code>deriving (Eq, Show, Ord, Read, Bounded...)
 </code></pre>
 
 <div class="admonition note">
 <p class="admonition-title">Lembre-se</p>
-<p>Strings são arrays de caracteres.</p>
+<p><p>Podemos usar typeclasses para adicionar contexto, como no exemplo abaixo:</p>
+
+<pre><code>isEquals :: Eq a =&gt; a -&gt; a -&gt; bool
+</code></pre>
+</p>
 </div>
 
-<h3 id="operadores">Operadores</h3>
+<h2 id="módulos">Módulos</h2>
 
-<pre><code>    // (cons) define uma lista
-    :
-    // (concatenação)                
-    ++
-    // (seleção) indexação
-    !!
-    // comparação a partir do primeiro        
-    &gt; &lt; &gt;= &lt;= == /=
+<p>Usados para particionar ou agrupar sub componentes do sistema, melhorando sua modularidade. São semelhantes a pacotes.</p>
+
+<h3 id="exportação">Exportação</h3>
+
+<pre><code>module Cards ( Tipo1(),                         -- sem construtores
+               Tipo2(Construtor1, Construtor2), -- alguns construtores
+               Tipo3(..),                       -- todos os construtores
+               funcao
+             )
+  where
+
+data Tipo1 = ...
+data Tipo2 = ...
+data Tipo3 = ...
+funcao :: ... -&gt; ...
+funcao = ...
 </code></pre>
 
-<h3 id="funções-básicas">Funções Básicas</h3>
+<h3 id="importação">Importação</h3>
 
-<pre><code>    // primeiro elemento
-    head xs
-    // exceto primeiro elemento
-    tail xs
-    // ultimo elemento
-    last xs
-    // exceto ultimo elemento
-    init xs
-    // tamanho
-    length xs
-    // verifica se é vazia
-    null xs
-    // inverte
-    reverse xs
-    // do início até k-ésima posição
-    take k xs
-    // da k-ésima posição até fim
-    drop k xs
-    // maior
-    maximum xs
-    // menor
-    minimum xs
-    // soma dos elementos
-    sum xs
-    // produto dos elementos
-    product xs
-    // verifica se x pertence a xs
-    elem x xs
+<h4 id="importando-pacote">Importando pacote</h4>
+
+<pre><code>import NomeModulo                   -- Tudo
+import NomeModulo(funcao)           -- Apenas funcao
+import NomeModulo hiding (funcao)   -- Tudo exceto funcao
+import qualified NomeModulo as m    -- Tudo, mas chamando NomeModulo de m
+import NomeModulo.funcao as f       -- Importação Hierárquica
 </code></pre>
 
-<h3 id="funções-para-definição-de-listas">Funções para Definição de Listas</h3>
+<h4 id="utilizando-importações">Utilizando importações</h4>
 
-<pre><code>    // (range) lista de k até m
-    [k..m]
-    // (range) lista de k até m seguindo sequência k,p
-    [k,p..m]
-    // (range) lista infinita
-    [k..]
-    // circulariza infinitamente
-    cycle xs
-    // produzir lista infinita com um elemento
-    repeat x
-    // lista de tamanho k com elementos x   
-    replicate k x
-</code></pre>
+<pre><code>NomeModulo.funcao
+NomeModulo.Tipo
 
-<h3 id="outras-funções">Outras Funções</h3>
-
-<pre><code>    // aplicar função f a todos os elementos da lista xs
-    map f xs
-    // lista com elementos que satrisfazem condição
-    filter cond xs
-    // na lista xs, substitui o cons(:) pela função f e a lista vazia pelo valor inicial x
-    // associativo à direita (não trabalha com listas infinitas)
-    foldr f x xs
-    // associativo à esquerda
-    foldl f x xs  
-</code></pre>
-
-<h3 id="compreensão-de-listas">Compreensão de Listas</h3>
-
-<pre><code>    [ x | x &lt;- array, cond]
-</code></pre>
-
-<h2 id="tuplas">Tuplas</h2>
-
-<h3 id="definição">Definição</h3>
-
-<pre><code>    (a,b)
-</code></pre>
-
-<h3 id="funções-1">Funções</h3>
-
-<pre><code>    // primeiro Elemento
-    fst (a,b) == a
-    // segundo Elemento
-    snd (a,b) == b
-    // junta duas listas em uma lista de pares (índice com índice)
-    zip xs ys
-</code></pre>
-
-<h2 id="tipos-ordenáveis">Tipos Ordenáveis</h2>
-
-<h3 id="definição-1">Definição</h3>
-
-<pre><code>    // podemos definir um tipo ordenável no escopo da função
-    funcao :: (Ord a)
-    // podemos retornar um Ordering
-    funcao :: Ordering
-    GT // maior que
-    EQ // igual
-    LT // menor que
 </code></pre>
 
 
@@ -532,34 +499,18 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="http://localhost:1313/c/" title="C: Programação Imperativa em Baixo Nível">
-        <span class="direction">
-          Anterior
-        </span>
-        <div class="page">
-          <div class="button button-previous" role="button" aria-label="Previous">
-            <i class="icon icon-back"></i>
-          </div>
-          <div class="stretch">
-            <div class="title">
-              C: Programação Imperativa em Baixo Nível
-            </div>
-          </div>
-        </div>
-      </a>
-  
   </div>
 
   <div class="next">
   
-      <a href="http://localhost:1313/linux1/" title="Linux I: Conhecendo e Usando o Terminal">
+      <a href="http://localhost:1313/c/" title="C: Programação Imperativa em Baixo Nível">
         <span class="direction">
           Próximo
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Linux I: Conhecendo e Usando o Terminal
+              C: Programação Imperativa em Baixo Nível
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
