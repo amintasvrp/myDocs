@@ -1,5 +1,5 @@
 ---
-title: "SQL e os Banco de Dados Relacionais"
+title: "SQL e os Bancos de Dados Relacionais"
 date: 2018-06-17T23:59:54-03:00
 author: "Amintas Victor"
 type: "post"
