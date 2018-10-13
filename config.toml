@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313/"
+baseurl = "https://amintasvrp.github.io/myDocs/"
 languageCode = "en-us"
 title = "myDocs"
 theme = "hugo-material-docs"
@@ -45,8 +45,13 @@ googleAnalytics = ""
 	email   = "amintas.pereira@ccc.ufcg.edu.br"
 
 [[menu.main]]
-	name   = "Linux I"
-	url    = "linux1/"
+	name   = "C"
+	url    = "c/"
+	weight = 2
+
+[[menu.main]]
+	name   = "Haskell"
+	url    = "haskell/"
 	weight = 2
 
 [[menu.main]]
@@ -55,8 +60,8 @@ googleAnalytics = ""
 	weight = 2
 
 [[menu.main]]
-	name   = "C"
-	url    = "c/"
+	name   = "Linux I"
+	url    = "linux1/"
 	weight = 2
 
 [[menu.main]]
@@ -65,13 +70,8 @@ googleAnalytics = ""
 	weight = 2
 
 [[menu.main]]
-	name   = "Haskell I"
-	url    = "haskell1/"
-	weight = 2
-
-[[menu.main]]
-	name   = "Haskell II"
-	url    = "haskell2/"
+	name   = "SQL"
+	url    = "sql/"
 	weight = 2
 
 [blackfriday]

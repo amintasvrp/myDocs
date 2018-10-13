@@ -1,6 +1,6 @@
 ---
 title: "C: Programação Imperativa em Baixo Nível"
-date: 2018-08-21T16:50:59-03:00
+date: 2018-06-17T23:59:59-03:00
 author: "Amintas Victor"
 type: "post"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Hugo: Um Gerador de Sites Estáticos"
-date: 2018-08-05
+date: 2018-06-17T23:59:57-03:00
 author: "Amintas Victor"
 type: "post"
 ---
