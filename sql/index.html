@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>SQL e os Banco de Dados Relacionais - myDocs</title>
+    <meta name="generator" content="Hugo 0.49.2" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/sql/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/sql/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        SQL e os Banco de Dados Relacionais
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux I" href="https://amintasvrp.github.io/myDocs/linux1/">
+	
+	Linux I
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>SQL e os Banco de Dados Relacionais </h1>
+
+			
+
+<h2 id="introdução-a-banco-de-dados">Introdução a Banco de Dados</h2>
+
+<h3 id="o-que-é-um-banco-de-dados">O que é um Banco de Dados ?</h3>
+
+<p>Se trata de qualquer coleção de dados que possui relação entre si. Bancos de dados podem ser armazenados de diversas formas, sendo mais úteis (potencialmente em larga escala) e seguros se forem guardados em computadores.</p>
+
+<h3 id="sgbd-ou-dbms">SGBD ou DBMS</h3>
+
+<p>Um Sistema de Gerenciamento de Banco de Dados é um software que auxilia o usuário a criar e gerenciar um BD. Dentre suas contribuições, estão: melhorar manuseio de dados em massa; segurança dos dados; backups; importação e exportação de dados; concorrência e interagir com outras aplicações.</p>
+
+<h3 id="crud">CRUD</h3>
+
+<p>Esta sigla representa as quatro principais operações de manipulação de dados em um banco: Criar, Ler, Atualizar e Remover.</p>
+
+<h3 id="tipos-de-banco-de-dados">Tipos de Banco de Dados</h3>
+
+<ul>
+<li><p>Banco de Dados Relacional (SQL):</p>
+
+<ul>
+<li>Os dados estão dispostos em uma ou mais tabelas tradicionais, formadas por colunas e linhas, estas últimas identificadas por chave.</li>
+<li>Sistema de Gerenciamento de Banco de Dados Relacional (RDBMS): mySQL, Oracle, postgreSQL, mariaDB, etc.</li>
+<li>Structured Query Language (SQL): linguagem padrão para interação com RDBMS. Realiza tanto operações CRUD quanto de ordem administrativa, como segurança e backup. Define tabelas e estruturas. Nem sempre portável sem modificações (mesmos conceitos, implementações diferentes).</li>
+</ul></li>
+
+<li><p>Banco de Dados Não-Relacional (noSQL - not just SQL):</p>
+
+<ul>
+<li>Os dados estão organizados de outras formas: dicionários, documentos (como JSON e XML), gráficos, grafos, tabelas flexíveis, etc.</li>
+<li>Sistema de Gerenciamento de Banco de Dados Não-Relacional (RDBMS): mongoDB, dynamoDB, Apache Cassandra, Firebase, etc.</li>
+<li>Implementação Específica: Sem linguagem padrão, cada um com sua própria.</li>
+</ul></li>
+</ul>
+
+<h3 id="consultas-queries">Consultas (Queries)</h3>
+
+<p>Requisições feitas ao SGBD por uma informação específica.  Conforme o esquema (estrutura do BD) se torna mais complexo, as requisições também o serão. Mesmo assim o objetivo é o mesmo: obter exatamente os dados que você precisa.</p>
+
+<h2 id="tabelas-e-chaves">Tabelas e Chaves</h2>
+
+<ul>
+<li>Coluna: define atributo simples</li>
+<li>Linha: define uma tupla (análogo a objeto)</li>
+
+<li><p>Chave primária: atributo que identifica unicamente uma tupla</p>
+
+<ul>
+<li>Chave substituta: chave primária que não é mapeada (tem sentido) para algo no mundo real</li>
+<li>Chave natural: chave primária que é mapeada (tem sentido) para algo no mundo real</li>
+<li>Chave composta: chave primária formada por mais de um atributo<br /></li>
+</ul></li>
+
+<li><p>Chave estrangeira: chave primária de outra tabela para mapeamento</p></li>
+</ul>
+
+<h2 id="básico">Básico</h2>
+
+<p>SQL na realidade é uma linguagem híbrida, pois possui 4 tipos em uma:</p>
+
+<ul>
+<li>Data Query Language (DQL): consultar informação que já está armazenada</li>
+<li>Data Definition Language (DDL): definir esquemas</li>
+<li>Data Control Language (DCL): controlar acesso de usuários aos dados</li>
+<li>Data Manipulation Language (DML): inserir, atualizar e remover dados</li>
+</ul>
+
+<h2 id="instalando-e-criando-bd-no-linux">Instalando e Criando BD no Linux</h2>
+
+<p>Utilizamos os comando abaixo para realizar a instalação do mySQL em ambiente linux (Ubuntu e derivados). Note que ao utilizarmos os último comando, faremos configurações de segurança, que variam ao gosto e necessidade do programador.</p>
+
+<pre><code class="language-bash">sudo apt update
+sudo apt install mysql-server
+mysql_secure_installation
+</code></pre>
+
+<p>Acessamos o mySQL pelo terminal utilizando o seguinte comando:</p>
+
+<pre><code class="language-bash">mysql -u root -p
+</code></pre>
+
+<p>De forma opcional, podemos mudar a senha padrão utilizada com o comando:</p>
+
+<pre><code class="language-sql">ALTER USER 'root'@'localhost' IDENTIFIED BY 'senha'
+</code></pre>
+
+<p>Criamos o BD com o comando:</p>
+
+<pre><code class="language-sql">create database nome_do_bd
+</code></pre>
+
+<p>Com o mySQL instalado e nosso primeiro BD criado. Podemos realizar as manipulações via <strong>terminal</strong>, após usar o comando:</p>
+
+<pre><code class="language-sql">use nome_do_bd
+</code></pre>
+
+<p>Podemos ainda utilizar uma <strong>IDE</strong>, como o PopSQL.</p>
+
+<h2 id="tipos-de-dados">Tipos de Dados</h2>
+
+<pre><code class="language-sql">
+INT                           -- Números Inteiros
+DECIMAL(TOTAL,DECIMAIS)       -- Números Decimais
+VARCHAR(T)                    -- String de tamanho máximo T
+BLOB                          -- Binary Large Object (armazenar grandes dados)
+DATE                          -- 'YYYY-MM-DD'
+TIMESTAMP                     -- 'YYYY-MM-DD HH:MM:SS' (registro de eventos)
+</code></pre>
+
+<h2 id="criando-tabelas">Criando Tabelas</h2>
+
+<pre><code class="language-sql">CREATE TABLE nome_da_tabela (
+  id INT PRIMARY KEY,
+  att1 VARCHAR(40),
+  att2 DECIMAL(10,3)
+);
+-- Quando a chave primária é simples
+
+CREATE TABLE nome_da_tabela (
+  id1 INT,
+  id2 INT,  
+  att1 VARCHAR(40),
+  att2 DECIMAL(10,3),
+  PRIMARY KEY(id1,id2)  
+);
+-- Quando a chave primária é chave composta
+
+CREATE TABLE nome_da_tabela (
+  id1 INT PRIMARY KEY,
+  att1 VARCHAR(40),
+  att2 DECIMAL(10,3),
+  FOREIGN KEY(id2) REFERENCES tabela_referenciada(id1)
+);
+-- Quando a tabela possui chave estrangeira
+</code></pre>
+
+<h2 id="descrevendo-tabelas">Descrevendo Tabelas</h2>
+
+<pre><code class="language-sql">DESCRIBE nome_da_tabela;
+</code></pre>
+
+<h2 id="removendo-tabelas">Removendo Tabelas</h2>
+
+<pre><code class="language-sql">DROP TABLE nome_da_tabela;
+</code></pre>
+
+<h2 id="alterando-tabelas">Alterando Tabelas</h2>
+
+<h3 id="adicionando-colunas">Adicionando Colunas</h3>
+
+<pre><code class="language-sql">ALTER TABLE nome_da_tabela ADD att3 TIPO;
+-- Adicionando atributo simples
+
+ALTER TABLE nome_da_tabela
+ADD FOREIGN KEY(id2)
+REFERENCES tabela_referenciada(id1);
+-- Adicionando chave estrangeira
+</code></pre>
+
+<h3 id="removendo-colunas">Removendo Colunas</h3>
+
+<pre><code class="language-sql">ALTER TABLE nome_da_tabela DROP COLUMN att3;
+</code></pre>
+
+<h2 id="inserindo-dados">Inserindo Dados</h2>
+
+<pre><code class="language-sql">INSERT INTO nome_da_tabela VALUES(1, 'Atributo', 1234567.890);
+-- Colocamos todos os valores em ordem que foram definidos
+
+INSERT INTO nome_da_tabela(id1, att1) VALUES(3, 'Atributo');
+-- Neste último, podemos omitir valores e usar NULL ou valores default no lugar
+</code></pre>
+
+<h2 id="restrições">Restrições</h2>
+
+<pre><code class="language-sql">CREATE TABLE nome_da_tabela (
+  id1 INT PRIMARY KEY AUTO_INCREMENT,   -- Incrementar automaticamente
+  id2 INT UNIQUE,                       -- Valor único       
+  att1 VARCHAR(20) NOT NULL,            -- Impede valores NULL
+  att2 VARCHAR(20) DEFAULT 'padrao'     -- Definir valor padrão
+);
+</code></pre>
+
+<h2 id="removendo-dados">Removendo Dados</h2>
+
+<pre><code class="language-sql">DELETE FROM nome_da_tabela;                      
+-- Limpar tabela
+
+DELETE FROM nome_da_tabela
+WHERE att1 = 'Valor1' AND att2 = 'Valor2';
+-- Remover linhas que atendem determinados requisitos
+</code></pre>
+
+<h2 id="atualizando-dados">Atualizando Dados</h2>
+
+<pre><code class="language-sql">UPDATE nome_da_tabela
+SET att1 = 'Valor1';
+-- Editar todos os valores da coluna
+
+UPDATE nome_da_tabela
+SET att2 = 'Valor1'
+WHERE att1 = 'Valor1' AND att2 = 'Valor2';
+-- Editar os valores da coluna nas linhas que atendem determinados requisitos
+</code></pre>
+
+<h2 id="consultas-básicas">Consultas Básicas</h2>
+
+<pre><code class="language-sql">SELECT *
+FROM nome_da_tabela;
+-- Obter tabela completa
+
+SELECT nome_da_tabela.id, nome_da_tabela.att1
+FROM nome_da_tabela;
+-- Obter algumas colunas de uma tabela
+
+SELECT *
+FROM nome_da_tabela
+WHERE att1 = 'Valor1' OR (id1 &gt; 10 AND att2 = 'Valor2');
+-- Obter algumas linhas de uma tabela
+
+SELECT *
+from nome_da_tabela
+ORDER BY att1 ASC/DESC;
+-- Obter tabela completa ordenados por 'att1', de forma ascendente/descendente
+
+SELECT *
+from nome_da_tabela
+ORDER BY att1, att2;
+-- Obter tabela completa ordenados por 'att1', e por 'att2'
+
+SELECT *
+from nome_da_tabela
+LIMIT X;
+-- Obter as primeiras X linhas de uma tabela
+
+SELECT nome_da_tabela.id AS id1, nome_da_tabela.att AS att1
+FROM nome_da_tabela;
+-- Obter algumas colunas, renomeadas, de uma tabela
+
+SELECT DISCINCT att1
+FROM nome_da_tabela;
+-- Obter os diferentes valores de 'att1' de uma tabela
+
+SELECT *
+FROM nome_da_tabela
+WHERE id1 BETWEEN 10 AND 100;
+-- Obter as linhas de uma tabela com 'att1' entre dois valores
+
+SELECT *
+FROM nome_da_tabela
+WHERE att1 IN ('Valor1', 'Valor2', 'Valor3', 'Valor4');
+-- Obter as linhas de uma tabela com 'att1' contido em uma lista
+</code></pre>
+
+<h2 id="funções">Funções</h2>
+
+<pre><code class="language-sql">
+SELECT COUNT(id)
+FROM nome_da_tabela;
+-- Quantidade de 'id's em uma tabela
+
+SELECT AVG(att1)
+FROM nome_da_tabela;
+-- Média dos valores de 'att1' de uma tabela
+
+SELECT SUM(att1)
+FROM nome_da_tabela;
+-- Soma dos valores de 'att1' de uma tabela
+
+SELECT COUNT(att1), att1
+FROM nome_da_tabela
+GROUP BY att1;
+-- Para cada valor de 'att1', quantas linhas o possui
+</code></pre>
+
+<h2 id="curingas">Curingas</h2>
+
+<pre><code class="language-sql">
+-- % = n caracteres
+-- _ = um caractere
+
+SELECT *
+FROM nome_da_tabela
+WHERE att1 LIKE 'Valor%';
+-- Obter linhas onde 'att1' é um 'Valor'
+
+SELECT *
+FROM nome_da_tabela
+WHERE att1 LIKE 'Valor_3';
+-- Obter linhas onde 'att1' é um 'Valor' terminado em '3'
+</code></pre>
+
+<h2 id="união">União</h2>
+
+<pre><code class="language-sql">SELECT tabela1.id AS IDs_das_Tabelas
+FROM tabela1
+UNION
+SELECT tabela2.id
+FROM tabela2;
+-- Obter os IDs tanto da tabela 1 quanto da tabela 2
+-- Obs.: Os tipos das colunas das tabelas devem ser os mesmos
+</code></pre>
+
+<h2 id="junção-de-produto-cartesiano">Junção de Produto Cartesiano</h2>
+
+<h3 id="junções-internas-inner-join">Junções Internas (Inner Join)</h3>
+
+<pre><code class="language-sql">SELECT tabela1.att1, tabela2.att2
+FROM tabela1
+JOIN tabela2    
+ON tabela1.id1 = tabela2.id2;
+-- Obter apenas os att1 e os att2 onde id1 é igual ao id2
+
+SELECT tabela1.att1, tabela2.att2
+FROM tabela1
+JOIN tabela2    
+ON tabela1.id = tabela2.id;
+-- Nesse caso, temos uma Junção Natural (Natural Join)
+</code></pre>
+
+<h3 id="junções-externas-outer-join">Junções Externas (Outer Join)</h3>
+
+<pre><code class="language-sql">SELECT tabela1.att1, tabela2.att2
+FROM tabela1
+LEFT JOIN tabela2    
+ON tabela1.id1 = tabela2.id2;
+-- Obter todos os att1 e os att2 onde id1 é igual ao id2
+-- Nesse caso, temos uma Junção Externa a Esquerda (Left Outer Join)
+
+SELECT tabela1.att1, tabela2.att2
+FROM tabela1
+RIGHT JOIN tabela2    
+ON tabela1.id1 = tabela2.id2;
+-- Obter todos os att2 e os att1 onde id1 é igual ao id2
+-- Nesse caso, temos uma Junção Externa a Direita (Right Outer Join)
+
+SELECT tabela1.att1, tabela2.att2
+FROM tabela1
+LEFT JOIN tabela2;
+-- Obter todos os att2 e todos os att1, combinados onde id1 é igual ao id2
+-- Nesse caso, temos uma Junção Externa Completa (Full Outer Join)
+</code></pre>
+
+<h2 id="consultas-aninhadas">Consultas Aninhadas</h2>
+
+<pre><code class="language-sql">
+SELECT tabela1.att1
+FROM tabela1
+WHERE tabela1.id1 IN (SELECT tabela2.id1
+                          FROM tabela2
+                          WHERE tabela2.att2 = 'Valor5');
+-- Obter os 'att1' que estão relacionados aos 'att2' iguais a 'Valor5'
+</code></pre>
+
+<h2 id="ao-deletar">Ao Deletar</h2>
+
+<p>Trabalhando com esquemas, temos várias tabelas correlacionadas através de chaves estrangeiras.  Quando removemos uma linha que referencia outras, devemos informar, através de DDL, qual ação será tomada:</p>
+
+<pre><code class="language-sql">CREATE TABLE tabela1 (
+  id1 INT PRIMARY KEY,
+  att1 VARCHAR(40),
+  att2 DECIMAL(10,3),
+  FOREIGN KEY(id2) REFERENCES tabela2(id) ON DELETE SET NULL
+);
+-- Atualizar como NULL quando 'id' for removido
+
+CREATE TABLE tabela1 (
+  id1 INT PRIMARY KEY,
+  att1 VARCHAR(40),
+  att2 DECIMAL(10,3),
+  FOREIGN KEY(id2) REFERENCES tabela2(id) ON DELETE CASCADE
+);
+-- Remover a linha quando 'id' for removido
+</code></pre>
+
+<h2 id="gatilhos">Gatilhos</h2>
+
+<pre><code class="language-sql">DELIMITER $$
+CREATE
+    TRIGGER nome_gatilho BEFORE/AFTER INSERT/UPDATE/DELETE
+    ON nome_da_tabela
+    FOR EACH ROW BEGIN
+    	acao;
+    	-- Corpo do gatilho, aplicado para toda linha inserida/atualizada/removida
+ 		-- Nos referimos a novas linhas como NEW
+    END$$
+DELIMITER ;
+-- Gatilho simples
+
+DELIMITER $$
+CREATE
+    TRIGGER nome_gatilho BEFORE/AFTER INSERT/UPDATE/DELETE
+    ON nome_da_tabela
+    FOR EACH ROW BEGIN
+         IF cond1 THEN
+               acao1;
+         ELSEIF cond2 THEN
+               acao2;
+         ELSE
+               acao3;
+         END IF;
+    END$$
+DELIMITER ;
+-- Gatilho com comando condicional
+
+DROP TRIGGER nome_gatilho;
+-- Remover gatilho
+</code></pre>
+
+<h2 id="modelo-er">Modelo ER</h2>
+
+<p>Consiste em um diagrama que tem como objetivo intermediar a transformação do modelo do BD em liguagem natural para a implementação propriamente dita. Neste tipo de diagrama utilizamos as seguintes estruturas:</p>
+
+<ul>
+<li>Entidade: objeto que queremos modelar e armazenar suas informações</li>
+<li>Atributo: parte específica de informação sobre uma entidade</li>
+<li>Chave primária: atributo que identifica exclusivamente uma entrada na tabela do BD</li>
+<li>Atributo composto: atributo que pode ser quebrado em subatributos</li>
+<li>Atributo multivalorado: um atributo que pode assumir mais de um valor ao mesmo tempo</li>
+<li>Atributos derivados: atributos que podem ser derivados de outros atributos</li>
+<li>Relacionamento: define uma relação entre duas entidades. Pode possuir elementos como:
+
+<ul>
+<li>Atributos do Relacionamento</li>
+<li>Cardinalidade: número de instâncias de uma entidade que participam de um relacionamento</li>
+<li>Um para um (1:1)</li>
+<li>Um para muitos (1:N)</li>
+<li>Muitos para muitos (N:M)</li>
+</ul></li>
+<li>Participação:
+
+<ul>
+<li>Total: todos os membros devem participar do relacionamento</li>
+<li>Parcial: nem todos os membros precisam participar do relacionamento</li>
+</ul></li>
+<li>Entidade fraca: uma entidade que não pode ser unicamente identificada por si só, dependendo de outra entidade (chamada de entidade forte) para existir</li>
+<li>Relacionamento identificador: um relacionamento que serve para identificar unicamente uma entidade fraca</li>
+</ul>
+
+<p><img src="http://www.mikedane.com/databases/sql/erd-template.png" alt="A template for an ER Diagram" /></p>
+
+<p>Após obtermos o Diagrama ER, basta realizarmos o mapeamento para o modelo de implementação</p>
+
+<h3 id="convertendo-diagramas-er-para-esquemas">Convertendo Diagramas ER para Esquemas</h3>
+
+<ol>
+<li>Mapeando entidades:
+
+<ol>
+<li>Regulares: para cada entidade regular criamos uma relação (tabela) que inclui todos os atributos simples da entidade regular</li>
+<li>Fracas: para cada entidade fraca criamos uma relação (tabela) que inclui todos os atributos simples da entidade fraca. A chave primária da tabela é formada pela chave primária da entidade fraca e pela chave primária da entidade forte</li>
+</ol></li>
+<li>Mapeando relacionamentos:
+
+<ol>
+<li>Um para um: incluir a chave primária de quem tem participação parcial na tabela de quem tem participação total, como chave estrangeira</li>
+<li>Um para muitos: incluir a chave primária de quem está no &ldquo;lado um&rdquo; na tabela de quem está no &ldquo;lado muitos&rdquo;, como chave estrangeira</li>
+<li>Muitos para muitos: criamos uma nova tabela, onde a chave primária é formada pelas chaves primárias das entidades envolvidas, além de incluir os atributos do relacionamento</li>
+</ol></li>
+</ol>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://amintasvrp.github.io/myDocs/prolog/" title="Prolog e o Paradigma Lógico">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Prolog e o Paradigma Lógico
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+
