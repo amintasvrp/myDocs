@@ -9,8 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Haskell e o Paradigma Funcional - myDocs</title>
-    <meta name="generator" content="Hugo 0.49.2" />
+    <title>Haskell I: Introdução ao Paradigma Funcional - myDocs</title>
+    <meta name="generator" content="Hugo 0.51" />
 
     
     <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Haskell e o Paradigma Funcional
+        Haskell I: Introdução ao Paradigma Funcional
       </div>
     </div>
 
@@ -200,6 +200,24 @@
 
 
 
+<a  title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
 <a class="current" title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
 	
 	Haskell
@@ -239,9 +257,9 @@
 
 
 
-<a  title="Linux I" href="https://amintasvrp.github.io/myDocs/linux1/">
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
 	
-	Linux I
+	Linux
 </a>
 
 
@@ -322,7 +340,7 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Haskell e o Paradigma Funcional </h1>
+			<h1>Haskell I: Introdução ao Paradigma Funcional </h1>
 
 			
 
@@ -382,11 +400,11 @@
 
 <h3 id="definição-local">Definição local</h3>
 
-<pre><code>    // relacionamos expressões com variáveis, melhorando visibilidade e escopo locais
-    // (where)
+<pre><code>    -- relacionamos expressões com variáveis, melhorando visibilidade e escopo locais
+    -- (where)
     funcao xs = ...
       where xs = ...
-    // (let)
+    -- (let)
     funcao xs = let &lt;bindings&gt; in &lt;expression&gt;
 </code></pre>
 
@@ -417,74 +435,74 @@
 
 <h3 id="operadores">Operadores</h3>
 
-<pre><code>    // (cons) define uma lista
+<pre><code>    -- (cons) define uma lista
     :
-    // (concatenação)                
+    -- (concatenação)                
     ++
-    // (seleção) indexação
+    -- (seleção) indexação
     !!
-    // comparação a partir do primeiro        
+    -- comparação a partir do primeiro        
     &gt; &lt; &gt;= &lt;= == /=
 </code></pre>
 
 <h3 id="funções-básicas">Funções Básicas</h3>
 
-<pre><code>    // primeiro elemento
+<pre><code>    -- primeiro elemento
     head xs
-    // exceto primeiro elemento
+    -- exceto primeiro elemento
     tail xs
-    // ultimo elemento
+    -- ultimo elemento
     last xs
-    // exceto ultimo elemento
+    -- exceto ultimo elemento
     init xs
-    // tamanho
+    -- tamanho
     length xs
-    // verifica se é vazia
+    -- verifica se é vazia
     null xs
-    // inverte
+    -- inverte
     reverse xs
-    // do início até k-ésima posição
+    -- do início até k-ésima posição
     take k xs
-    // da k-ésima posição até fim
+    -- da k-ésima posição até fim
     drop k xs
-    // maior
+    -- maior
     maximum xs
-    // menor
+    -- menor
     minimum xs
-    // soma dos elementos
+    -- soma dos elementos
     sum xs
-    // produto dos elementos
+    -- produto dos elementos
     product xs
-    // verifica se x pertence a xs
+    -- verifica se x pertence a xs
     elem x xs
 </code></pre>
 
 <h3 id="funções-para-definição-de-listas">Funções para Definição de Listas</h3>
 
-<pre><code>    // (range) lista de k até m
+<pre><code>    -- (range) lista de k até m
     [k..m]
-    // (range) lista de k até m seguindo sequência k,p
+    -- (range) lista de k até m seguindo sequência k,p
     [k,p..m]
-    // (range) lista infinita
+    -- (range) lista infinita
     [k..]
-    // circulariza infinitamente
+    -- circulariza infinitamente
     cycle xs
-    // produzir lista infinita com um elemento
+    -- produzir lista infinita com um elemento
     repeat x
-    // lista de tamanho k com elementos x   
+    -- lista de tamanho k com elementos x   
     replicate k x
 </code></pre>
 
 <h3 id="outras-funções">Outras Funções</h3>
 
-<pre><code>    // aplicar função f a todos os elementos da lista xs
+<pre><code>    -- aplicar função f a todos os elementos da lista xs
     map f xs
-    // lista com elementos que satrisfazem condição
+    -- lista com elementos que satrisfazem condição
     filter cond xs
-    // na lista xs, substitui o cons(:) pela função f e a lista vazia pelo valor inicial x
-    // associativo à direita (não trabalha com listas infinitas)
+    -- na lista xs, substitui o cons(:) pela função f e a lista vazia pelo valor inicial x
+    -- associativo à direita (não trabalha com listas infinitas)
     foldr f x xs
-    // associativo à esquerda
+    -- associativo à esquerda
     foldl f x xs  
 </code></pre>
 
@@ -502,11 +520,11 @@
 
 <h3 id="funções-1">Funções</h3>
 
-<pre><code>    // primeiro Elemento
+<pre><code>    -- primeiro Elemento
     fst (a,b) == a
-    // segundo Elemento
+    -- segundo Elemento
     snd (a,b) == b
-    // junta duas listas em uma lista de pares (índice com índice)
+    -- junta duas listas em uma lista de pares (índice com índice)
     zip xs ys
 </code></pre>
 
@@ -514,13 +532,13 @@
 
 <h3 id="definição-1">Definição</h3>
 
-<pre><code>    // podemos definir um tipo ordenável no escopo da função
+<pre><code>    -- podemos definir um tipo ordenável no escopo da função
     funcao :: (Ord a)
-    // podemos retornar um Ordering
+    -- podemos retornar um Ordering
     funcao :: Ordering
-    GT // maior que
-    EQ // igual
-    LT // menor que
+    GT -- maior que
+    EQ -- igual
+    LT -- menor que
 </code></pre>
 
 <h2 id="lambda-calculus">Lambda Calculus</h2>
@@ -620,7 +638,7 @@ type BadType = Int -&gt; BadType  -- Tipo Infinito
 type List3D a = [(a,a,a)]      -- Tipo Parametrizado
 </code></pre>
 
-<h3 id="typeclasses">Typeclasses</h3>
+<h3 id="classes-typeclasses">Classes (Typeclasses)</h3>
 
 <p>Definem interfaces genéricas com feições comuns (análogo aos serviços). Conceito análogo a Objetos em Programação Orientada a Objetos.</p>
 
@@ -635,7 +653,7 @@ instance Servico bool where
       metodo False = 0
 </code></pre>
 
-<h4 id="built-in-typeclasses">Built-in Typeclasses</h4>
+<h4 id="classes-padrão-built-in-typeclasses">Classes Padrão (Built-in Typeclasses)</h4>
 
 <pre><code>deriving (Eq, Show, Ord, Read, Bounded...)
 </code></pre>
@@ -671,20 +689,159 @@ funcao = ...
 
 <h3 id="importação">Importação</h3>
 
-<h4 id="importando-pacote">Importando pacote</h4>
+<h4 id="importando-pacotes">Importando pacotes</h4>
 
 <pre><code>import NomeModulo                   -- Tudo
 import NomeModulo(funcao)           -- Apenas funcao
 import NomeModulo hiding (funcao)   -- Tudo exceto funcao
 import qualified NomeModulo as m    -- Tudo, mas chamando NomeModulo de m
-import NomeModulo.funcao as f       -- Importação Hierárquica
+import Pacote.Modulo as m           -- Importação Hierárquica
 </code></pre>
 
 <h4 id="utilizando-importações">Utilizando importações</h4>
 
 <pre><code>NomeModulo.funcao
 NomeModulo.Tipo
+</code></pre>
 
+<h2 id="entrada-e-saída-io">Entrada e Saída (IO)</h2>
+
+<pre><code>-- Main: ação IO com tipo IO(). Todo programa Haskell que precisa fazer IO começa sua execução com essa ação
+-- Do: forma conveniente de definir uma sequencia de ações
+
+main :: IO()
+main = do
+  -- Código IO
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Lembre-se</p>
+<p><p>A função <strong>read</strong> pode nos ajudar a converter tipos, o que é bastante útil quando estamos lidando com entrada e saída:</p>
+
+<pre><code>read a :: (Read tipo) =&gt; tipo
+</code></pre>
+</p>
+</div>
+
+<p>Segue adiante o básico que é fornecido pela biblioteca IO ao utilizarmos <code>import IO</code>:</p>
+
+<pre><code>data IOMode = ReadMode | WriteMode| AppendMode | ReadWriteMode
+type FilePath = String
+
+-- Read
+openFile :: FilePath -&gt; IOMode -&gt; IO Handle
+hClose :: Handle -&gt; IO ()
+hIsEOF :: Handle -&gt; IO Bool
+hGetChar :: Handle -&gt; IO Char
+hGetLine :: Handle -&gt; IO String
+hGetContents :: Handle -&gt; IO String
+getChar :: IO Char                                    -- Obter caractere da entrada
+getLine :: IO String                                  -- Obter linha da entrada
+getContents :: IO String
+
+-- Write
+hPutChar :: Handle -&gt; Char -&gt; IO ()
+hPutStr :: Handle -&gt; String -&gt; IO ()
+hPutStrLn :: Handle -&gt; String -&gt; IO ()
+putChar :: Char -&gt; IO ()
+putStr :: String -&gt; IO ()                              -- Printar linha
+putStrLn :: String -&gt; IO ()                            -- Printar e pular linha
+readFile :: FilePath -&gt; IO String
+writeFile :: FilePath -&gt; String -&gt; IO ()
+</code></pre>
+
+<h2 id="manipulação-de-erros">Manipulação de Erros</h2>
+
+<h3 id="pura">Pura</h3>
+
+<pre><code>-- Maybe
+data Maybe a = Just a | Nothing deriving (Eq, Ord)
+
+-- Either
+data Either a b = Left a | Right b deriving (Eq, Ord, Read, Show)
+</code></pre>
+
+<h3 id="exceções">Exceções</h3>
+
+<pre><code>-- Retorna um IO() ou a mensagem de uma exceção
+try :: Exception e =&gt; IO a -&gt; IO (Either e a)
+
+-- Permite realizar uma ação quando acontece exceção
+handle :: Exception e =&gt; (e -&gt; IO a) -&gt; IO a -&gt; IO a
+
+-- Permite levantar exceções
+throwIO :: Exception e =&gt; e -&gt; IO a
+
+-- Permite levantar erros
+ioError :: IOError -&gt; IO a
+</code></pre>
+
+<h2 id="testes">Testes</h2>
+
+<h3 id="hunit">HUNit</h3>
+
+<pre><code>-- importando HUnit
+
+import Test.HUnit
+
+-- elementos importantes
+
+data Test = TestCase Assertion 	    -- um caso de teste simples
+          | TestList [Test]		      -- uma lista de casos de teste
+          | TestLabel String Test		-- um teste indentificado por um label
+
+data Counts = Counts { cases, tried, errors, failures :: Int }  -- contadores de testes
+            deriving (Eq, Show, Read)
+
+
+-- funções baseadas em casos de teste
+
+testCaseCount :: Test -&gt; Int
+testCasePaths :: Test -&gt; [Path]
+
+-- funções baseadas em afirmação
+
+assertFailure :: String -&gt; Assertion
+assertFailure msg = ioError (userError (&quot;HUnit:&quot; ++ msg))
+
+assertBool :: String -&gt; Bool -&gt; Assertion
+assertBool msg b = unless b (assertFailure msg)
+
+assertString :: String -&gt; Assertion
+assertString s = unless (null s) (assertFailure s)
+
+assertEqual :: (Eq a, Show a) =&gt; String -&gt; a -&gt; a -&gt; Assertion
+
+-- funções baseadas em contadores
+
+runTestText :: PutText st -&gt; Test -&gt; IO (Counts, st)
+showCounts :: Counts -&gt; String
+showPath :: Path -&gt; String
+runTestTT :: Test -&gt; IO Counts  
+</code></pre>
+
+<h2 id="concorrência-e-paralelismo">Concorrência e Paralelismo</h2>
+
+<p>Compilando programa para arquiteturas paralelas:</p>
+
+<pre><code class="language-bash">ghc --make -threaded codigo.hs
+</code></pre>
+
+<p>Execução:</p>
+
+<pre><code class="language-bash">## sendo x = quantidade de núcleos utilizados
+codigo +RTS -Nx
+</code></pre>
+
+<p>Módulos e funções envolvidas:</p>
+
+<pre><code>-- importando o módulo de paralelismo
+import Control.Parallel
+
+-- funções
+par :: a −&gt; b −&gt; b -- avalia argumentos em paralelo. Retorna como resultado o valor do
+segundo argumento. par a b = b. escrita as vezes como a ‘par’ b
+pseq :: a −&gt; b −&gt; b
 </code></pre>
 
 
@@ -696,7 +853,7 @@ NomeModulo.Tipo
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://amintasvrp.github.io/myDocs/c/" title="C: Programação Imperativa em Baixo Nível">
+      <a href="https://amintasvrp.github.io/myDocs/cpp/" title="C&#43;&#43;: Programação Imperativa e Orientada a Objetos">
         <span class="direction">
           Anterior
         </span>
@@ -706,7 +863,7 @@ NomeModulo.Tipo
           </div>
           <div class="stretch">
             <div class="title">
-              C: Programação Imperativa em Baixo Nível
+              C&#43;&#43;: Programação Imperativa e Orientada a Objetos
             </div>
           </div>
         </div>

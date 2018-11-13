@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>C&#43;&#43;: Programação Imperativa e Orientada a Objetos - myDocs</title>
+    <meta name="generator" content="Hugo 0.51" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/cpp/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/cpp/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        C&#43;&#43;: Programação Imperativa e Orientada a Objetos
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
+	
+	Linux
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>C&#43;&#43;: Programação Imperativa e Orientada a Objetos </h1>
+
+			
+
+<h2 id="introdução">Introdução</h2>
+
+<p>C++ é uma linguagem de programação orientada a objetos, de tipagem estática, de uso geral. Por vários anos, a linguagem evoluiu até o lançamento oficial em 1985. C++ é essencialmente uma extensão da linguagem de programação C, portanto muitas das coisas que você pode fazer em C você também pode fazer em C++. Ambas são amplamente compatíveis e, em muitos casos, o código C pode ser usado com pouca ou nenhuma modificação como código C++. Mas, além disso, o C++ fornece todo o poder e flexibilidade da orientação a objetos. Então você pode usar chamadas de sistema de baixo nível, gerenciar a memória e lidar com ponteiros, enquanto, ao mesmo tempo, trabalha com classes, objetos, herança e todos os recursos de uma linguagem orientada a objetos.</p>
+
+<h2 id="executando-programas-em-c">Executando Programas em C++</h2>
+
+<p>Para todos os programas em C++ deve-se utilizar um compilador cujo trabalho seja compilar o código C++ em código de máquina legível pelo computador. Utilizamos para tal o seguinte comando:</p>
+
+<pre><code class="language-bash">  gcc -o nome_executavel arquivo.c
+</code></pre>
+
+<p>Tal linguagem depende do usuário para gerenciar a memória do programa, embora existam coletores de lixo disponíveis para C++. Muitos desenvolvedores optam por escrever C ++ usando um editor de texto básico, mas também há ambientes de desenvolvimento integrados mais especializados, alguns dos mais populares incluem <strong>Code Blocks</strong> , <strong>Eclipse</strong> e <strong>NetBeans</strong>.</p>
+
+<h2 id="printando">Printando</h2>
+
+<pre><code class="language-c++">cout &lt;&lt; &quot;Olá &quot;;
+cout &lt;&lt; &quot;Mundo &quot;;
+cout &lt;&lt; &quot;!&quot; &lt;&lt; endl;
+</code></pre>
+
+<h2 id="variáveis-e-tipos-de-dados">Variáveis e Tipos de Dados</h2>
+
+<pre><code class="language-c++">
+/*
+Nomes são case-sensitive e devem começar com: letters, _
+Depois, devem incluir: letters, numbers, _
+A convenção diz:
+     &quot;Comece com uma palavra começando com letra minúscula, então as palavras adicionais começam
+     com letra maiúscula.&quot;
+     Exemplo: minhaPrimeiraVariavel  
+*/
+string nome = &quot;Amintas&quot;; // lista de caracteres (não primitivo)
+char nota = 'A';         // caractere simples 8 bits
+
+short idade0 = 10;         // inteiro 16 bits com sinal
+int idade1 = 20;           // inteiro 16 bits com sinal (maior do que short)
+long idade2 = 30;          // inteiro 32 bits com sinal
+long long idade3 = 40;     // inteiro 64 bits com sinal
+// para torná-los sem sinal, basta adicionar o prefixo &quot;unsigned&quot;
+
+float media0 = 2.5f;       // ponto flutuante de precisão simples
+double media1 = 3.5;       // ponto flutuante de precisão dupla
+long double media2 = 3.5;  // ponto flutuante de precisão extendida
+
+bool ehAlto;             // 1 bit -&gt; true/false
+ehAlto = true;
+
+// podemos printar o valor de variáveis:
+cout &lt;&lt; &quot;Meu nome é &quot; &lt;&lt; nome &lt;&lt; endl;
+</code></pre>
+
+<h2 id="casting-e-conversão">Casting e conversão</h2>
+
+<pre><code class="language-c++">cout &lt;&lt;  (int)3.14 &lt;&lt; endl;    // 3
+cout &lt;&lt; (double)3 / 2 &lt;&lt; endl; // 1.5
+</code></pre>
+
+<h2 id="ponteiros">Ponteiros</h2>
+
+<pre><code class="language-c++">int num = 10;
+cout &lt;&lt; &amp;num &lt;&lt; endl;  // referência de num
+
+int *pNum = &amp;num;
+cout &lt;&lt; pNum &lt;&lt; endl;  // referência de num
+cout &lt;&lt; *pNum &lt;&lt; endl; // 10
+</code></pre>
+
+<h2 id="strings">Strings</h2>
+
+<pre><code class="language-c++">#include &lt;string&gt;            // importando biblioteca de strings
+string palavra = &quot;Olá&quot;;
+//     índices:   012
+
+cout &lt;&lt; palavra.length();              // tamanho da string (5)
+cout &lt;&lt; palavra[0] &lt;&lt; endl;            // char indexado ('')
+cout &lt;&lt; palavra.find(&quot;lá&quot;) &lt;&lt; endl;    // a partir de qual índice encontramos a substring (1)
+cout &lt;&lt; palavra.substr(1) &lt;&lt; endl;     // substring do índice até o final (&quot;lá&quot;)
+cout &lt;&lt; palavra.substr(0, 1) &lt;&lt; endl;  // substring do primeiro índice ao segundo (&quot;Ol&quot;)
+</code></pre>
+
+<h2 id="números">Números</h2>
+
+<pre><code class="language-c++">cout &lt;&lt; 2 * 3 &lt;&lt; endl;       // aritmética básica: +, -, /, *
+cout &lt;&lt; 10 % 3 &lt;&lt; endl;      // módulo da divisão inteira
+cout &lt;&lt; 1 + 2 * 3 &lt;&lt; endl;   // ordem das operações: 1 + (2 * 3)
+cout &lt;&lt; 10 / 3.0 &lt;&lt; endl;    // ints operando com doubles = double
+
+
+int n = 10;
+num++;      // += 1
+n += 100;   // +=, -=, /=, *=
+
+#import &lt;cmath&gt;              // importando funções matemáticas úteis
+cout &lt;&lt; pow(2, 3) &lt;&lt; endl;   // potenciação
+cout &lt;&lt; sqrt(144) &lt;&lt; endl;   // radiciação quadrada
+cout &lt;&lt; round(2.7) &lt;&lt; endl;  // arredondamento
+</code></pre>
+
+<h2 id="entrada-do-usuário">Entrada do Usuário</h2>
+
+<pre><code class="language-c++">string nome;
+cout &lt;&lt; &quot;Insira seu nome: &quot;;
+cin &gt;&gt; nome;                           // entrada do usuário (string)
+cout &lt;&lt; &quot;Olá &quot; &lt;&lt; nome &lt;&lt; endl;
+
+int num1, num2;                        // declarando múltiplas vaŕiáveis com mesmo tipo na mesma linha
+cout &lt;&lt; &quot;Insira o primeiro número: &quot;;
+cin &gt;&gt; num1;                           // conversão implícita (string -&gt; int)  
+cout &lt;&lt; &quot;Insira o segundo número: &quot;;
+cin &gt;&gt; num2;
+cout &lt;&lt; &quot;Soma: &quot; &lt;&lt; num1 + num2 &lt;&lt; endl;
+</code></pre>
+
+<h2 id="arrays">Arrays</h2>
+
+<pre><code class="language-c++">int numeros[6];  // array com 6 posições vazias
+int numeros[] = {4, 8, 15, 16, 23, 42};
+//   índices:    0  1  2   3   4   5
+
+cout &lt;&lt; numeros[1] &lt;&lt; endl;  // podemos acessar valores através dos índices
+numeros[0] = 90;  // podemos editar valores através dos índices -&gt; numeros[] = {90,8,15,16,23,42}   
+</code></pre>
+
+<h2 id="arrays-bidimensionais">Arrays Bidimensionais</h2>
+
+<pre><code class="language-c++">int matriz[2][3];  // matriz com 2 linhas e 3 colunas vazias
+int matriz[2][3] = { {1, 2, 3}, {4, 5, 6} };
+// 1 2 3
+// 4 5 6
+
+cout &lt;&lt; matriz[0][0] &lt;&lt; endl; // podemos acessar valores através dos índices
+matriz[0][1] = 99; // podemos editar valores através dos índices -&gt; matriz[2][3] = {{1,90,3},{4,5,6}}
+</code></pre>
+
+<h2 id="vetores">Vetores</h2>
+
+<pre><code class="language-c++">#include &lt;vector&gt;              // importando biblioteca de vetores
+vector&lt;string&gt; friends;        // instanciando vetor de strings vazio
+friends.push_back(&quot;Oscar&quot;);    // adicionando ao final
+friends.push_back(&quot;Angela&quot;);
+
+friends.insert(friends.begin() + 1, &quot;Jim&quot;); // inserindo elemento no índice 1
+
+friends.erase(friends.begin() + 1); // excluindo elemento do índice 1
+
+cout &lt;&lt; friends.at(1) &lt;&lt; endl; // acessando elemento do índice 1
+
+cout &lt;&lt; friends.size() &lt;&lt; endl; // obtendo tamanho do vector
+</code></pre>
+
+<h2 id="funções">Funções</h2>
+
+<pre><code class="language-c++">
+// assinatura do método antes de ser chamado no main
+int addNumbers(int num1, int num2);
+
+// main sempre retorna 0 (convenção)
+int main()
+{
+     int sum = addNumbers(4, 60);
+     cout &lt;&lt; sum &lt;&lt; endl;
+
+     return 0;
+}
+
+// implementação antes ou depois do main
+int addNumbers(int num1, int num2){
+     return num1 + num2;
+}
+</code></pre>
+
+<h2 id="condicionais">Condicionais</h2>
+
+<pre><code class="language-c++">bool a = true;
+bool b = false;
+
+// podemos usar and(&amp;&amp;), or(||), ou not(!) nas expressões booleanas
+if(a &amp;&amp; b){
+  // ...
+} else if(a || !b){
+  // ...
+} else {
+  // ...
+}
+
+// podemos comparar números com &gt;, &lt;, &gt;=, &lt;=, != e == nas expressões booleanas
+if(1 &gt; 3){
+  // ...
+} else if ('a' &gt; 'b'){ // e o mesmo se aplica ao comparar caracteres
+  // ...
+}
+
+// comparamos strings com o método compare, que retorna 0 se as strings forem iguais
+string s = &quot;string&quot;;
+if(s.compare(&quot;string&quot;) != 0){
+     // ...
+}
+</code></pre>
+
+<h2 id="switch-case">Switch Case</h2>
+
+<pre><code class="language-c++">char myGrade = 'A';
+
+// dependo do valor da variável, um comportamento é tomado
+switch(myGrade){
+     case 'A':
+          cout &lt;&lt; &quot;You Pass&quot; &lt;&lt; endl;
+          break;
+     case 'F':
+          cout &lt;&lt; &quot;You fail&quot; &lt;&lt; endl;
+          break;
+     default:
+          // o caso default funciona como um else
+          cout &lt;&lt; &quot;Invalid grade&quot; &lt;&lt; endl;
+}
+</code></pre>
+
+<h2 id="loop-indefinido">Loop Indefinido</h2>
+
+<pre><code class="language-c++">int index = 1;
+
+// não sabemos quantas iterações serão realizadas
+// enquanto a condição for verdadeira, o comando é repitido
+while (index &lt;= 5) {
+     cout &lt;&lt; index &lt;&lt; endl;
+     index++;
+}
+
+// realiza o comando ao menos uma vez, verificando a condição depois
+do{
+     cout &lt;&lt; index &lt;&lt; endl;
+     index++;
+} while (index &lt;= 5);
+</code></pre>
+
+<h2 id="loop-definido">Loop Definido</h2>
+
+<pre><code class="language-c++">// sabemos quantas iterações serão realizadas
+for(int i = 0; i &lt; 5; i++){
+     cout &lt;&lt; i &lt;&lt; endl;
+}
+</code></pre>
+
+<h2 id="tratamento-de-exceções">Tratamento de Exceções</h2>
+
+<pre><code class="language-c++">double division(int a, int b) {
+   if( b == 0 ) {
+   	  // ao lançar a exceção, a mensagem que passamos como parâmetro é mostrada
+      throw &quot;Division by zero error!&quot;;
+   }
+   return (a/b);
+}
+
+int main(){
+     try {
+        division(10, 0);
+     } catch (const char* msg) {
+      cerr &lt;&lt; msg &lt;&lt; endl;
+     }
+     return 0;
+}
+</code></pre>
+
+<h2 id="classes-e-objetos">Classes e Objetos</h2>
+
+<pre><code class="language-c++">// criando uma classe, definindo um objeto
+class Book{
+     public:
+     	  // definindo atributos inerentes
+          string title;
+          string author;
+
+          // definindo métodos inerentes
+          // quando nos referimos aos atributos, usamos: this-&gt;atributo
+          void readBook(){
+               cout &lt;&lt; &quot;Reading &quot; + this-&gt;title + &quot; by &quot; + this-&gt;author &lt;&lt; endl;
+          }
+};
+
+// podemos ter várias instâncias de um mesmo objeto
+Book book1;
+book1.title = &quot;Harry Potter&quot;;
+book1.author = &quot;JK Rowling&quot;;
+
+Book book2;
+book2.title = &quot;Lord of the Rings&quot;;
+book2.author = &quot;JRR Tolkien&quot;;
+
+// usamos os métodos de forma independente
+book2.readBook();
+cout &lt;&lt; book2.title &lt;&lt; endl;
+</code></pre>
+
+<h2 id="construtores">Construtores</h2>
+
+<pre><code class="language-c++">class Book{
+     public:
+          string title;
+          string author;
+
+          // usamos construtores para criar instâncias de forma elegante
+          Book(string title, string author){
+               this-&gt;title = title;
+               this-&gt;author = author;
+          }
+
+          void readBook(){
+               cout &lt;&lt; &quot;Reading &quot; + this-&gt;title + &quot; by &quot; + this-&gt;author &lt;&lt; endl;
+          }
+};
+
+// criamos assim instâncias de forma muito mais legível e enxulta, garantindo bom design
+Book book1(&quot;Harry Potter&quot;, &quot;JK Rowling&quot;);
+cout &lt;&lt; book1.title &lt;&lt; endl;
+
+Book book2(&quot;Lord of the Rings&quot;, &quot;JRR Tolkien&quot;);
+cout &lt;&lt; book2.title &lt;&lt; endl;
+</code></pre>
+
+<h2 id="getters-e-setters">Getters e Setters</h2>
+
+<pre><code class="language-c++">class Book{
+     private:
+          string title;
+          string author;
+     public:
+          Book(string title, string author){
+               this-&gt;setTitle(title);
+               this-&gt;setAuthor(author);
+          }
+
+          // para acessar os atributos de um objeto, usamos métodos getters
+          // para alterar os atributos de um objeto, usamos métodos setters
+
+          string getTitle(){
+               return this-&gt;title;
+          }
+          void setTitle(string title){
+               this-&gt;title = title;
+          }
+          string getAuthor(){
+               return this-&gt;author;
+          }
+          void setAuthor(string author){
+               this-&gt;author = author;
+          }
+
+          void readBook(){
+               cout &lt;&lt; &quot;Reading &quot; + this-&gt;title + &quot; by &quot; + this-&gt;author &lt;&lt; endl;
+          }
+};
+
+Book book1(&quot;Harry Potter&quot;, &quot;JK Rowling&quot;);
+cout &lt;&lt; book1.getTitle() &lt;&lt; endl;
+
+Book book2(&quot;Lord of the Rings&quot;, &quot;JRR Tolkien&quot;);
+book2.setTitle(&quot;LOTR: The Fellowship of the Ring&quot;);
+</code></pre>
+
+<h2 id="herança">Herança</h2>
+
+<pre><code class="language-c++">class Chef{
+     public:
+
+          string name;
+          int age;
+
+          Chef(string name, int age){
+               this-&gt;name = name;
+               this-&gt;age = age;
+          }
+
+          void makeChicken(){
+               cout &lt;&lt; &quot;The chef makes chicken&quot; &lt;&lt; endl;
+          }
+
+          void makeSalad(){
+               cout &lt;&lt; &quot;The chef makes salad&quot; &lt;&lt; endl;
+          }
+
+          void makeSpecialDish(){
+               cout &lt;&lt; &quot;The chef makes a special dish&quot; &lt;&lt; endl;
+          }
+};
+
+// com herança, podemos criar objetos que herdam atributos e/ou métodos de outro
+// sendo estes mais específicos
+
+class EuropeanChef : public Chef{
+     public:
+
+          string countryOfOrigin;
+
+          // ao herdar atributos, estes são reaproveitados em construtores novos
+          // a partir dos construtores da superclasse
+          EuropeanChef(string name, int age, string countryOfOrigin) : Chef(name, age){
+               this-&gt;countryOfOrigin = countryOfOrigin;
+          }
+
+          // da mesma forma, novos atributos e métodos podem ser criados
+          void makePasta(){
+               cout &lt;&lt; &quot;The chef makes pasta&quot; &lt;&lt; endl;
+          }
+
+          // assim como métodos podem ser sobrescritos (override)
+          void makeSpecialDish(){
+               cout &lt;&lt; &quot;The chef makes chicken parm&quot; &lt;&lt; endl;
+          }
+};
+
+Chef myChef(&quot;Gordon Ramsay&quot;, 50);
+myChef.makeChicken();
+
+EuropeanChef myItalianChef(&quot;Massimo Bottura&quot;, 55, &quot;Italy&quot;);
+myItalianChef.makeChicken();
+cout &lt;&lt; myItalianChef.age &lt;&lt; endl;
+</code></pre>
+
+<h2 id="classes-e-métodos-abstratos">Classes e Métodos Abstratos</h2>
+
+<pre><code class="language-c++">// com a palavra-chave &quot;virtual&quot;, criamos classes abstratas, ou seja, que não podem ser instanciadas
+virtual class Vehicle{
+     public:
+     	  // determinamos a assinatura de um método a ser instanciado com &quot;virtual&quot;
+          virtual void move() = 0;
+          void getDescription(){
+               cout &lt;&lt; &quot;Vehicles are used for transportation&quot; &lt;&lt; endl;
+          }
+};
+
+class Plane : public Vehicle{
+     public:
+     	  // implementamos o método cuja assinatura foi herdada
+          void move(){
+               cout &lt;&lt; &quot;The plane flys through the sky&quot; &lt;&lt; endl;
+          }
+};
+
+Plane myPlane;
+myPlane.move();  // usamos o método implementado por Plane
+</code></pre>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://amintasvrp.github.io/myDocs/c/" title="C: Programação Imperativa em Baixo Nível">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              C: Programação Imperativa em Baixo Nível
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://amintasvrp.github.io/myDocs/haskell/" title="Haskell I: Introdução ao Paradigma Funcional">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Haskell I: Introdução ao Paradigma Funcional
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

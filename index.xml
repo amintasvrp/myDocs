@@ -21,18 +21,27 @@
     </item>
     
     <item>
-      <title>Haskell e o Paradigma Funcional</title>
+      <title>C&#43;&#43;: Programação Imperativa e Orientada a Objetos</title>
+      <link>https://amintasvrp.github.io/myDocs/cpp/</link>
+      <pubDate>Sun, 17 Jun 2018 23:58:59 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/cpp/</guid>
+      <description>Introdução C++ é uma linguagem de programação orientada a objetos, de tipagem estática, de uso geral. Por vários anos, a linguagem evoluiu até o lançamento oficial em 1985. C++ é essencialmente uma extensão da linguagem de programação C, portanto muitas das coisas que você pode fazer em C você também pode fazer em C++. Ambas são amplamente compatíveis e, em muitos casos, o código C pode ser usado com pouca ou nenhuma modificação como código C++.</description>
+    </item>
+    
+    <item>
+      <title>Haskell I: Introdução ao Paradigma Funcional</title>
       <link>https://amintasvrp.github.io/myDocs/haskell/</link>
-      <pubDate>Sun, 17 Jun 2018 23:59:58 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:57:59 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/haskell/</guid>
-      <description>Básico Operadores Básicos  + - * / mod sqrt  Operadores Lógicos  &amp;amp;&amp;amp; || not  Operadores Relacionais  &amp;gt; &amp;lt; &amp;gt;= &amp;lt;= == /=  Declarando Valores  x = a  Comentários  -- linha comentada {- - bloco comentado -}  Funções Aplicação  f x y == (f x) y == x &#39;f&#39; y  Expressões Condicionais  nomeFuncao param = if cond then resultado1 else resultado2  Equações Guardadas  nomeFuncao param | cond = resultado1 | otherwise = resultado2  Expressões Case  funcao xs = case expression of pattern1 -&amp;gt; result1 pattern2 -&amp;gt; result2  Definição local  // relacionamos expressões com variáveis, melhorando visibilidade e escopo locais // (where) funcao xs = .</description>
+      <description>Básico Operadores Básicos  + - * / mod sqrt  Operadores Lógicos  &amp;amp;&amp;amp; || not  Operadores Relacionais  &amp;gt; &amp;lt; &amp;gt;= &amp;lt;= == /=  Declarando Valores  x = a  Comentários  -- linha comentada {- - bloco comentado -}  Funções Aplicação  f x y == (f x) y == x &#39;f&#39; y  Expressões Condicionais  nomeFuncao param = if cond then resultado1 else resultado2  Equações Guardadas  nomeFuncao param | cond = resultado1 | otherwise = resultado2  Expressões Case  funcao xs = case expression of pattern1 -&amp;gt; result1 pattern2 -&amp;gt; result2  Definição local  -- relacionamos expressões com variáveis, melhorando visibilidade e escopo locais -- (where) funcao xs = .</description>
     </item>
     
     <item>
       <title>Hugo: Um Gerador de Sites Estáticos</title>
       <link>https://amintasvrp.github.io/myDocs/hugo/</link>
-      <pubDate>Sun, 17 Jun 2018 23:59:57 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:56:59 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/hugo/</guid>
       <description>Um site estático consiste em um aplicativo da Web simples, no qual o conteúdo exposto é o mesmo para todos os que acessam, como blogs, periódicos, portfólios e portais de notícias. No entanto, no WordPress encontramos uma plataforma muito robusta para tal, já no tumblr e no blogger encontramos o oposto: é por isso que usamos o Hugo, um gerador de site estático.
@@ -40,11 +49,11 @@ Pré-requisitos Breves noções de HTML e Markdown.</description>
     </item>
     
     <item>
-      <title>Linux I: Conhecendo e Usando o Terminal</title>
-      <link>https://amintasvrp.github.io/myDocs/linux1/</link>
-      <pubDate>Sun, 17 Jun 2018 23:59:56 -0300</pubDate>
+      <title>Linux: Conhecendo e Usando o Terminal</title>
+      <link>https://amintasvrp.github.io/myDocs/linux/</link>
+      <pubDate>Sun, 17 Jun 2018 23:55:59 -0300</pubDate>
       
-      <guid>https://amintasvrp.github.io/myDocs/linux1/</guid>
+      <guid>https://amintasvrp.github.io/myDocs/linux/</guid>
       <description>Para aqueles que agora estão sendo introduzidos ao Linux, o manuseio do terminal pode, ao mesmo tempo, fascinar e dar um frio na barriga. A fim de aprender o básico sobre como lidar com essa ferramenta muito importante no uso de qualquer distribuição Linux, e claro, de perdermos qualquer preconceito sobre o prompt de comando, veremos neste artigo os principais comandos no terminal Linux
 Arquivos e Diretórios Para encontrar o diretório atual, use o comando:</description>
     </item>
@@ -52,7 +61,7 @@ Arquivos e Diretórios Para encontrar o diretório atual, use o comando:</descri
     <item>
       <title>Prolog e o Paradigma Lógico</title>
       <link>https://amintasvrp.github.io/myDocs/prolog/</link>
-      <pubDate>Sun, 17 Jun 2018 23:59:55 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:54:59 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/prolog/</guid>
       <description>Mesmo diferentes paradigmas como Funcional e Imperativo têm algo em comum: ambos realizam mapeamento, isto é, lêem entradas e geram saídas. No entanto, um programa de acordo com o paradigma lógico implementa relacionamentos, que são mais gerais do que os mapeamentos. Em outras palavras, quando se trata de programação lógica, o nível é superior ao da programação imperativa ou funcional.
@@ -63,7 +72,7 @@ Paradigma Lógico Definimos as relações da seguinte forma:
     <item>
       <title>SQL e os Bancos de Dados Relacionais</title>
       <link>https://amintasvrp.github.io/myDocs/sql/</link>
-      <pubDate>Sun, 17 Jun 2018 23:59:54 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:53:59 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/sql/</guid>
       <description>Introdução a Banco de Dados O que é um Banco de Dados ? Se trata de qualquer coleção de dados que possui relação entre si. Bancos de dados podem ser armazenados de diversas formas, sendo mais úteis (potencialmente em larga escala) e seguros se forem guardados em computadores.
