@@ -16,7 +16,7 @@ Por ser um nível tão baixo, muitos kernels de sistemas operacionais e até mes
 Precisamos compilar o código C em código de máquina legível pelo computador para executar um programa escrito nesta linguagem.
 
 ```bash
-  gcc -o nome_executavel arquivo.cpp
+  gcc -o nome_executavel arquivo.c
 ```
 Muitos desenvolvedores optam por escrever C usando um editor de texto básico, mas também há ambientes de desenvolvimento integrados mais especializados, alguns dos mais populares incluem **Code Blocks** , **Eclipse** e **NetBeans**.
 
@@ -79,7 +79,7 @@ A convenção diz: *Comece com uma palavra minúscula, então palavras adicionai
 
   // você pode formatar a saída dessa maneira
   testGrade = 'F';
-  printf ("% s, sua nota é% c \ n", name, testGrade);
+  printf ("% s, sua nota é% c \n", name, testGrade);
   / *
   %c caractere
   %d número inteiro (base 10)

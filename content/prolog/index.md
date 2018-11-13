@@ -1,6 +1,6 @@
 ---
 title: "Prolog e o Paradigma Lógico"
-date: 2018-06-17T23:59:55-03:00
+date: 2018-06-17T23:54:59-03:00
 author: "Amintas Victor"
 type: "post"
 ---

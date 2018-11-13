@@ -1,6 +1,6 @@
 ---
-title: "Linux I: Conhecendo e Usando o Terminal"
-date: 2018-06-17T23:59:56-03:00
+title: "Linux: Conhecendo e Usando o Terminal"
+date: 2018-06-17T23:55:59-03:00
 author: "Amintas Victor"
 type: "post"
 ---

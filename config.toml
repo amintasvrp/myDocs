@@ -60,8 +60,8 @@ googleAnalytics = ""
 	weight = 2
 
 [[menu.main]]
-	name   = "Linux I"
-	url    = "linux1/"
+	name   = "Linux"
+	url    = "linux/"
 	weight = 2
 
 [[menu.main]]
@@ -72,6 +72,11 @@ googleAnalytics = ""
 [[menu.main]]
 	name   = "SQL"
 	url    = "sql/"
+	weight = 2
+
+[[menu.main]]
+	name   = "C++"
+	url    = "cpp/"
 	weight = 2
 
 [blackfriday]
