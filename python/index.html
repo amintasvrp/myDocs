@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Python 3: Minimalismo e Legibilidade - myDocs</title>
+    <meta name="generator" content="Hugo 0.51" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/python/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/python/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Python 3: Minimalismo e Legibilidade
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
+	
+	Linux
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Python 3" href="https://amintasvrp.github.io/myDocs/python/">
+	
+	Python 3
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Python 3: Minimalismo e Legibilidade </h1>
+
+			
+
+<h2 id="introdução-a-python">Introdução a Python</h2>
+
+<p>Python é uma linguagem de programação orientada a objetos, dinamicamente tipificada e interpretada. A filosofia de design do Python é baseada em uma sintaxe não-tradicional e minimalista, girando em torno da legibilidade. Isso é feito usando-se espaço em branco para delinear escopos em vez das mais tradicionais chaves e ponto-e-vírgula. Geralmente todo o código python é executado usando um interpretador, sendo o mais popular e original chamado CPython, porque é implementado utilizando C e usa um coletor de lixo automático para gerenciar a memória. Existem vários outros intérpretes, muitos dos quais implementados em Java e C#.</p>
+
+<p>Muitos desenvolvedores optam por escrever Python usando um ambiente de desenvolvimento integrado específico, como o Eclipse, o PyCharm e o NetBeans.</p>
+
+<h3 id="versões-do-python">Versões do Python</h3>
+
+<p>Ao entrar em contato com Python pela primeira vez pode ser um pouco confuso porque, ao contrário de muitas outras linguidadens de programação, o Python tem duas versões principais, não compatíveis, que são atualmente amplamente utilizadas.</p>
+
+<p>A versão 2.7.3 do Python é na maior parte, compatível com todas as versões anteriores. Ao refatorar a linguidadem, foi criada Python 3, o qual foi adotado lentamente no início, principalmente pela incompatibilidade. Mas hoje em dia o ecossistema do Python 3 está em grande parte comprometido, tornando o Python 3 a escolha óbvia para novos desenvolvedores que desejam aprender a linguidadem.</p>
+
+<h2 id="printando">Printando</h2>
+
+<pre><code class="language-python">  print(&quot;Hello&quot;)
+  print(&quot;World&quot;)      
+  print(&quot;!&quot;)
+</code></pre>
+
+<h2 id="variáveis-e-tipos-de-dados">Variáveis e Tipos de Dados</h2>
+
+<pre><code class="language-python">  # Nomes são case-sensitive e devem começar com: letras, $, _
+  # Depois, devem incluir: letras, números, $, _
+  # Segundo a conveção:
+  #  &quot;Comece com uma letra minúscula, e as palavras seguintes são separadas por underscores&quot;
+  # Exemplo: minha_primeira_variavel
+
+  nome = &quot;Mike&quot;    # String
+  idade = 30       # Inteiro
+  peso = 3.5       # Decimal
+  eh_alto = True   # Boolean (True/False)
+</code></pre>
+
+<h2 id="casting-e-conversão">Casting e Conversão</h2>
+
+<pre><code class="language-python">  print( int(3.14) )                 # 3
+  print( float(3) )                  # 3.0
+  print( str(True) )                 # &quot;True&quot;
+  print( int(&quot;50&quot;) + float(&quot;70&quot;) )   # 120.0
+</code></pre>
+
+<h2 id="strings">Strings</h2>
+
+<pre><code class="language-python">  palavra = &quot;String&quot;
+  # índices: 012345
+
+  print( len(palavra) )         # 6
+  print( palavra[0] )           # S
+  print( palavra[-1] )          # g
+
+  # A partir de qual índice encontramos uma substring
+  print( palavra.find(&quot;ing&quot;) )  # 3
+  print( palavra.find(&quot;z&quot;) )    # -1
+
+  # Obter uma substring
+  print( palavra[3:] )         # &quot;ing&quot;
+  print( palavra[1:4] )        # &quot;tri&quot;
+</code></pre>
+
+<h2 id="números">Números</h2>
+
+<pre><code class="language-python">  print( 2 * 3 )       # Aritmética Básica: +, -, /, %, *, **
+  print( 2**3 )       
+  print( 10 % 3 )      
+  print( 1 + 2 * 3 )   # Precedência das operações é avaliada
+  print(10 / 3.0)      # Inteiro (Operação) Decimal = Decimal
+
+
+  num = 10
+  num += 100           # Atualização de Variável: +=, -=, /=, *=
+
+  ++num                # num += 1
+  --num                # num -= 1
+
+  # Módulo Matemático
+  import math
+  print( pow(2, 3) )       # Potenciação
+  print( math.sqrt(144) )  # Raiz Quadrada
+  print( round(2.7) )      # Arredondamento
+</code></pre>
+
+<h2 id="entrada-do-usuário">Entrada do Usuário</h2>
+
+<pre><code class="language-python">  # Entrada Recebida como String
+  nome = input(&quot;Enter your nome: &quot;)        
+  print(&quot;Hello&quot;, nome + &quot;!&quot;)              
+
+  # Entrada Convertida para Inteiro/Decimal
+  num1 = int(input(&quot;Enter First Num: &quot;))
+  num2 = float(input(&quot;Enter Second Num: &quot;))
+  print(num1 + num2)
+</code></pre>
+
+<h2 id="listas">Listas</h2>
+
+<pre><code class="language-python">  lista_numeros = [2, 4, &quot;six&quot;, 8.0, 10, 12]  # Listas, em Python, são Heterogêneas
+  #  Índices:      0  1    2     3   4   5
+
+  lista_numeros[0] = 100     # Alterando Valor Contido na Lista
+  print(lista_numeros[0])    # Acessando Valor Contido na Lista: 100
+  print(lista_numeros[-1])   # Acessando Valor Contido na Lista: 12
+  print(lista_numeros[2:])   # Obtendo Sublista: [&quot;six&quot;, 8.0, 10, 12]
+  print(lista_numeros[2:4])  # Obtendo Sublista: [&quot;six&quot;, 8.0]
+  print(len(lista_numeros))  # Obtendo Tamanho da Lista
+</code></pre>
+
+<h2 id="listas-bidimensionais">Listas Bidimensionais</h2>
+
+<pre><code class="language-python">  matriz = [ [1, 2], [3, 4] ]  # Definindo uma Lista Bidimensional
+  print(matriz[0][1])          # Acessando Valor Contido na Lista[Linha][Coluna]: 2
+  matriz[0][1] = 100           # Alterando Valor Contido na Lista
+</code></pre>
+
+<h2 id="funções-de-listas">Funções de Listas</h2>
+
+<pre><code class="language-python">  friends = []
+
+  friends.append(&quot;Oscar&quot;)            # Adicionando Elementos ao Final da Lista
+  friends.append(&quot;Angela&quot;)
+
+  friends.insert(1, &quot;Kevin&quot;)         # Inserindo Elemento em uma Determinado Índice
+  friends.remove(&quot;Kevin&quot;)            # Removendo a Primeira Ocorrência de um Elemento
+  print( friends.index(&quot;Oscar&quot;) )    # Obtendo o Índice de um Determinado Elemento
+  print( friends.count(&quot;Angela&quot;) )   # Obtendo Quantidade de Ocorrências de um Determinado Elemento
+  friends.sort()                     # Ordenando a Lista
+  friends.clear()                    # Esvaziando a Lista
+</code></pre>
+
+<h2 id="tuplas">Tuplas</h2>
+
+<pre><code class="language-python">  tupla_numeros = (2, 4, &quot;six&quot;, 8.0, 10, 12)
+  # Índices:       0  1    2     3   4   5
+
+  tupla_numeros[0] = 100     # Alterando Valor Contido na Tupla      
+  print(tupla_numeros[0])    # Acessando Valor Contido na Tupla: 100
+  print(tupla_numeros[-1])   # Acessando Valor Contido na Tupla: 12
+  print(tupla_numeros[2:])   # Obtendo Subtupla: (&quot;six&quot;, 8.0, 10, 12)
+  print(tupla_numeros[2:4])  # Obtendo Subtupla: (&quot;six&quot;, 8.0)
+  print(len(tupla_numeros))  # Obtendo Tamanho da Tupla
+</code></pre>
+
+<h2 id="funções">Funções</h2>
+
+<pre><code class="language-python">  def funcao(param1, param2 = valor_default):
+       return resultado
+
+  funcao(valor1)
+  funcao(valor1, valor2)
+</code></pre>
+
+<h2 id="condicionais">Condicionais</h2>
+
+<pre><code class="language-python">a = True
+b = False
+
+if a and b:
+	# Ações Executadas ao Validar o If
+elif a or not(b):
+	# Ações Executadas ao Validar o Else If
+else:
+	# Ações Executadas ao Validar o Else
+
+# Comparações: &gt;, &lt;, &gt;=, &lt;=, !=, ==
+if (1 &lt; 3) or (&quot;string1&quot; == &quot;string2&quot;):
+	# Execução ao validar condição
+</code></pre>
+
+<h2 id="dicionários">Dicionários</h2>
+
+<pre><code class="language-python">
+# Definindo um dicionário
+dicionario = {
+    &quot;a&quot; : &quot;b&quot;,
+    5 : [&quot;a&quot;, 3],
+    3 : 5
+}
+
+# Acessando o Valor, dado uma Chave, em um Dicionário
+print( dicionario[&quot;a&quot;] )
+
+# Acessando o Valor, dado uma Chave, em um Dicionário. Caso a Chave não Exista,
+# um Valor Passado como Parâmetro será Retornado
+print( dicionario.get(5, &quot;Chave não consta&quot;) )
+</code></pre>
+
+<h2 id="iterações-loops">Iterações (Loops)</h2>
+
+<pre><code class="language-python"># While Loop
+indice = 1
+while indice &lt;= 5:
+	print(indice)
+	indice += 1
+
+# For Loop
+for indice in range(5):         # range(n) = [0, 1, ..., n-1]
+    print(indice)
+
+numeros = [4, 8, 15, 16, 23, 42]
+for numero in numeros:
+    print(numeros)
+
+for letra in &quot;Palavra&quot;:
+    print(letra)
+</code></pre>
+
+<h2 id="tratamento-de-exceções">Tratamento de Exceções</h2>
+
+<pre><code class="language-python">  try:
+      # Comandos a serem Executados
+  except ExcecaoPrevista as e:
+      # Tratamento de uma Exceção Prevista
+      print(e)
+  except:
+      # Tratamento de uma Exceção Imprevista
+      print(&quot;HOUVE UM ERRO&quot;)       
+</code></pre>
+
+<h2 id="classes-e-objetos">Classes e Objetos</h2>
+
+<pre><code class="language-python">  # Definindo o Objeto
+  class Livro:
+      # Construtor do Objeto
+      def __init__(self, titulo, autor):
+          self.titulo = titulo
+          self.titulo = titulo
+
+      # Função Inerente aos Atributos
+      def ler_livro(self):
+           print(&quot;Lendo &quot;, self.titulo, &quot; de &quot;, self.autor)
+
+  # Instanciando Objeto
+  book1 = Book(&quot;Dracula&quot;, &quot;Bram Stocker&quot;);
+
+  # Acessando Atributo do Objeto
+  print(book1.titulo)
+  # Utilizando Função do Objeto
+  book1.ler_livro()
+</code></pre>
+
+<h2 id="getters-e-setters">Getters e Setters</h2>
+
+<pre><code class="language-python">  class Livro:
+      def __init__(self, titulo, autor):
+          self.titulo = titulo;
+          self.autor = autor
+
+      # Getter
+      @property
+      def title(self):
+          return self._titulo     # Usamos Underscore antes do Atributo para
+                                 # indicá-lo como Privado
+
+      # Setter
+      @titulo.setter
+      def title(self, novo_titulo):
+          self._titulo = novo_titulo
+
+      # Setter to Null
+      @titulo.deleter
+      def titulo(self):
+          del self._titulo
+
+      def ler_livro(self):
+         print(&quot;Lendo &quot;, self.titulo, &quot; de &quot;, self.autor)
+
+  book1 = Book(&quot;Dracula&quot;, &quot;Bram Stocker&quot;);
+
+  print(book1.titulo)
+  book1.ler_livro()
+</code></pre>
+
+<h2 id="herança">Herança</h2>
+
+<pre><code class="language-python">
+  # Superclasse
+  class Chef:
+
+     def __init__(self, nome, idade):
+         self.nome = nome
+         self.idade = idade
+
+     def cozinhar_frango(self):
+         print(&quot;Frango Cozinhado&quot;)
+
+     def temperar_salada(self):
+         print(&quot;Salada Temperada&quot;)
+
+     def cozinhar_prato_especial(self):
+         print(&quot;Costeletas de Porco&quot;)
+
+  # Subclasse
+  class ChefEuropeu(Chef):
+
+     def __init__(self, nome, idade, countryOfOrigin):
+         self.countryOfOrigin = countryOfOrigin
+         # Reaproveitamos o Construtor da Superclasse
+         super().__init__(nome, idade)
+
+     def cozinhar_massa(self):
+         print(&quot;Macarronada&quot;)
+
+     # Sobrescrevendo Função da Superclasse
+     def cozinhar_prato_especial(self):
+         print(&quot;Frango Parma&quot;)
+
+
+  myChef = Chef(&quot;Gordon Ramsay&quot;, 50)
+  myChefEuropeu = ChefEuropeu(&quot;Massimo Bottura&quot;, 55, &quot;Itália&quot;)
+
+  # Instâncias da Subclasse herdam Características da Superclasse
+  myChef.cozinhar_frango()  
+  myChefEuropeu.cozinhar_frango()
+
+  # Instâncias da Subclasse podem Sobrescrever Características da Superclasse
+  myChef.cozinhar_prato_especial()
+  myChefEuropeu.cozinhar_prato_especial()
+</code></pre>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://amintasvrp.github.io/myDocs/prolog/" title="Prolog e o Paradigma Lógico">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Prolog e o Paradigma Lógico
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://amintasvrp.github.io/myDocs/sql/" title="SQL e os Bancos de Dados Relacionais">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              SQL e os Bancos de Dados Relacionais
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

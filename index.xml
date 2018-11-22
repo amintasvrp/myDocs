@@ -70,9 +70,18 @@ Paradigma Lógico Definimos as relações da seguinte forma:
     </item>
     
     <item>
+      <title>Python 3: Minimalismo e Legibilidade</title>
+      <link>https://amintasvrp.github.io/myDocs/python/</link>
+      <pubDate>Sun, 17 Jun 2018 23:53:59 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/python/</guid>
+      <description>Introdução a Python Python é uma linguagem de programação orientada a objetos, dinamicamente tipificada e interpretada. A filosofia de design do Python é baseada em uma sintaxe não-tradicional e minimalista, girando em torno da legibilidade. Isso é feito usando-se espaço em branco para delinear escopos em vez das mais tradicionais chaves e ponto-e-vírgula. Geralmente todo o código python é executado usando um interpretador, sendo o mais popular e original chamado CPython, porque é implementado utilizando C e usa um coletor de lixo automático para gerenciar a memória.</description>
+    </item>
+    
+    <item>
       <title>SQL e os Bancos de Dados Relacionais</title>
       <link>https://amintasvrp.github.io/myDocs/sql/</link>
-      <pubDate>Sun, 17 Jun 2018 23:53:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:53:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/sql/</guid>
       <description>Introdução a Banco de Dados O que é um Banco de Dados ? Se trata de qualquer coleção de dados que possui relação entre si. Bancos de dados podem ser armazenados de diversas formas, sendo mais úteis (potencialmente em larga escala) e seguros se forem guardados em computadores.
