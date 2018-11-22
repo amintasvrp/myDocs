@@ -1,5 +1,5 @@
 ---
-title: "Python 3"
+title: "Python 3: Minimalismo e Legibilidade"
 date: 2018-06-17T23:53:59-03:00
 author: "Amintas Victor"
 type: "post"
@@ -13,9 +13,9 @@ Muitos desenvolvedores optam por escrever Python usando um ambiente de desenvolv
 
 ### Versões do Python
 
-Ao entrar em contato com Python pela primeira vez pode ser um pouco confuso porque, ao contrário de muitas outras linguagens de programação, o Python tem duas versões principais, não compatíveis, que são atualmente amplamente utilizadas.
+Ao entrar em contato com Python pela primeira vez pode ser um pouco confuso porque, ao contrário de muitas outras linguidadens de programação, o Python tem duas versões principais, não compatíveis, que são atualmente amplamente utilizadas.
 
-A versão 2.7.3 do Python é na maior parte, compatível com todas as versões anteriores. Ao refatorar a linguagem, foi criada Python 3, o qual foi adotado lentamente no início, principalmente pela incompatibilidade. Mas hoje em dia o ecossistema do Python 3 está em grande parte comprometido, tornando o Python 3 a escolha óbvia para novos desenvolvedores que desejam aprender a linguagem.
+A versão 2.7.3 do Python é na maior parte, compatível com todas as versões anteriores. Ao refatorar a linguidadem, foi criada Python 3, o qual foi adotado lentamente no início, principalmente pela incompatibilidade. Mas hoje em dia o ecossistema do Python 3 está em grande parte comprometido, tornando o Python 3 a escolha óbvia para novos desenvolvedores que desejam aprender a linguidadem.
 
 ## Printando
 
@@ -94,8 +94,8 @@ A versão 2.7.3 do Python é na maior parte, compatível com todas as versões a
 
 ```python
   # Entrada Recebida como String
-  name = input("Enter your name: ")        
-  print("Hello", name + "!")              
+  nome = input("Enter your nome: ")        
+  print("Hello", nome + "!")              
 
   # Entrada Convertida para Inteiro/Decimal
   num1 = int(input("Enter First Num: "))
@@ -141,7 +141,7 @@ A versão 2.7.3 do Python é na maior parte, compatível com todas as versões a
   friends.clear()                    # Esvaziando a Lista
 ```
 
-## tupla_numeross
+## Tuplas
 
 ```python
   tupla_numeros = (2, 4, "six", 8.0, 10, 12)
@@ -153,4 +153,189 @@ A versão 2.7.3 do Python é na maior parte, compatível com todas as versões a
   print(tupla_numeros[2:])   # Obtendo Subtupla: ("six", 8.0, 10, 12)
   print(tupla_numeros[2:4])  # Obtendo Subtupla: ("six", 8.0)
   print(len(tupla_numeros))  # Obtendo Tamanho da Tupla
+```
+
+## Funções
+
+```python
+  def funcao(param1, param2 = valor_default):
+       return resultado
+
+  funcao(valor1)
+  funcao(valor1, valor2)
+```
+
+## Condicionais
+
+```python
+a = True
+b = False
+
+if a and b:
+	# Ações Executadas ao Validar o If
+elif a or not(b):
+	# Ações Executadas ao Validar o Else If
+else:
+	# Ações Executadas ao Validar o Else
+
+# Comparações: >, <, >=, <=, !=, ==
+if (1 < 3) or ("string1" == "string2"):
+	# Execução ao validar condição
+```
+
+## Dicionários
+
+```python
+
+# Definindo um dicionário
+dicionario = {
+    "a" : "b",
+    5 : ["a", 3],
+    3 : 5
+}
+
+# Acessando o Valor, dado uma Chave, em um Dicionário
+print( dicionario["a"] )
+
+# Acessando o Valor, dado uma Chave, em um Dicionário. Caso a Chave não Exista,
+# um Valor Passado como Parâmetro será Retornado
+print( dicionario.get(5, "Chave não consta") )
+```
+
+## Iterações (Loops)
+
+```python
+# While Loop
+indice = 1
+while indice <= 5:
+	print(indice)
+	indice += 1
+
+# For Loop
+for indice in range(5):         # range(n) = [0, 1, ..., n-1]
+    print(indice)
+
+numeros = [4, 8, 15, 16, 23, 42]
+for numero in numeros:
+    print(numeros)
+
+for letra in "Palavra":
+    print(letra)
+```
+
+## Tratamento de Exceções
+
+```python
+  try:
+      # Comandos a serem Executados
+  except ExcecaoPrevista as e:
+      # Tratamento de uma Exceção Prevista
+      print(e)
+  except:
+      # Tratamento de uma Exceção Imprevista
+      print("HOUVE UM ERRO")       
+```
+
+## Classes e Objetos
+
+```python
+  # Definindo o Objeto
+  class Livro:
+      # Construtor do Objeto
+      def __init__(self, titulo, autor):
+          self.titulo = titulo
+          self.titulo = titulo
+
+      # Função Inerente aos Atributos
+      def ler_livro(self):
+           print("Lendo ", self.titulo, " de ", self.autor)
+
+  # Instanciando Objeto
+  book1 = Book("Dracula", "Bram Stocker");
+
+  # Acessando Atributo do Objeto
+  print(book1.titulo)
+  # Utilizando Função do Objeto
+  book1.ler_livro()
+```
+
+## Getters e Setters
+
+```python
+  class Livro:
+      def __init__(self, titulo, autor):
+          self.titulo = titulo;
+          self.autor = autor
+
+      # Getter
+      @property
+      def title(self):
+          return self._titulo     # Usamos Underscore antes do Atributo para
+                                 # indicá-lo como Privado
+
+      # Setter
+      @titulo.setter
+      def title(self, novo_titulo):
+          self._titulo = novo_titulo
+
+      # Setter to Null
+      @titulo.deleter
+      def titulo(self):
+          del self._titulo
+
+      def ler_livro(self):
+         print("Lendo ", self.titulo, " de ", self.autor)
+
+  book1 = Book("Dracula", "Bram Stocker");
+
+  print(book1.titulo)
+  book1.ler_livro()
+```
+
+## Herança
+
+```python
+
+  # Superclasse
+  class Chef:
+
+     def __init__(self, nome, idade):
+         self.nome = nome
+         self.idade = idade
+
+     def cozinhar_frango(self):
+         print("Frango Cozinhado")
+
+     def temperar_salada(self):
+         print("Salada Temperada")
+
+     def cozinhar_prato_especial(self):
+         print("Costeletas de Porco")
+
+  # Subclasse
+  class ChefEuropeu(Chef):
+
+     def __init__(self, nome, idade, countryOfOrigin):
+         self.countryOfOrigin = countryOfOrigin
+         # Reaproveitamos o Construtor da Superclasse
+         super().__init__(nome, idade)
+
+     def cozinhar_massa(self):
+         print("Macarronada")
+
+     # Sobrescrevendo Função da Superclasse
+     def cozinhar_prato_especial(self):
+         print("Frango Parma")
+
+
+  myChef = Chef("Gordon Ramsay", 50)
+  myChefEuropeu = ChefEuropeu("Massimo Bottura", 55, "Itália")
+
+  # Instâncias da Subclasse herdam Características da Superclasse
+  myChef.cozinhar_frango()  
+  myChefEuropeu.cozinhar_frango()
+
+  # Instâncias da Subclasse podem Sobrescrever Características da Superclasse
+  myChef.cozinhar_prato_especial()
+  myChefEuropeu.cozinhar_prato_especial()
 ```

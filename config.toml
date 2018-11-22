@@ -79,6 +79,11 @@ googleAnalytics = ""
 	url    = "cpp/"
 	weight = 2
 
+[[menu.main]]
+	name   = "Python 3"
+	url    = "python/"
+	weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
