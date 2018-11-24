@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Prolog e o Paradigma Lógico - myDocs</title>
+    <title>R: Introdução a Ciência de Dados - myDocs</title>
     <meta name="generator" content="Hugo 0.51" />
 
     
     <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
     
-    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/prolog/">
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/r/">
     
     <meta name="author" content="Amintas Victor">
     
 
-    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/prolog/">
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/r/">
     <meta property="og:title" content="myDocs">
     <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
     <meta name="apple-mobile-web-app-title" content="myDocs">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Prolog e o Paradigma Lógico
+        R: Introdução a Ciência de Dados
       </div>
     </div>
 
@@ -272,14 +272,11 @@
 
 
 
-<a class="current" title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
 	
 	Prolog
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -311,11 +308,14 @@
 
 
 
-<a  title="R" href="https://amintasvrp.github.io/myDocs/r/">
+<a class="current" title="R" href="https://amintasvrp.github.io/myDocs/r/">
 	
 	R
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -376,92 +376,235 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Prolog e o Paradigma Lógico </h1>
+			<h1>R: Introdução a Ciência de Dados </h1>
 
 			
 
-<p>Mesmo diferentes paradigmas como Funcional e Imperativo têm algo em comum: ambos realizam mapeamento, isto é, lêem entradas e geram saídas. No entanto, um programa de acordo com o paradigma lógico <strong>implementa relacionamentos</strong>, que são mais gerais do que os mapeamentos. Em outras palavras, quando se trata de programação lógica, o nível é superior ao da programação imperativa ou funcional.</p>
+<h2 id="preparando-o-ambiente">Preparando o Ambiente</h2>
 
-<h2 id="paradigma-lógico">Paradigma Lógico</h2>
-
-<p>Definimos as relações da seguinte forma:</p>
-
-<blockquote>
-<p>Considerando dois conjuntos S e T, dizemos que existe uma relação r entre S e T se, para cada x em S e y em T, a avaliação r(x, y) é verdadeira ou falsa.</p>
-</blockquote>
-
-<p>Tendo implementado a relação r, podemos fazer consultas como:</p>
-
-<ul>
-<li>Dado x e y, determine se r(x, y) é verdadeiro;</li>
-<li>Dado x, encontre todo y onde r(x, y) é verdadeiro, e vice-versa;</li>
-<li>Encontre todos os x e y onde r(x, y) é verdadeiro.</li>
-</ul>
-
-<p>Linguagens de programação lógicas são restritas a <strong>Cláusulas de Horn</strong>, que possuem o seguinte formato: <strong>A0 se A1 e &hellip; e An</strong>, onde <strong>Ai</strong> é uma afirmação do formulário <strong>Ri(&hellip;)</strong>, com <strong>Ri</strong> sendo o nome de um relacionamento. Se <strong>A1, &hellip;, An</strong> forem verdadeiras, inferimos que <strong>A0</strong> também é verdadeiro, caso contrário, falso. Se a cláusula for igual a <strong>A0</strong>, é considerado um <strong>fato</strong>.</p>
-
-<p>O Paradigma Lógico faz parte da subcategoria &ldquo;Paradigma Declarativo&rdquo;, preocupada com fatos e não com procedimentos, de modo que o conhecimento sobre o problema é descrito usando a lógica simbólica.</p>
-
-<p>O formalismo lógico-computacional é baseado em três princípios:</p>
-
-<ul>
-<li>Uso de linguagem formal para representação do conhecimento;</li>
-</ul>
-
-<blockquote>
-<p>Uma linguagem formal é precisa, pois tem sentenças com sintaxe e semântica bem definidas, embora seja menos expressiva em comparação com a linguagem natural.</p>
-</blockquote>
-
-<ul>
-<li>Uso de regras de inferência para manipular conhecimento;</li>
-</ul>
-
-<blockquote>
-<p>Uma regra de inferência é um padrão de manipulação sintática que permite criar novas fórmulas a partir de fórmulas existentes e simular formas de raciocínio válidas.</p>
-</blockquote>
-
-<ul>
-<li>Uso de uma estratégia de busca para controlar inferências.</li>
-</ul>
-
-<blockquote>
-<p>Um agente pode ter uma enorme quantidade de conhecimento armazenado. Normalmente, ele precisa usar apenas parte dele para resolver um problema. Nesse sentido, a estratégia de busca serve para decidir qual parte do conhecimento armazenado deve ser explorada em busca da solução.</p>
-</blockquote>
-
-<p>O programador deve se preocupar em descrever o problema a ser resolvido (especificação), deixando a máquina para procurar a solução.</p>
-
-<h2 id="prolog">Prolog</h2>
-
-<p>Geralmente associado ao contexto de IA ou linguística ou ambos, tem suas raízes na lógica de primeira ordem. Como vantagem, permite representar o conhecimento que um agente tem sobre seu mundo em um nível simples, direto e alto.</p>
-
-<h2 id="cláusulas-de-horn">Cláusulas de Horn</h2>
-
-<pre><code>    B :- A1, A2, ..., An.  % B = A1 and A2 and ... An
-    B :- A1; A2; ...; An.  % B = A1 or A2 or ... An
-    B :- A1 -&gt; A2 ; A3.    % B = if A1 then A2 else A3
+<pre><code class="language-bash">  sudo apt update
+  sudo apt install r-base r-base-dev
 </code></pre>
 
-<h2 id="unificação">Unificação</h2>
+<p>O uso da linguagem pode se dar tanto via terminal, ao utilizar o comando <code>R</code>, quanto através da IDE <strong>RStudio</strong>, sendo este último a maneira recomendada.</p>
 
-<p>Ao responder a uma consulta, o interpretador de Prolog pode precisar atribuir valores às variáveis. Unificação é o mecanismo usado para determinar se existe uma maneira de instanciar as variáveis de dois predicados para torná-los iguais. Dois termos podem ser unificados se:</p>
+<h2 id="tipos-de-dados-básicos-e-variáveis">Tipos de Dados Básicos e Variáveis</h2>
 
-<ul>
-<li>Ambos são constantes;</li>
-<li>Um dos termos é uma variável;</li>
-<li>Ambos são termos complexos com o mesmo nome e número de argumentos.</li>
-</ul>
+<pre><code class="language-python">  # Tipos de Dados
+  numerico &lt;- 10.5            # Decimal (Padrão)
+  inteiro &lt;- as.integer(6)    # is.integer(inteiro) == True
+  logico &lt;- False             # ||, &amp;&amp;, !
+  string &lt;- paste(&quot;a&quot;,&quot;b&quot;)    # &quot;a b&quot;  
+  string &lt;- paste0(&quot;a&quot;,&quot;b&quot;)   # &quot;ab&quot;
 
-<h2 id="listas">Listas</h2>
+  # Ambas as formas são válidas
+  numero1 &lt;- 10
+  numero2 = 10
 
-<p>As listas consistem em uma estrutura que representa uma sequência de elementos de qualquer tamanho. Uma lista é definida recursivamente da seguinte maneira:</p>
-
-<pre><code>    []    % lista vazia
-    [h|t] % lista com cabeça e cauda                                           
+  # Printando Valor da Variável
+  numero1
+  numero2 - 5
 </code></pre>
 
-<p>Nessa linguagem, as listas são heterogêneas, ou seja, podem conter valores de diferentes tipos. Podemos até comparar valores de diferentes tipos usando a relação &ldquo;=&rdquo;, mas o resultado será falso.</p>
+<h2 id="datas">Datas</h2>
 
-<p>Para ver exemplos de implementações, <a href="https://github.com/amintasvrp/Dirlididi_PLP/tree/master/questoesProlog">clique aqui</a>. Para saber mais sobre o projeto <em>Prolog Story: Colosseum of Champions</em>, que consiste em um jogo de batalha de personagens da Marvel, implementado no Prolog, <a href="https://github.com/amintasvrp/A_Prolog_Story_CoC">clique aqui</a>.</p>
+<pre><code class="language-python">  Sys.Date() # Date: Manipulação em Dias
+  Sys.time() # POSIXct: Manipulação em Segundos
+
+  # Converter String para Data
+  as.Date(&quot;YYYY-MM-DD&quot;)               # Formato Padrão
+  as.Date(&quot;DD/MM/YYYY&quot;, &quot;%d/%m/%y&quot;)   # Convertendo o Formato
+</code></pre>
+
+<h2 id="operações-básicas">Operações Básicas</h2>
+
+<pre><code class="language-python">  # +, - , *, /, %
+  (3 * 8) + 2 / 5
+</code></pre>
+
+<h2 id="criando-e-manipulando-vetores">Criando e Manipulando Vetores</h2>
+
+<pre><code class="language-python">  # Instanciando Vetor
+  vetor &lt;- c(1, 2, 3, 4, 5, 6)
+
+  vetor * 2             # Manipulando Vetor como Único Elemento
+                        # [2, 4, 6, 8, 10, 12]
+
+  # Acessando Elementos do Vetor
+  vetor[i]              # Elemento Indicado pelo Índice (1..n)
+  vetor[-i]             # Todos os Elementos, Exceto o Indicado
+  vetor[i:j]            # Intervalo Fechado
+  vetor[-i:-j]          # Intervalo Aberto
+
+  # Nomeando Elementos
+  names(vetor) &lt;- c(&quot;nome1&quot;,...,&quot;nomen&quot;)
+
+  # Repetir Elementos
+  rep(elemento,quantidade)
+</code></pre>
+
+<h2 id="fator">Fator</h2>
+
+<pre><code class="language-python">  # Vetor de Categorias e Níveis sem Repetição
+  fator &lt;- factor(vetor)
+</code></pre>
+
+<h2 id="tabela">Tabela</h2>
+
+<pre><code class="language-python">  # Elimina Repetições e Determina Frequências
+  fator &lt;- table(vetor)
+</code></pre>
+
+<h2 id="matriz">Matriz</h2>
+
+<pre><code class="language-python">  matriz &lt;- matrix(vetor, ncol=numeroColunas, nrow=numeroLinhas) # Definindo Matriz, Preenchendo em Coluna
+  matrizt &lt;- t(matriz)                                           # Matriz Transposta
+  matrizi &lt;- solve(matriz)                                       # Matriz Inversa
+
+  # Combinar Matrizes
+  matrizl &lt;- rbind(matriz1, matriz2) # Linha
+  matrizc &lt;- cbind(matriz1, matriz2) # Coluna
+
+  matriz1 %*% matriz2 # Multiplicação Matricial  
+</code></pre>
+
+<h2 id="lista">Lista</h2>
+
+<pre><code class="language-python">  lista &lt;- list(valor1,...,valorn) # Definindo uma Sequência de Diferentes Tipos
+
+  # Acessando Elementos do Vetor
+  lista[i]              # Retorna uma Lista com Elemento Indicado pelo Índice (1..n)
+  lista[[i]]            # Retorna o Elemento Indicado pelo Índice (1..n)
+
+  # Definindo Lista com Elementos Nomeados
+  lista &lt;- list(nome1=valor1,...,nomen=valorn)
+</code></pre>
+
+<h2 id="data-frames">Data Frames</h2>
+
+<pre><code class="language-python"># Tabela de Dados compostas por Listas de Valores de Igual Tamanho
+
+# Indexação de Elementos
+dataFrame[i,j]      # Numeração
+dataFrame[&quot;a&quot;,&quot;b&quot;]  # Nomes
+dataFrame[i,]       # Linha
+dataFrame[,j]       # Coluna
+
+# Tamanho
+ncol(dataFrame)  # Total de Linhas
+nrow(dataFrame)  # Total de Colunas
+
+head(dataFrame)  # Início do Data Frame
+</code></pre>
+
+<h2 id="desenhando-gráficos">Desenhando Gráficos</h2>
+
+<pre><code class="language-python">  amostra &lt;- c(2, 4, 4, 6, 6, 6, 6, 8, 8, 10) # Elemento x Frequência
+
+  # Gráfico de Barras: Dados Categóricos
+  barplot(amostra)
+
+  # Histograma: Dados Intervalares
+  hist(amostra)
+
+  # Gráfico Pizza
+  pie(amostra)
+
+  # Gráfico de Dispersão
+  plot(amostra)
+
+  # Definindo Legenda
+  legend(&quot;Posição da Legenda&quot;, fill=c(cor1,...,corn), legend=c(&quot;legenda1&quot;,...,&quot;legendan&quot;))
+
+  # Desenhando Linha no Histograma
+  abline(v=valor, col=&quot;cor&quot;, lwd=larguraDaLinha)
+</code></pre>
+
+<h2 id="média">Média</h2>
+
+<pre><code class="language-python">  mean(amostra)             
+</code></pre>
+
+<h2 id="mediana">Mediana</h2>
+
+<pre><code class="language-python">  median(amostra)             
+</code></pre>
+
+<h2 id="funcão-própria">Funcão Própria</h2>
+
+<pre><code class="language-python">  funcao &lt;- function(param1, param2, ...) {
+    # Código a ser Executado
+  }             
+</code></pre>
+
+<h2 id="moda">Moda</h2>
+
+<pre><code class="language-python">  mode &lt;- function(amostra) {
+     amostraSemRep &lt;- unique(amostra)
+     amostraSemRep[which.max(tabulate(match(amostra, amostraSemRep)))]
+  }           
+</code></pre>
+
+<h2 id="distribuição-normal">Distribuição Normal</h2>
+
+<pre><code class="language-python">  shapiro.test(amostra)  # Distribuição não é Normal: p-value &lt; 0.05
+                         # Distribuição é Normal: p-value &gt;= 0.05
+</code></pre>
+
+<h2 id="sumário">Sumário</h2>
+
+<pre><code class="language-python">  summary(amostra)  # Resumo das Informações de uma Conjunto de Dados
+</code></pre>
+
+<h2 id="boxplot">Boxplot</h2>
+
+<pre><code class="language-python">  boxplot(amostra)  # Gráfico que expõe o Primeiro e o Terceiro Quartis
+</code></pre>
+
+<h2 id="salvando-como-png">Salvando como .png</h2>
+
+<pre><code class="language-python">  png(file=&quot;/path/da/imagem.png&quot;, width=comprimento, height=altura)  # Determinando o Path, o Comprimento e a Altura
+                                                                     # da Figura
+  dev.off()                                                          # Salvando Modificações na Imagem
+</code></pre>
+
+<h2 id="variância">Variância</h2>
+
+<pre><code class="language-python">  var(amostra)  # Se a Amostra for Pequena: (Xi - X)**2 / (n - 1)
+                # Se a Amostra for Grande: (Xi - X)**2 / n
+</code></pre>
+
+<h2 id="desvio-padrão">Desvio Padrão</h2>
+
+<pre><code class="language-python">  sd(amostra)
+</code></pre>
+
+<h2 id="manipulando-dados-tabulados">Manipulando Dados Tabulados</h2>
+
+<pre><code class="language-python">  amostra &lt;- read.table(file=&quot;/path/da/amostra.csv&quot;) # Criando Data Frame a partir de table
+  amostra &lt;- read.csv(file=&quot;/path/da/amostra.csv&quot;)   # Criando Data Frame a partir do .csv
+
+  amostra$coluna                                     # Acessando coluna do Data Frame
+</code></pre>
+
+<h2 id="intervalos-de-confiança">Intervalos de Confiança</h2>
+
+<pre><code class="language-python">  # Obtemos o Intervalo de Confiança através do Teste com a Distribuição t de Student
+  t.test(amostra)                     # 90% de Confiança
+  t.test(amostra,  conf.level=0.9)
+</code></pre>
+
+<h2 id="manipulação-do-sistema">Manipulação do Sistema</h2>
+
+<pre><code class="language-python"># Diretório de Trabalho
+getwd()         # Obter
+setwd(&quot;path&quot;)   # Modificar
+
+# Pacotes e Dados do Sistema
+search()        # Listar
+attach(dados)   # Adicionar
+detach(dados)   # Remover
+</code></pre>
 
 
 		</br>
@@ -472,7 +615,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://amintasvrp.github.io/myDocs/linux/" title="Linux: Conhecendo e Usando o Terminal">
+      <a href="https://amintasvrp.github.io/myDocs/python/" title="Python 3: Minimalismo e Legibilidade">
         <span class="direction">
           Anterior
         </span>
@@ -482,7 +625,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              Linux: Conhecendo e Usando o Terminal
+              Python 3: Minimalismo e Legibilidade
             </div>
           </div>
         </div>
@@ -492,14 +635,14 @@
 
   <div class="next">
   
-      <a href="https://amintasvrp.github.io/myDocs/python/" title="Python 3: Minimalismo e Legibilidade">
+      <a href="https://amintasvrp.github.io/myDocs/sql/" title="SQL e os Bancos de Dados Relacionais">
         <span class="direction">
           Próximo
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Python 3: Minimalismo e Legibilidade
+              SQL e os Bancos de Dados Relacionais
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

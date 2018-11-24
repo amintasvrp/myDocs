@@ -79,6 +79,16 @@ Paradigma Lógico Definimos as relações da seguinte forma:
     </item>
     
     <item>
+      <title>R: Introdução a Ciência de Dados</title>
+      <link>https://amintasvrp.github.io/myDocs/r/</link>
+      <pubDate>Sun, 17 Jun 2018 23:53:30 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/r/</guid>
+      <description>Preparando o Ambiente sudo apt update sudo apt install r-base r-base-dev  O uso da linguagem pode se dar tanto via terminal, ao utilizar o comando R, quanto através da IDE RStudio, sendo este último a maneira recomendada.
+Tipos de Dados Básicos e Variáveis # Tipos de Dados numerico &amp;lt;- 10.5 # Decimal (Padrão) inteiro &amp;lt;- as.integer(6) # is.integer(inteiro) == True logico &amp;lt;- False # ||, &amp;amp;&amp;amp;, ! string &amp;lt;- paste(&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;) # &amp;quot;a b&amp;quot; string &amp;lt;- paste0(&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;) # &amp;quot;ab&amp;quot; # Ambas as formas são válidas numero1 &amp;lt;- 10 numero2 = 10 # Printando Valor da Variável numero1 numero2 - 5  Datas Sys.</description>
+    </item>
+    
+    <item>
       <title>SQL e os Bancos de Dados Relacionais</title>
       <link>https://amintasvrp.github.io/myDocs/sql/</link>
       <pubDate>Sun, 17 Jun 2018 23:53:00 -0300</pubDate>
