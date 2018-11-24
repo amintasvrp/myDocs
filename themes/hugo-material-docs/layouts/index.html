@@ -26,11 +26,18 @@
 		<div class="wrapper">
 			{{ range where .Site.Pages "Type" "index" }}
 				<h1>Uma Documentação em Português: Simples e Direta. {{ if .IsDraft }} (Draft){{ end }}</h1>
+				</br>
+				{{ with .Site.Params.roadmap }}
+					<div class="roadmap">
+						<img src="{{ $.Site.BaseURL }}{{ . }}">
+					</div>
+				{{ end }}
 
 				{{ .Content }}
+
 			{{ end }}
 
-		</br><!--><aside class="copyright" role="note">
+		<!--><aside class="copyright" role="note">
 				{{ with .Site.Params.copyright }}
 				&copy; {{ now.Format "2006" }} {{ . }} &ndash;
 				{{ end }}

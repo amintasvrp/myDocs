@@ -19,6 +19,7 @@ googleAnalytics = ""
 
 	version = "1.0.0"
 	logo = "images/logo.jpeg"
+	roadmap = "images/roadmap.png"
 	favicon = ""
 
 	permalink = "#"
@@ -82,6 +83,11 @@ googleAnalytics = ""
 [[menu.main]]
 	name   = "Python 3"
 	url    = "python/"
+	weight = 2
+
+[[menu.main]]
+	name   = "R"
+	url    = "r/"
 	weight = 2
 
 [blackfriday]

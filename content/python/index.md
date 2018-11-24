@@ -15,7 +15,7 @@ Muitos desenvolvedores optam por escrever Python usando um ambiente de desenvolv
 
 Ao entrar em contato com Python pela primeira vez pode ser um pouco confuso porque, ao contrário de muitas outras linguidadens de programação, o Python tem duas versões principais, não compatíveis, que são atualmente amplamente utilizadas.
 
-A versão 2.7.3 do Python é na maior parte, compatível com todas as versões anteriores. Ao refatorar a linguidadem, foi criada Python 3, o qual foi adotado lentamente no início, principalmente pela incompatibilidade. Mas hoje em dia o ecossistema do Python 3 está em grande parte comprometido, tornando o Python 3 a escolha óbvia para novos desenvolvedores que desejam aprender a linguidadem.
+A versão 2.7.3 do Python é na maior parte, compatível com todas as versões anteriores. Ao refatorar a linguagem, foi criada Python 3, o qual foi adotado lentamente no início, principalmente pela incompatibilidade. Mas hoje em dia o ecossistema do Python 3 está em grande parte comprometido, tornando o Python 3 a escolha óbvia para novos desenvolvedores que desejam aprender a linguagem.
 
 ## Printando
 
