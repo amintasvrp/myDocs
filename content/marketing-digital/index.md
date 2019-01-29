@@ -1,7 +1,8 @@
 ---
-title: "Marketing Digital"
+title: "Introdução ao Marketing Digital"
 date: 2018-06-17T23:55:30-03:00
-draft: true
+author: "Amintas Victor"
+type: "post"
 ---
 
 ##  Imagens inspiradoras
