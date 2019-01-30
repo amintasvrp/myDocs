@@ -95,6 +95,11 @@ googleAnalytics = ""
 	url    = "marketing-digital/"
 	weight = 2
 
+[[menu.main]]
+	name   = "HTML 5"
+	url    = "html/"
+	weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
