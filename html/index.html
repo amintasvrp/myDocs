@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Prolog e o Paradigma Lógico - myDocs</title>
+    <title>HTML 5: Construindo um Website - myDocs</title>
     <meta name="generator" content="Hugo 0.53" />
 
     
     <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
     
-    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/prolog/">
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/html/">
     
     <meta name="author" content="Amintas Victor">
     
 
-    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/prolog/">
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/html/">
     <meta property="og:title" content="myDocs">
     <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
     <meta name="apple-mobile-web-app-title" content="myDocs">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Prolog e o Paradigma Lógico
+        HTML 5: Construindo um Website
       </div>
     </div>
 
@@ -218,11 +218,14 @@
 
 
 
-<a  title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
+<a class="current" title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
 	
 	HTML 5
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -308,14 +311,11 @@
 
 
 
-<a class="current" title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
 	
 	Prolog
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -412,92 +412,335 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Prolog e o Paradigma Lógico </h1>
+			<h1>HTML 5: Construindo um Website </h1>
 
 			
 
-<p>Mesmo diferentes paradigmas como Funcional e Imperativo têm algo em comum: ambos realizam mapeamento, isto é, lêem entradas e geram saídas. No entanto, um programa de acordo com o paradigma lógico <strong>implementa relacionamentos</strong>, que são mais gerais do que os mapeamentos. Em outras palavras, quando se trata de programação lógica, o nível é superior ao da programação imperativa ou funcional.</p>
+<h2 id="tags-básicas">Tags Básicas</h2>
 
-<h2 id="paradigma-lógico">Paradigma Lógico</h2>
+<h3 id="meta-tags">Meta Tags</h3>
 
-<p>Definimos as relações da seguinte forma:</p>
+<pre><code class="language-html">
+&lt;html&gt;
+     &lt;head&gt;
+           &lt;meta charset=&quot;UTF-8&quot;&gt;
+           &lt;meta name=&quot;description&quot; content=&quot;Descrição do website&quot;&gt;
+           &lt;meta name=&quot;keywords&quot; content=&quot;palavras,chave&quot;&gt;
+           &lt;meta name=&quot;author&quot; content=&quot;Autor do website&quot;&gt;
+           &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!-- Janela de visualização--&gt;
+          &lt;title&gt;Título do Website&lt;/title&gt;
+     &lt;/head&gt;
+    &lt;body&gt;
+        Corpo do Website
+    &lt;/body&gt;
+&lt;/html&gt;
 
-<blockquote>
-<p>Considerando dois conjuntos S e T, dizemos que existe uma relação r entre S e T se, para cada x em S e y em T, a avaliação r(x, y) é verdadeira ou falsa.</p>
-</blockquote>
 
-<p>Tendo implementado a relação r, podemos fazer consultas como:</p>
+&lt;head&gt;
 
-<ul>
-<li>Dado x e y, determine se r(x, y) é verdadeiro;</li>
-<li>Dado x, encontre todo y onde r(x, y) é verdadeiro, e vice-versa;</li>
-<li>Encontre todos os x e y onde r(x, y) é verdadeiro.</li>
-</ul>
+&lt;/head&gt;
 
-<p>Linguagens de programação lógicas são restritas a <strong>Cláusulas de Horn</strong>, que possuem o seguinte formato: <strong>A0 se A1 e &hellip; e An</strong>, onde <strong>Ai</strong> é uma afirmação do formulário <strong>Ri(&hellip;)</strong>, com <strong>Ri</strong> sendo o nome de um relacionamento. Se <strong>A1, &hellip;, An</strong> forem verdadeiras, inferimos que <strong>A0</strong> também é verdadeiro, caso contrário, falso. Se a cláusula for igual a <strong>A0</strong>, é considerado um <strong>fato</strong>.</p>
 
-<p>O Paradigma Lógico faz parte da subcategoria &ldquo;Paradigma Declarativo&rdquo;, preocupada com fatos e não com procedimentos, de modo que o conhecimento sobre o problema é descrito usando a lógica simbólica.</p>
-
-<p>O formalismo lógico-computacional é baseado em três princípios:</p>
-
-<ul>
-<li>Uso de linguagem formal para representação do conhecimento;</li>
-</ul>
-
-<blockquote>
-<p>Uma linguagem formal é precisa, pois tem sentenças com sintaxe e semântica bem definidas, embora seja menos expressiva em comparação com a linguagem natural.</p>
-</blockquote>
-
-<ul>
-<li>Uso de regras de inferência para manipular conhecimento;</li>
-</ul>
-
-<blockquote>
-<p>Uma regra de inferência é um padrão de manipulação sintática que permite criar novas fórmulas a partir de fórmulas existentes e simular formas de raciocínio válidas.</p>
-</blockquote>
-
-<ul>
-<li>Uso de uma estratégia de busca para controlar inferências.</li>
-</ul>
-
-<blockquote>
-<p>Um agente pode ter uma enorme quantidade de conhecimento armazenado. Normalmente, ele precisa usar apenas parte dele para resolver um problema. Nesse sentido, a estratégia de busca serve para decidir qual parte do conhecimento armazenado deve ser explorada em busca da solução.</p>
-</blockquote>
-
-<p>O programador deve se preocupar em descrever o problema a ser resolvido (especificação), deixando a máquina para procurar a solução.</p>
-
-<h2 id="prolog">Prolog</h2>
-
-<p>Geralmente associado ao contexto de IA ou linguística ou ambos, tem suas raízes na lógica de primeira ordem. Como vantagem, permite representar o conhecimento que um agente tem sobre seu mundo em um nível simples, direto e alto.</p>
-
-<h2 id="cláusulas-de-horn">Cláusulas de Horn</h2>
-
-<pre><code>    B :- A1, A2, ..., An.  % B = A1 and A2 and ... An
-    B :- A1; A2; ...; An.  % B = A1 or A2 or ... An
-    B :- A1 -&gt; A2 ; A3.    % B = if A1 then A2 else A3
 </code></pre>
 
-<h2 id="unificação">Unificação</h2>
+<h3 id="cabeçalhos">Cabeçalhos</h3>
 
-<p>Ao responder a uma consulta, o interpretador de Prolog pode precisar atribuir valores às variáveis. Unificação é o mecanismo usado para determinar se existe uma maneira de instanciar as variáveis de dois predicados para torná-los iguais. Dois termos podem ser unificados se:</p>
+<pre><code class="language-html">
+&lt;h1&gt;Cabeçalho 1&lt;/h1&gt;
 
-<ul>
-<li>Ambos são constantes;</li>
-<li>Um dos termos é uma variável;</li>
-<li>Ambos são termos complexos com o mesmo nome e número de argumentos.</li>
-</ul>
+&lt;h2&gt;Cabeçalho 2&lt;/h2&gt;
+
+&lt;h3&gt;Cabeçalho 3&lt;/h3&gt;
+
+&lt;h4&gt;Cabeçalho 4&lt;/h4&gt;
+
+&lt;h5&gt;Cabeçalho 5&lt;/h5&gt;
+
+&lt;h6&gt;Cabeçalho 6&lt;/h6&gt;
+
+</code></pre>
+
+<h3 id="linha-horizontal">Linha Horizontal</h3>
+
+<pre><code class="language-html">
+&lt;hr/&gt;
+
+</code></pre>
+
+<h3 id="parágrafo">Parágrafo</h3>
+
+<pre><code class="language-html">
+&lt;p&gt;
+  Parágrafo 1
+&lt;/p&gt;
+
+</code></pre>
+
+<h3 id="formatadores-de-texto">Formatadores de Texto</h3>
+
+<pre><code class="language-html">
+&lt;p&gt;
+  &lt;big&gt;Texto Grande&lt;/big&gt;
+
+  &lt;small&gt;Texto Pequeno&lt;/small&gt;
+
+  &lt;b&gt;Texto em Negrito&lt;/b&gt;
+  &lt;strong&gt;Texto em Negrito&lt;/strong&gt;
+
+  &lt;i&gt;Texto em Itálico&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  Escrita Normal &lt;sup&gt;Escrita Superior&lt;/sup&gt;
+&lt;/p&gt;
+
+</code></pre>
+
+<h2 id="comentários">Comentários</h2>
+
+<pre><code class="language-html">
+&lt;!--
+Isto é um comentário
+Que encobre mais de uma linha
+--&gt;
+
+</code></pre>
+
+<h2 id="cores-e-estilos">Cores e Estilos</h2>
+
+<pre><code class="language-html">
+&lt;body style=&quot;background-color:cordefundo&quot;&gt;
+     &lt;h2 style=&quot;color:cordafonte&quot;&gt;
+          Cor de fundo e da fonte determinam um Estilo
+     &lt;/h2&gt;
+
+     &lt;p style=&quot;color: cordafonte; background-color:cordefundo&quot;&gt;
+          Podemos ter um estilo dentro de outro
+     &lt;/p&gt;
+&lt;/body&gt;
+
+</code></pre>
+
+<h2 id="formatando-a-página">Formatando a Página</h2>
+
+<pre><code class="language-html">
+&lt;body&gt;
+     &lt;header&gt;
+          Cabeçalho
+          &lt;nav&gt;
+               Área de Navegação
+          &lt;/nav&gt;
+     &lt;/header&gt;
+     &lt;main&gt;
+          Parte principal (conteúdo)
+          &lt;article&gt;
+               Artigo
+               &lt;section&gt;
+                    Seção
+                    &lt;aside&gt;
+                         Exposto
+                    &lt;/aside&gt;
+               &lt;/section&gt;
+          &lt;/article&gt;
+     &lt;/main&gt;
+     &lt;footer&gt;
+          Rodapé
+     &lt;/footer&gt;
+&lt;/body&gt;
+
+</code></pre>
+
+<h2 id="links">Links</h2>
+
+<pre><code class="language-html">
+
+&lt;a href=&quot;https://www.site.com&quot;&gt; Página externa &lt;/a&gt;
+
+&lt;a href=&quot;pagina.html&quot;&gt; Página no mesmo website &lt;/a&gt;
+
+&lt;a href=&quot;ebook.pdf&quot;&gt; Arquivo interno &lt;/a&gt;
+
+
+</code></pre>
+
+<h2 id="imagens">Imagens</h2>
+
+<pre><code class="language-html">
+&lt;!--
+Podemos alterar configurações da imagem como comprimento e largura
+--&gt;
+
+&lt;img src=&quot;http://www.site.com/foto/&quot;
+     alt=&quot;Título da Imagem&quot;
+     width=&quot;200&quot;&gt;
+
+</code></pre>
+
+<h2 id="vídeos">Vídeos</h2>
+
+<pre><code class="language-html">
+&lt;!--
+Vídeos externos
+--&gt;
+
+&lt;iframe width=&quot;560&quot;
+        height=&quot;315&quot;
+        src=&quot;https://www.site.com/video/&quot;
+        frameborder=&quot;0&quot;
+        gesture=&quot;media&quot;
+        allow=&quot;encrypted-media&quot;
+        allowfullscreen&gt;
+&lt;/iframe&gt;
+
+&lt;!--
+Vídeos internos
+--&gt;
+
+&lt;video src=&quot;meuvideo.mp4&quot;
+       autoplay
+       controls
+       width=&quot;300&quot;
+       poster=&quot;thumbnail.jpg&quot;&gt;
+&lt;/video&gt;
+
+</code></pre>
 
 <h2 id="listas">Listas</h2>
 
-<p>As listas consistem em uma estrutura que representa uma sequência de elementos de qualquer tamanho. Uma lista é definida recursivamente da seguinte maneira:</p>
+<pre><code class="language-html">
+&lt;!-- Lista não numerada --&gt;
 
-<pre><code>    []    % lista vazia
-    [h|t] % lista com cabeça e cauda                                           
+&lt;ul&gt;
+     &lt;li&gt;Ítem&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Lista numerada --&gt;
+
+&lt;ol&gt;
+     &lt;li&gt;1. Ítem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;A&quot;&gt;
+     &lt;li&gt;A. Ítem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;a&quot;&gt;
+     &lt;li&gt;a. Ítem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;I&quot;&gt;
+     &lt;li&gt;I. Ítem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;i&quot;&gt;
+     &lt;li&gt;i. Ítem&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Lista descritiva --&gt;
+
+&lt;dl&gt;
+     &lt;dt&gt;Ítem&lt;/dt&gt;
+     &lt;dd&gt;Descrição&lt;/dd&gt;
+&lt;/dl&gt;
+
+
 </code></pre>
 
-<p>Nessa linguagem, as listas são heterogêneas, ou seja, podem conter valores de diferentes tipos. Podemos até comparar valores de diferentes tipos usando a relação &ldquo;=&rdquo;, mas o resultado será falso.</p>
+<h2 id="tabela">Tabela</h2>
 
-<p>Para ver exemplos de implementações, <a href="https://github.com/amintasvrp/Dirlididi_PLP/tree/master/questoesProlog">clique aqui</a>. Para saber mais sobre o projeto <em>Prolog Story: Colosseum of Champions</em>, que consiste em um jogo de batalha de personagens da Marvel, implementado no Prolog, <a href="https://github.com/amintasvrp/A_Prolog_Story_CoC">clique aqui</a>.</p>
+<pre><code class="language-html">
+
+&lt;table&gt;
+     &lt;caption&gt;Minha Tabela&lt;/caption&gt;
+     &lt;thead&gt;
+          &lt;tr&gt;
+               &lt;th&gt;Cabeçalho 1&lt;/th&gt;
+               &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+               &lt;th&gt;Cabeçalho 3&lt;/th&gt;
+          &lt;/tr&gt;
+     &lt;/thead&gt;
+     &lt;tbody&gt;
+          &lt;tr&gt;
+               &lt;td&gt;Linha 1 Coluna 1&lt;/td&gt;
+               &lt;td&gt;Linha 1 Coluna 2&lt;/td&gt;
+               &lt;td&gt;Linha 1 Coluna 3&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+               &lt;td&gt;Linha 2 Coluna 1&lt;/td&gt;
+               &lt;td&gt;Linha 2 Coluna 2&lt;/td&gt;
+               &lt;td colspan=&quot;2&quot;&gt;Linha 2 Coluna 3&lt;/td&gt;
+               &lt;td&gt;Linha 2 Coluna 6&lt;/td&gt;
+          &lt;/tr&gt;
+     &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+</code></pre>
+
+<h2 id="divs-e-spans">Divs e Spans</h2>
+
+<pre><code class="language-html">
+&lt;!-- Containers um abaixo do outro --&gt;
+&lt;div&gt;Div1&lt;/div&gt;
+&lt;div&gt;Div2&lt;/div&gt;
+
+&lt;!-- Containers na mesma linha --&gt;
+&lt;span&gt;Span1&lt;/span&gt;
+&lt;span&gt;Span2&lt;/span&gt;
+
+</code></pre>
+
+<h2 id="entradas-e-formulários">Entradas e Formulários</h2>
+
+<pre><code class="language-html">&lt;form&gt;
+
+    &lt;input type=&quot;text&quot; value=&quot;Insira aqui a entrada&quot;/&gt;
+
+    &lt;input type=&quot;password&quot; /&gt;
+
+    &lt;input type=&quot;number&quot; /&gt;
+
+    &lt;input type=&quot;checkbox&quot; /&gt;
+
+    &lt;input type=&quot;color&quot; /&gt;
+
+    &lt;input type=&quot;date&quot; /&gt;
+
+    &lt;input type=&quot;email&quot; /&gt;
+
+    &lt;input type=&quot;file&quot; /&gt;
+
+    &lt;!-- Botões multualmente excludentes --&gt;
+    &lt;input type=&quot;radio&quot; /&gt;
+
+    &lt;input type=&quot;submit&quot; /&gt;
+
+    &lt;input type=&quot;time&quot; /&gt;
+
+    &lt;input type=&quot;url&quot; /&gt;
+
+    &lt;textarea rows=&quot;10&quot; cols=&quot;200&quot;&gt;
+      Insira aqui um parágrafo
+    &lt;/textarea&gt;
+
+&lt;/form&gt;
+
+</code></pre>
+
+<h2 id="iframe">Iframe</h2>
+
+<pre><code class="language-html">
+
+&lt;iframe src=&quot;http://www.site.com/&quot;
+         frameborder=&quot;0&quot;
+         width=&quot;1000&quot;
+         height=&quot;800&quot;&gt;
+     Aviso: Nem todo website suporta iframe
+&lt;/iframe&gt;
+
+</code></pre>
+
+<p>##</p>
 
 
 		</br>
@@ -508,7 +751,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://amintasvrp.github.io/myDocs/marketing-digital/" title="Introdução ao Marketing Digital">
+      <a href="https://amintasvrp.github.io/myDocs/cpp/" title="C&#43;&#43;: Programação Imperativa e Orientada a Objetos">
         <span class="direction">
           Anterior
         </span>
@@ -518,7 +761,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              Introdução ao Marketing Digital
+              C&#43;&#43;: Programação Imperativa e Orientada a Objetos
             </div>
           </div>
         </div>
@@ -528,14 +771,14 @@
 
   <div class="next">
   
-      <a href="https://amintasvrp.github.io/myDocs/python/" title="Python 3: Minimalismo e Legibilidade">
+      <a href="https://amintasvrp.github.io/myDocs/haskell/" title="Haskell I: Introdução ao Paradigma Funcional">
         <span class="direction">
           Próximo
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Python 3: Minimalismo e Legibilidade
+              Haskell I: Introdução ao Paradigma Funcional
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

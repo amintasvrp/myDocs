@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>HTML 5: Construindo um Website</title>
+      <link>https://amintasvrp.github.io/myDocs/html/</link>
+      <pubDate>Sun, 17 Jun 2018 23:58:30 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/html/</guid>
+      <description>Tags Básicas Meta Tags &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Descrição do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;palavras,chave&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Autor do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;!-- Janela de visualização--&amp;gt; &amp;lt;title&amp;gt;Título do Website&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Corpo do Website &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;  Cabeçalhos &amp;lt;h1&amp;gt;Cabeçalho 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Cabeçalho 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Cabeçalho 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Cabeçalho 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Cabeçalho 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Cabeçalho 6&amp;lt;/h6&amp;gt;  Linha Horizontal &amp;lt;hr/&amp;gt;  Parágrafo &amp;lt;p&amp;gt; Parágrafo 1 &amp;lt;/p&amp;gt;  Formatadores de Texto &amp;lt;p&amp;gt; &amp;lt;big&amp;gt;Texto Grande&amp;lt;/big&amp;gt; &amp;lt;small&amp;gt;Texto Pequeno&amp;lt;/small&amp;gt; &amp;lt;b&amp;gt;Texto em Negrito&amp;lt;/b&amp;gt; &amp;lt;strong&amp;gt;Texto em Negrito&amp;lt;/strong&amp;gt; &amp;lt;i&amp;gt;Texto em Itálico&amp;lt;/i&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Escrita Normal &amp;lt;sup&amp;gt;Escrita Superior&amp;lt;/sup&amp;gt; &amp;lt;/p&amp;gt;  Comentários &amp;lt;!</description>
+    </item>
+    
+    <item>
       <title>Haskell I: Introdução ao Paradigma Funcional</title>
       <link>https://amintasvrp.github.io/myDocs/haskell/</link>
       <pubDate>Sun, 17 Jun 2018 23:57:59 -0300</pubDate>
