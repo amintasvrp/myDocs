@@ -81,4 +81,3 @@ __negrito__
   ```linguagem
     Código com Highlight
   ```
-~~~~
