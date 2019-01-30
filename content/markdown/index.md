@@ -77,8 +77,10 @@ __negrito__
 
 ## Blocos de Código
 
-```
+```markdown
+
 ```linguagem
   Código com Highlight
 ```
+
 ```
