@@ -67,7 +67,7 @@ Pré-requisitos Breves noções de HTML e Markdown.</description>
     </item>
     
     <item>
-      <title>LESS: Folha de Estilo Pré-Processadora de CSS</title>
+      <title>LESS: Folha de Estilo Pré-Processada para CSS</title>
       <link>https://amintasvrp.github.io/myDocs/less/</link>
       <pubDate>Sun, 17 Jun 2018 23:56:30 -0300</pubDate>
       
@@ -134,6 +134,17 @@ Paradigma Lógico Definimos as relações da seguinte forma:
       <guid>https://amintasvrp.github.io/myDocs/r/</guid>
       <description>Preparando o Ambiente sudo apt update sudo apt install r-base r-base-dev  O uso da linguagem pode se dar tanto via terminal, ao utilizar o comando R, quanto através da IDE RStudio, sendo este último a maneira recomendada.
 Tipos de Dados Básicos e Variáveis # Tipos de Dados numerico &amp;lt;- 10.5 # Decimal (Padrão) inteiro &amp;lt;- as.integer(6) # is.integer(inteiro) == True logico &amp;lt;- False # ||, &amp;amp;&amp;amp;, ! string &amp;lt;- paste(&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;) # &amp;quot;a b&amp;quot; string &amp;lt;- paste0(&amp;quot;a&amp;quot;,&amp;quot;b&amp;quot;) # &amp;quot;ab&amp;quot; # Ambas as formas são válidas numero1 &amp;lt;- 10 numero2 = 10 # Printando Valor da Variável numero1 numero2 - 5  Datas Sys.</description>
+    </item>
+    
+    <item>
+      <title>SASS: CSS com Superpoderes</title>
+      <link>https://amintasvrp.github.io/myDocs/sass/</link>
+      <pubDate>Sun, 17 Jun 2018 23:53:15 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/sass/</guid>
+      <description>Instalando SASS Primeiramente devemos instalar o Ruby, linguagem de programação que implementa SASS, e o gem, gerenciador de pacotes do Ruby. Fazemos ambas as instalações com o seguinte comando:
+sudo apt install ruby  Em seguida, basta utilizar o gem para instalar o SASS com o seguinte comando:
+sudo apt install ruby-sass  SASS X SCSS O framework SASS comporta duas sintaxes para implementação: SASS, que utiliza identações para definir escopos, e SCSS que utiliza chaves e ponto-e-vírgula para definir escopos.</description>
     </item>
     
     <item>
