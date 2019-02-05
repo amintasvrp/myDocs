@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>R: Introdução a Ciência de Dados - myDocs</title>
+    <title>LESS: Folha de Estilo Pré-Processadora de CSS - myDocs</title>
     <meta name="generator" content="Hugo 0.54.0" />
 
     
     <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
     
-    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/r/">
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/less/">
     
     <meta name="author" content="Amintas Victor">
     
 
-    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/r/">
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/less/">
     <meta property="og:title" content="myDocs">
     <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
     <meta name="apple-mobile-web-app-title" content="myDocs">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        R: Introdução a Ciência de Dados
+        LESS: Folha de Estilo Pré-Processadora de CSS
       </div>
     </div>
 
@@ -290,11 +290,14 @@
 
 
 
-<a  title="LESS" href="https://amintasvrp.github.io/myDocs/less/">
+<a class="current" title="LESS" href="https://amintasvrp.github.io/myDocs/less/">
 	
 	LESS
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -398,14 +401,11 @@
 
 
 
-<a class="current" title="R" href="https://amintasvrp.github.io/myDocs/r/">
+<a  title="R" href="https://amintasvrp.github.io/myDocs/r/">
 	
 	R
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -466,234 +466,135 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>R: Introdução a Ciência de Dados </h1>
+			<h1>LESS: Folha de Estilo Pré-Processadora de CSS </h1>
 
 			
 
-<h2 id="preparando-o-ambiente">Preparando o Ambiente</h2>
+<h2 id="instalando-less">Instalando LESS</h2>
 
-<pre><code class="language-bash">  sudo apt update
-  sudo apt install r-base r-base-dev
+<p>Primeiramente devemos instalar o Node.JS e o NPM (Node.JS Package Manager):</p>
+
+<pre><code class="language-bash">sudo apt update
+sudo apt install nodejs
+sudo apt install npm
 </code></pre>
 
-<p>O uso da linguagem pode se dar tanto via terminal, ao utilizar o comando <code>R</code>, quanto através da IDE <strong>RStudio</strong>, sendo este último a maneira recomendada.</p>
+<p>Depois, instalamos o LESS em si:</p>
 
-<h2 id="tipos-de-dados-básicos-e-variáveis">Tipos de Dados Básicos e Variáveis</h2>
-
-<pre><code class="language-python">  # Tipos de Dados
-  numerico &lt;- 10.5            # Decimal (Padrão)
-  inteiro &lt;- as.integer(6)    # is.integer(inteiro) == True
-  logico &lt;- False             # ||, &amp;&amp;, !
-  string &lt;- paste(&quot;a&quot;,&quot;b&quot;)    # &quot;a b&quot;  
-  string &lt;- paste0(&quot;a&quot;,&quot;b&quot;)   # &quot;ab&quot;
-
-  # Ambas as formas são válidas
-  numero1 &lt;- 10
-  numero2 = 10
-
-  # Printando Valor da Variável
-  numero1
-  numero2 - 5
+<pre><code class="language-bash">sudo npm install -g less
 </code></pre>
 
-<h2 id="datas">Datas</h2>
+<h2 id="compilando-less-em-css">Compilando LESS em CSS</h2>
 
-<pre><code class="language-python">  Sys.Date() # Date: Manipulação em Dias
-  Sys.time() # POSIXct: Manipulação em Segundos
+<p>Nós escrevemos código em LESS e depois usamos o compilador de LESS para gerar arquivos CSS. Nós compilamos código LESS da seginte forma:</p>
 
-  # Converter String para Data
-  as.Date(&quot;YYYY-MM-DD&quot;)               # Formato Padrão
-  as.Date(&quot;DD/MM/YYYY&quot;, &quot;%d/%m/%y&quot;)   # Convertendo o Formato
+<pre><code class="language-bash">lessc diretorio/arquivo.less diretorio/arquivo.css
 </code></pre>
 
-<h2 id="operações-básicas">Operações Básicas</h2>
+<p>Podemos instalar um plug-in, chamado LESS-Watcher, em nosso projeto para que os arquivos LESS seja automaticamente compilados em arquivos CSS. Estando na raiz do projeto, instalamos esse plug-in da seguinte forma:</p>
 
-<pre><code class="language-python">  # +, - , *, /, %
-  (3 * 8) + 2 / 5
+<pre><code class="language-bash">sudo npm install less-watcher
 </code></pre>
 
-<h2 id="criando-e-manipulando-vetores">Criando e Manipulando Vetores</h2>
+<p>Para usar o LESS-Watcher basta utilizar o seguinte comando:</p>
 
-<pre><code class="language-python">  # Instanciando Vetor
-  vetor &lt;- c(1, 2, 3, 4, 5, 6)
-
-  vetor * 2             # Manipulando Vetor como Único Elemento
-                        # [2, 4, 6, 8, 10, 12]
-
-  # Acessando Elementos do Vetor
-  vetor[i]              # Elemento Indicado pelo Índice (1..n)
-  vetor[-i]             # Todos os Elementos, Exceto o Indicado
-  vetor[i:j]            # Intervalo Fechado
-  vetor[-i:-j]          # Intervalo Aberto
-
-  # Nomeando Elementos
-  names(vetor) &lt;- c(&quot;nome1&quot;,...,&quot;nomen&quot;)
-
-  # Repetir Elementos
-  rep(elemento,quantidade)
+<pre><code class="language-bash">less-watcher -p &quot;&quot; -d diretorios_arquivos_less/
 </code></pre>
 
-<h2 id="fator">Fator</h2>
+<h2 id="variáveis">Variáveis</h2>
 
-<pre><code class="language-python">  # Vetor de Categorias e Níveis sem Repetição
-  fator &lt;- factor(vetor)
+<pre><code class="language-css">
+@variavel: blue;
+
+header{
+     color: @variavel;
+}
+
+footer {
+     color: @variavel;
+}
+
+button {
+     background-color: @variavel;
+}
+
 </code></pre>
 
-<h2 id="tabela">Tabela</h2>
+<h2 id="mixins">Mixins</h2>
 
-<pre><code class="language-python">  # Elimina Repetições e Determina Frequências
-  fator &lt;- table(vetor)
+<pre><code class="language-css">
+.fancy-border(@size: 1px, @color: black) {
+     border: @size dashed @color;
+}
+
+.fancier-border {
+     .fancy-border(10px, blue);
+     background-color: yellow;
+     border-radius: 5px;
+}
+
 </code></pre>
 
-<h2 id="matriz">Matriz</h2>
+<h2 id="condicionais-em-mixins">Condicionais em Mixins</h2>
 
-<pre><code class="language-python">  matriz &lt;- matrix(vetor, ncol=numeroColunas, nrow=numeroLinhas) # Definindo Matriz, Preenchendo em Coluna
-  matrizt &lt;- t(matriz)                                           # Matriz Transposta
-  matrizi &lt;- solve(matriz)                                       # Matriz Inversa
+<pre><code class="language-css">
+.p-style(@size) when (@size &lt;= 20) {
+     font-size: @size;
+     color: red
+}
 
-  # Combinar Matrizes
-  matrizl &lt;- rbind(matriz1, matriz2) # Linha
-  matrizc &lt;- cbind(matriz1, matriz2) # Coluna
+.p-style(@size) when (@size &gt; 20) {
+     font-size: @size;
+     color: blue
+}
 
-  matriz1 %*% matriz2 # Multiplicação Matricial  
+p{
+     .p-style(30px);
+}
+
 </code></pre>
 
-<h2 id="lista">Lista</h2>
+<h2 id="escopo">Escopo</h2>
 
-<pre><code class="language-python">  lista &lt;- list(valor1,...,valorn) # Definindo uma Sequência de Diferentes Tipos
+<pre><code class="language-css">
+main {
+     background-color: blue;
+     p {
+          color: red;
+     }
+     article {
+          background-color: yellow;
+          p{
+               color: green;
+          }
+     }
+}
 
-  # Acessando Elementos do Vetor
-  lista[i]              # Retorna uma Lista com Elemento Indicado pelo Índice (1..n)
-  lista[[i]]            # Retorna o Elemento Indicado pelo Índice (1..n)
-
-  # Definindo Lista com Elementos Nomeados
-  lista &lt;- list(nome1=valor1,...,nomen=valorn)
 </code></pre>
 
-<h2 id="data-frames">Data Frames</h2>
+<h2 id="operadores">Operadores</h2>
 
-<pre><code class="language-python"># Tabela de Dados compostas por Listas de Valores de Igual Tamanho
+<pre><code class="language-css">
+@base-size: 20px;
+@base-color: red;
 
-# Indexação de Elementos
-dataFrame[i,j]      # Numeração
-dataFrame[&quot;a&quot;,&quot;b&quot;]  # Nomes
-dataFrame[i,]       # Linha
-dataFrame[,j]       # Coluna
+p{
+     font-size: @base-size;
+     color: @base-color;
+}
 
-# Tamanho
-ncol(dataFrame)  # Total de Linhas
-nrow(dataFrame)  # Total de Colunas
+button {
+     font-size: @base-size * 2;
+     background-color: @base-color + 200;
+}
 
-head(dataFrame)  # Início do Data Frame
 </code></pre>
 
-<h2 id="desenhando-gráficos">Desenhando Gráficos</h2>
+<h2 id="importando-arquivos-less">Importando Arquivos Less</h2>
 
-<pre><code class="language-python">  amostra &lt;- c(2, 4, 4, 6, 6, 6, 6, 8, 8, 10) # Elemento x Frequência
+<pre><code class="language-css">
+@import &quot;diretorio/nome_do_arquivo&quot;
 
-  # Gráfico de Barras: Dados Categóricos
-  barplot(amostra)
-
-  # Histograma: Dados Intervalares
-  hist(amostra)
-
-  # Gráfico Pizza
-  pie(amostra)
-
-  # Gráfico de Dispersão
-  plot(amostra)
-
-  # Definindo Legenda
-  legend(&quot;Posição da Legenda&quot;, fill=c(cor1,...,corn), legend=c(&quot;legenda1&quot;,...,&quot;legendan&quot;))
-
-  # Desenhando Linha no Histograma
-  abline(v=valor, col=&quot;cor&quot;, lwd=larguraDaLinha)
-</code></pre>
-
-<h2 id="média">Média</h2>
-
-<pre><code class="language-python">  mean(amostra)             
-</code></pre>
-
-<h2 id="mediana">Mediana</h2>
-
-<pre><code class="language-python">  median(amostra)             
-</code></pre>
-
-<h2 id="funcão-própria">Funcão Própria</h2>
-
-<pre><code class="language-python">  funcao &lt;- function(param1, param2, ...) {
-    # Código a ser Executado
-  }             
-</code></pre>
-
-<h2 id="moda">Moda</h2>
-
-<pre><code class="language-python">  mode &lt;- function(amostra) {
-     amostraSemRep &lt;- unique(amostra)
-     amostraSemRep[which.max(tabulate(match(amostra, amostraSemRep)))]
-  }           
-</code></pre>
-
-<h2 id="distribuição-normal">Distribuição Normal</h2>
-
-<pre><code class="language-python">  shapiro.test(amostra)  # Distribuição não é Normal: p-value &lt; 0.05
-                         # Distribuição é Normal: p-value &gt;= 0.05
-</code></pre>
-
-<h2 id="sumário">Sumário</h2>
-
-<pre><code class="language-python">  summary(amostra)  # Resumo das Informações de uma Conjunto de Dados
-</code></pre>
-
-<h2 id="boxplot">Boxplot</h2>
-
-<pre><code class="language-python">  boxplot(amostra)  # Gráfico que expõe o Primeiro e o Terceiro Quartis
-</code></pre>
-
-<h2 id="salvando-como-png">Salvando como .png</h2>
-
-<pre><code class="language-python">  png(file=&quot;/path/da/imagem.png&quot;, width=comprimento, height=altura)  # Determinando o Path, o Comprimento e a Altura
-                                                                     # da Figura
-  dev.off()                                                          # Salvando Modificações na Imagem
-</code></pre>
-
-<h2 id="variância">Variância</h2>
-
-<pre><code class="language-python">  var(amostra)  # Se a Amostra for Pequena: (Xi - X)**2 / (n - 1)
-                # Se a Amostra for Grande: (Xi - X)**2 / n
-</code></pre>
-
-<h2 id="desvio-padrão">Desvio Padrão</h2>
-
-<pre><code class="language-python">  sd(amostra)
-</code></pre>
-
-<h2 id="manipulando-dados-tabulados">Manipulando Dados Tabulados</h2>
-
-<pre><code class="language-python">  amostra &lt;- read.table(file=&quot;/path/da/amostra.csv&quot;) # Criando Data Frame a partir de table
-  amostra &lt;- read.csv(file=&quot;/path/da/amostra.csv&quot;)   # Criando Data Frame a partir do .csv
-
-  amostra$coluna                                     # Acessando coluna do Data Frame
-</code></pre>
-
-<h2 id="intervalos-de-confiança">Intervalos de Confiança</h2>
-
-<pre><code class="language-python">  # Obtemos o Intervalo de Confiança através do Teste com a Distribuição t de Student
-  t.test(amostra)                     # 90% de Confiança
-  t.test(amostra,  conf.level=0.9)
-</code></pre>
-
-<h2 id="manipulação-do-sistema">Manipulação do Sistema</h2>
-
-<pre><code class="language-python"># Diretório de Trabalho
-getwd()         # Obter
-setwd(&quot;path&quot;)   # Modificar
-
-# Pacotes e Dados do Sistema
-search()        # Listar
-attach(dados)   # Adicionar
-detach(dados)   # Remover
 </code></pre>
 
 
@@ -705,7 +606,7 @@ detach(dados)   # Remover
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://amintasvrp.github.io/myDocs/python/" title="Python 3: Minimalismo e Legibilidade">
+      <a href="https://amintasvrp.github.io/myDocs/hugo/" title="Hugo: Um Gerador de Sites Estáticos">
         <span class="direction">
           Anterior
         </span>
@@ -715,7 +616,7 @@ detach(dados)   # Remover
           </div>
           <div class="stretch">
             <div class="title">
-              Python 3: Minimalismo e Legibilidade
+              Hugo: Um Gerador de Sites Estáticos
             </div>
           </div>
         </div>
@@ -725,14 +626,14 @@ detach(dados)   # Remover
 
   <div class="next">
   
-      <a href="https://amintasvrp.github.io/myDocs/sql/" title="SQL e os Bancos de Dados Relacionais">
+      <a href="https://amintasvrp.github.io/myDocs/markdown/" title="Markdown: Desenvolvendo conteúdo para websites">
         <span class="direction">
           Próximo
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              SQL e os Bancos de Dados Relacionais
+              Markdown: Desenvolvendo conteúdo para websites
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

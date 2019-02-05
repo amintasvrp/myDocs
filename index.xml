@@ -30,12 +30,21 @@
     </item>
     
     <item>
+      <title>CSS 3: Estilizando seu Website</title>
+      <link>https://amintasvrp.github.io/myDocs/css/</link>
+      <pubDate>Sun, 17 Jun 2018 23:58:30 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/css/</guid>
+      <description>Folha de Estilo Interna &amp;lt;body style=&amp;quot;color: blue; font-size:20px&amp;quot;&amp;gt; &amp;lt;header&amp;gt; &amp;lt;h1 style=&amp;quot;color: red;&amp;quot;&amp;gt; Título de fonte vermelha&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;main style=&amp;quot;border: 1px solid black; width: 80%; max-width:500px&amp;quot;&amp;gt; &amp;lt;p&amp;gt;Parágrafo com fonte azul; borda fina, reta e preta ao redor, com tamanho responsivo de 80% e máximo de 500px&amp;lt;/p&amp;gt; &amp;lt;/main&amp;gt; &amp;lt;/body&amp;gt;  Cores &amp;lt;header&amp;gt; &amp;lt;h1 style=&amp;quot;color: CornflowerBlue;&amp;quot;&amp;gt;Configurando cor pelo nome&amp;lt;/h1&amp;gt; &amp;lt;h1 style=&amp;quot;color: #ff0000;&amp;quot;&amp;gt;Configurando cor pelo código hexadecimal&amp;lt;/h1&amp;gt; &amp;lt;h1 style=&amp;quot;color: rgb(255, 0, 0);&amp;quot;&amp;gt;Configurando cor pelo RGB&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt;  Margens e Preenchimentos &amp;lt;!</description>
+    </item>
+    
+    <item>
       <title>HTML 5: Construindo um Website</title>
       <link>https://amintasvrp.github.io/myDocs/html/</link>
       <pubDate>Sun, 17 Jun 2018 23:58:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/html/</guid>
-      <description>Tags Básicas Meta Tags &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Descrição do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;palavras,chave&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Autor do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;!-- Janela de visualização--&amp;gt; &amp;lt;title&amp;gt;Título do Website&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Corpo do Website &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;  Cabeçalhos &amp;lt;h1&amp;gt;Cabeçalho 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Cabeçalho 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Cabeçalho 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Cabeçalho 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Cabeçalho 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Cabeçalho 6&amp;lt;/h6&amp;gt;  Linha Horizontal &amp;lt;hr/&amp;gt;  Parágrafo &amp;lt;p&amp;gt; Parágrafo 1 &amp;lt;/p&amp;gt;  Formatadores de Texto &amp;lt;p&amp;gt; &amp;lt;big&amp;gt;Texto Grande&amp;lt;/big&amp;gt; &amp;lt;small&amp;gt;Texto Pequeno&amp;lt;/small&amp;gt; &amp;lt;b&amp;gt;Texto em Negrito&amp;lt;/b&amp;gt; &amp;lt;strong&amp;gt;Texto em Negrito&amp;lt;/strong&amp;gt; &amp;lt;i&amp;gt;Texto em Itálico&amp;lt;/i&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Escrita Normal &amp;lt;sup&amp;gt;Escrita Superior&amp;lt;/sup&amp;gt; &amp;lt;/p&amp;gt;  Comentários &amp;lt;!</description>
+      <description>Tags Básicas Meta Tags &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Descrição do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;palavras,chave&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Autor do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;!-- Janela de visualização--&amp;gt; &amp;lt;title&amp;gt;Título do Website&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Corpo do Website &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;  Cabeçalhos &amp;lt;h1&amp;gt;Cabeçalho 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Cabeçalho 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Cabeçalho 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Cabeçalho 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Cabeçalho 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Cabeçalho 6&amp;lt;/h6&amp;gt;  Linha Horizontal &amp;lt;hr/&amp;gt;  Quebra de Linha &amp;lt;br&amp;gt;  Parágrafo &amp;lt;p&amp;gt; Parágrafo 1 &amp;lt;/p&amp;gt;  Formatadores de Texto &amp;lt;p&amp;gt; &amp;lt;big&amp;gt;Texto Grande&amp;lt;/big&amp;gt; &amp;lt;small&amp;gt;Texto Pequeno&amp;lt;/small&amp;gt; &amp;lt;b&amp;gt;Texto em Negrito&amp;lt;/b&amp;gt; &amp;lt;strong&amp;gt;Texto em Negrito&amp;lt;/strong&amp;gt; &amp;lt;i&amp;gt;Texto em Itálico&amp;lt;/i&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Escrita Normal &amp;lt;sup&amp;gt;Escrita Superior&amp;lt;/sup&amp;gt; &amp;lt;/p&amp;gt;  Comentários &amp;lt;!</description>
     </item>
     
     <item>
@@ -55,6 +64,18 @@
       <guid>https://amintasvrp.github.io/myDocs/hugo/</guid>
       <description>Um site estático consiste em um aplicativo da Web simples, no qual o conteúdo exposto é o mesmo para todos os que acessam, como blogs, periódicos, portfólios e portais de notícias. No entanto, no WordPress encontramos uma plataforma muito robusta para tal, já no tumblr e no blogger encontramos o oposto: é por isso que usamos o Hugo, um gerador de site estático.
 Pré-requisitos Breves noções de HTML e Markdown.</description>
+    </item>
+    
+    <item>
+      <title>LESS: Folha de Estilo Pré-Processadora de CSS</title>
+      <link>https://amintasvrp.github.io/myDocs/less/</link>
+      <pubDate>Sun, 17 Jun 2018 23:56:30 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/less/</guid>
+      <description>Instalando LESS Primeiramente devemos instalar o Node.JS e o NPM (Node.JS Package Manager):
+sudo apt update sudo apt install nodejs sudo apt install npm  Depois, instalamos o LESS em si:
+sudo npm install -g less  Compilando LESS em CSS Nós escrevemos código em LESS e depois usamos o compilador de LESS para gerar arquivos CSS. Nós compilamos código LESS da seginte forma:
+lessc diretorio/arquivo.less diretorio/arquivo.css  Podemos instalar um plug-in, chamado LESS-Watcher, em nosso projeto para que os arquivos LESS seja automaticamente compilados em arquivos CSS.</description>
     </item>
     
     <item>
