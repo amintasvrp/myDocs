@@ -115,6 +115,11 @@ googleAnalytics = ""
 		url    = "less/"
 		weight = 2
 
+[[menu.main]]
+		name   = "SASS"
+		url    = "sass/"
+		weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true

@@ -1,5 +1,5 @@
 ---
-title: "LESS: Folha de Estilo Pré-Processadora de CSS"
+title: "LESS: Folha de Estilo Pré-Processada para CSS"
 date: 2018-06-17T23:56:30-03:00
 author: "Amintas Victor"
 type: "post"
