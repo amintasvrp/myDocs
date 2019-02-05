@@ -120,6 +120,11 @@ googleAnalytics = ""
 		url    = "sass/"
 		weight = 2
 
+[[menu.main]]
+		name   = "JavaScript"
+		url    = "js/"
+		weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
