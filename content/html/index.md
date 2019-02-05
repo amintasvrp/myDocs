@@ -59,6 +59,13 @@ type: "post"
 
 ```
 
+### Quebra de Linha
+```html
+
+<br>
+
+```
+
 ### Parágrafo
 
 ```html

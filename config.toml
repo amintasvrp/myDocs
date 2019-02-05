@@ -105,6 +105,16 @@ googleAnalytics = ""
 		url    = "markdown/"
 		weight = 2
 
+[[menu.main]]
+		name   = "CSS 3"
+		url    = "css/"
+		weight = 2
+
+[[menu.main]]
+		name   = "LESS"
+		url    = "less/"
+		weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
