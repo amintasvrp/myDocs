@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>JavaScript: Programando em Web - myDocs</title>
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/js/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/js/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        JavaScript: Programando em Web
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="CSS 3" href="https://amintasvrp.github.io/myDocs/css/">
+	
+	CSS 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
+	
+	HTML 5
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="JavaScript" href="https://amintasvrp.github.io/myDocs/js/">
+	
+	JavaScript
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="LESS" href="https://amintasvrp.github.io/myDocs/less/">
+	
+	LESS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
+	
+	Linux
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Markdown" href="https://amintasvrp.github.io/myDocs/markdown/">
+	
+	Markdown
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Marketing Digital" href="https://amintasvrp.github.io/myDocs/marketing-digital/">
+	
+	Marketing Digital
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Python 3" href="https://amintasvrp.github.io/myDocs/python/">
+	
+	Python 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="R" href="https://amintasvrp.github.io/myDocs/r/">
+	
+	R
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SASS" href="https://amintasvrp.github.io/myDocs/sass/">
+	
+	SASS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>JavaScript: Programando em Web </h1>
+
+			
+
+<h2 id="introdução">Introdução</h2>
+
+<p>JavaScript é uma linguidadem de programação de alto nível, dinamicamente tipificada e interpretada. Foi criado com o único propósito de tornar os sites mais responsivos e dinâmicos. Como é capaz de responder às interações do usuário e acessar e manipular o modelo de objeto de documento (DOM), permite que os desenvolvedores da Web criem sites mais dinâmicos.</p>
+
+<p>Hoje JavaScript é usado em praticamente todos os sites modernos. Tornou-se uma das três principais tecnologias de desenvolvimento Web ao lado de HTML e CSS. Hoje em dia, existem milhares de estruturas de JavaScript e é usado até mesmo como um idioma do lado do servidor. O JavaScript utiliza um coletor de lixo e sua sintaxe é baseada em C e C ++.</p>
+
+<p>Em muitos casos, o JavaScript será escrito diretamente dentro de um arquivo HTML, mas também pode ser inserido em seu próprio arquivo JavaScript separado e importado para HTML.</p>
+
+<h2 id="printando">Printando</h2>
+
+<pre><code class="language-javascript">
+// Adicionando linhas ao HTML
+document.write(&quot;&lt;h1&gt;Hello World&lt;/h1&gt;&quot;);
+document.write(&quot;&lt;hr&gt;&quot;);
+document.write(&quot;&lt;p&gt;This is a javascript tutorial&lt;/p&gt;&quot;);
+
+// Mostrando pop up
+alert(&quot;This is an alert&quot;);
+
+// Printando no console (F12)
+console.log(&quot;Logging to the console&quot;);
+
+</code></pre>
+
+<h2 id="variáveis-e-tipos-de-dados">Variáveis e Tipos de Dados</h2>
+
+<pre><code class="language-javascript">
+/*
+Nomes são case-sensitive e devem começar com: letras, $, _
+Após, podem incluir: letters, numbers, $, _
+Segundo a convenção:
+     &quot;Comece com minúscula, e as palavras adicionais são separadas pela primeira letra maiúscula
+     ex. minhaPrimeiraVariavel&quot;
+*/
+
+var nome = &quot;Amintas&quot;;                     // String com aspas duplas
+var ocupacao = 'programador';             // String com aspas simples
+
+var idade = 20;                           // Inteiro
+var altura = 1.73;                        // Número com ponto flutuante
+
+var ehAlto;                               // Booleano
+ehAlto = true;
+
+nome = &quot;John&quot;;                            // Mudando valor da variável
+
+document.write(&quot;Your nome is &quot; + nome);   // Concatenando valor da variável
+                                          // ex: Seu nome é Amintas
+
+</code></pre>
+
+<h2 id="cast-e-conversão">Cast e Conversão</h2>
+
+<pre><code class="language-javascript">
+// Convertendo em um número qualquer
+document.write( 100 + Number(&quot;25&quot;) + &quot;&lt;br&gt;&quot;);         // 125
+
+// Convertendo em um inteiro
+document.write( 100 + parseInt(&quot;50&quot;) + &quot;&lt;br&gt;&quot;);       // 150
+
+// Convertendo em um número com ponto flutuante
+document.write( 100 + parseFloat(&quot;50.99&quot;) + &quot;&lt;br&gt;&quot;);  // 150.99
+
+</code></pre>
+
+<h2 id="strings">Strings</h2>
+
+<pre><code class="language-javascript">
+var cumprimento = &quot;Ola&quot;;
+//   índices:      012
+
+document.write( cumprimento.length + &quot;&lt;br&gt;&quot; );            // 3
+document.write( cumprimento.charAt(0) + &quot;&lt;br&gt;&quot;  );        // O
+document.write( cumprimento.iOf(&quot;la&quot;) + &quot;&lt;br&gt;&quot;  );    // 1
+document.write( cumprimento.iOf(&quot;z&quot;) + &quot;&lt;br&gt;&quot;  );     // -1
+document.write( cumprimento.substring(1) + &quot;&lt;br&gt;&quot;  );     // la
+document.write( cumprimento.substring(0, 2) + &quot;&lt;br&gt;&quot;  );  // Ol
+
+</code></pre>
+
+<h2 id="números">Números</h2>
+
+<pre><code class="language-javascript">
+document.write( 2 * 3 + &quot;&lt;br&gt;&quot; );       // Aritimética Básica: +, -, /, *
+document.write( 2**3 + &quot;&lt;br&gt;&quot; );        // Exponenciação
+document.write( 10 % 3 + &quot;&lt;br&gt;&quot; );      // Resto
+document.write( 1 + 2 * 3 + &quot;&lt;br&gt;&quot; );   // Ordem das operações
+document.write(10 / 3.0 + &quot;&lt;br&gt;&quot;);      // Inteiros e Flutuantes: 3.333333
+
+// Incrementado e decrementando variáveis
+var num = 10;
+
+num += 100;                              // +=, -=, /=, *=
+document.write(num + &quot;&lt;br&gt;&quot;);
+
+num++;                                   // ++ (num += 1), -- (num -= 1)  
+document.write(num + &quot;&lt;br&gt;&quot;);
+
+// A classe Math tem métodos úteis
+document.write( Math.pow(2, 3) + &quot;&lt;br&gt;&quot; );    // Potenciação
+document.write( Math.sqrt(144) + &quot;&lt;br&gt;&quot; );    // Raiz quadrada
+document.write( Math.round(2.7) + &quot;&lt;br&gt;&quot; );   // Arredondamento
+
+</code></pre>
+
+<h2 id="entrada-de-usuário">Entrada de Usuário</h2>
+
+<pre><code class="language-javascript">
+// Pop ups
+var nome = window.prompt(&quot;Diga seu nome: &quot;);
+alert(&quot;Olá &quot; + nome);
+
+</code></pre>
+
+<h2 id="acessando-html">Acessando HTML</h2>
+
+<p>Em <strong>i.html</strong>:</p>
+
+<pre><code class="language-html">
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;h1 id=&quot;cabecalho&quot; atributo=&quot;Valor do Atributo&quot;&gt;Título do Site&lt;/h1&gt;
+
+</code></pre>
+
+<p>Em <strong>script.js</strong>:</p>
+
+<pre><code class="language-javascript">
+// Obtendo o elemento
+var cabecalho = document.getElementById(&quot;cabecalho&quot;);
+
+// Acessando atributo do elemento
+var atributo = cabecalho.getAttribute(&quot;atributo&quot;);
+
+// Modificando atributo do elemento
+cabecalho.style=&quot;color:blue; background-color:red;&quot;
+
+// Modificando conteúdo dentro da tag
+cabecalho.innerHTML = &quot;Novo Título do Site&quot;;
+
+</code></pre>
+
+<h2 id="arrays">Arrays</h2>
+
+<pre><code class="language-javascript">
+//Array vazio
+array = [];
+
+//       0  1  2   3      4       5
+array = [4, 8, 15, 16, &quot;vinte&quot;, false];
+
+// Alterando elemento do índice
+array[0] = 90;
+
+document.write(array[0] + &quot;&lt;br&gt;&quot;);  // 90
+document.write(array[1] + &quot;&lt;br&gt;&quot;);  // 8
+document.write(array.length);       // 6
+
+</code></pre>
+
+<h2 id="arrays-bidimencionais">Arrays Bidimencionais</h2>
+
+<pre><code class="language-javascript">
+// Definindo matriz: 2 linhas, 2 colunas
+matriz = [ [1, 2], [3, 4] ];
+
+// Obtendo elemento: [linha][coluna]
+matriz[0][1] = 99;
+
+document.write(numberGrid[0][0] + &quot;&lt;br&gt;&quot;);  // 1
+document.write(numberGrid[0][1] + &quot;&lt;br&gt;&quot;);  // 3
+
+</code></pre>
+
+<h2 id="funções-de-arrays">Funções de Arrays</h2>
+
+<pre><code class="language-javascript">
+// Criando array vazio
+amigos = new Array();
+
+// Adiconando ao final do array
+amigos.push(&quot;Edvaldo&quot;);
+amigos.push(&quot;André&quot;);
+amigos.push(&quot;Daniel&quot;);
+amigos.push(&quot;Thomaz&quot;);
+
+// Removendo último elemento
+amigos.pop();
+
+document.write( amigos + &quot;&lt;br&gt;&quot; );                    // [Edvaldo, André, Daniel]
+document.write( amigos.iOf(&quot;André&quot;) + &quot;&lt;br&gt;&quot; );   // 1
+document.write( amigos.iOf(&quot;Z&quot;) + &quot;&lt;br&gt;&quot; );       // -1
+document.write( amigos.reverse() + &quot;&lt;br&gt;&quot; );          // [Daniel, André, Edvaldo]
+document.write( amigos.sort() + &quot;&lt;br&gt;&quot; );             // [André, Daniel, Edvaldo]
+
+</code></pre>
+
+<h2 id="objetos">Objetos</h2>
+
+<pre><code class="language-javascript">
+// Criando objeto
+var aluno = {
+     nome: &quot;Amintas&quot;,
+     graduacao: &quot;Ciência da Computação&quot;,
+     idade: 20,
+     altura: 1.73
+};
+
+// Acessando variável
+document.write( student.nome + &quot;&lt;br&gt;&quot; );
+
+// Moficando variável
+student.nome = &quot;Thomaz&quot;
+
+</code></pre>
+
+<h2 id="funções">Funções</h2>
+
+<pre><code class="language-javascript">
+// Podemos usar funções antes mesmo de defini-las
+
+var soma = somaNumeros(4, 60);
+document.write(soma);
+
+function somaNumeros(num1, num2){
+     return num1 + num2;
+}
+
+</code></pre>
+
+<h2 id="escutadores-de-eventos">Escutadores de Eventos</h2>
+
+<h3 id="escutadores-definidos-em-linha">Escutadores Definidos em Linha</h3>
+
+<p>Em <strong>i.html</strong>:</p>
+
+<pre><code class="language-html">
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;h1 id=&quot;cabecalho&quot; onclick=&quot;checarClique(this)&quot;&gt; Clique Aqui &lt;/h1&gt;
+
+</code></pre>
+
+<p>Em <strong>script.js</strong>:</p>
+
+<pre><code class="language-javascript">
+function handleClick(elemento){
+     alert(elemento.id + &quot; clicado&quot;);
+}
+
+</code></pre>
+
+<h3 id="escutadores-programáticos">Escutadores Programáticos</h3>
+
+<p>Em <strong>i.html</strong>:</p>
+
+<pre><code class="language-html">
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;h1 id=&quot;cabecalho&quot;&gt; Clique Aqui &lt;/h1&gt;
+
+</code></pre>
+
+<p>Em <strong>script.js</strong>:</p>
+
+<pre><code class="language-javascript">
+var cabecalho = document.getElementById(&quot;cabecalho&quot;);
+
+cabecalho.addEventListener(&quot;click&quot;, function(){
+     alert(&quot;Você clicou em &quot; + cabecalho.id);
+});
+
+</code></pre>
+
+<p>Para consultar os eventos do DOM, consulte esta página (em inglês) clicando <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">aqui</a> !</p>
+
+<h2 id="condicionais">Condicionais</h2>
+
+<pre><code class="language-javascript">
+var ehEstudante = true;
+var ehInteligente = false;
+
+// Operadores lógicos: &amp;&amp;, ||, !
+
+if(ehEstudante &amp;&amp; ehInteligente){
+     document.write(&quot;Você é um estudante inteligente&quot;);
+} else if(ehEstudante &amp;&amp; !ehInteligente){
+     document.write(&quot;Você não é um estudante inteligente&quot;);
+} else {
+     document.write(&quot;Você não é um estudante nem inteligente&quot;);
+}
+document.write(&quot;&lt;br&gt;&quot;);
+
+// Comparadores: &gt;, &lt;, &gt;=, &lt;=, !=, ==, string1.equals(string2)
+
+if(1 &gt; 3){
+     document.write(&quot;Comparação de números deu verdadeiro&quot;);
+}
+
+var string = &quot;Amintas&quot;;
+if(string.equals(&quot;Amintas&quot;)){
+     document.write(&quot;Comparação de strings deu verdadeiro&quot;);
+}
+
+</code></pre>
+
+<h2 id="switch-case">Switch Case</h2>
+
+<pre><code class="language-javascript">
+var minhaNota = &quot;A&quot;;
+
+switch(minhaNota){
+     case &quot;A&quot;:
+          document.write(&quot;Aprovado&quot;);
+          break;
+     case &quot;F&quot;:
+          document.write(&quot;Reprovado&quot;);
+          break;
+     default:
+          document.write(&quot;Nota Inválida&quot;);
+}
+
+</code></pre>
+
+<h2 id="iterações">Iterações</h2>
+
+<h3 id="indefinidas">Indefinidas</h3>
+
+<pre><code class="language-javascript">
+var i = 1;
+while(i &lt;= 5){
+     document.write(i);
+     i++;
+}
+
+// 1 2 3 4 5
+
+i = 1;
+do{
+	document.write(i);
+	i++;
+}while(i &lt;= 5);
+
+// 1 2 3 4 5 6
+
+</code></pre>
+
+<h3 id="definidas">Definidas</h3>
+
+<pre><code class="language-javascript">
+for(var i = 0; i &lt; 5; i++){
+     document.write(i);
+}
+
+// 0 1 2 3 4
+
+var numeros = [4, 8, 15, 16, 23, 42];
+numeros.forEach(function(numero){
+     document.write(numero);
+});
+
+// 4 8 15 16 23 42
+
+</code></pre>
+
+<h2 id="tratamento-de-exceção">Tratamento de Exceção</h2>
+
+<pre><code class="language-javascript">
+var num1 = 10;
+
+try{
+     var num1 = num2 + 3
+}catch(erro){
+     // Esse código é executado quando ocorre um erro
+     throw &quot;Mensidadem de Erro&quot;
+}finally{
+     // Esse código é sempre executado
+     document.write(num1);
+}
+
+</code></pre>
+
+<h2 id="classes-e-objetos">Classes e Objetos</h2>
+
+<pre><code class="language-javascript">
+// Implementando classe com métodos e atributos
+
+class Livro{
+     constructor(titulo, autor){
+          this.titulo = titulo;
+          this.autor = autor;
+     }
+
+     lerLivro(){
+          document.write(&quot;Lendo &quot; + this.titulo + &quot; de &quot; + this.autor);
+     }
+}
+
+// Criando nova instância
+
+var harryPotter = new Book(&quot;Harry Potter&quot;, &quot;JK Rowling&quot;);
+
+// Acessando atributos do objeto
+
+document.write(harryPotter.titulo + &quot;&lt;br&gt;&quot;);
+
+// Chamando método do objeto
+
+book1.lerLivro();
+
+</code></pre>
+
+<h2 id="getters-e-setters">Getters e Setters</h2>
+
+<pre><code class="language-javascript">### Getters and Setters
+
+/*
+Implementamos getters e setters apenas quando desejamos que haja algum comportamento antes de acessar/modificar os atributos
+*/
+
+class Livro{
+     constructor(titulo, autor){
+          this.titulo = titulo;
+          this.autor = autor;
+     }
+
+     get titulo(){
+          document.write(&quot;Acessando título&quot;);
+          return this._title;
+     }
+
+     set titulo(title){
+          document.write(&quot;Editando título&quot;);
+          this._title = title;
+     }
+
+     lerLivro(){
+          document.write(&quot;Lendo &quot; + this.titulo + &quot; de &quot; + this.autor);
+     }
+}
+
+// A forma de acesso/modificação de atributos é o mesmo independente da implementação de getters e setters
+
+var harryPotter = new Book(&quot;Harry Potter&quot;, &quot;JK Rowling&quot;);
+document.write(harryPotter.titulo + &quot;&lt;br&gt;&quot;);
+book1.lerLivro();
+
+</code></pre>
+
+<h2 id="herança">Herança</h2>
+
+<pre><code class="language-javascript">
+class Chef{
+
+     constructor(nome, idade){
+          this.nome = nome;
+          this.idade = idade;
+     }
+
+     fazerFrango(){
+          document.write(&quot;Frango&quot;);
+     }
+
+     fazerSalada(){
+          document.write(&quot;Salada&quot;);
+     }
+
+     fazerPratoEspecial(){
+          document.write(&quot;Prato Especial&quot;);
+     }
+}
+
+class ChefItaliano extends Chef{
+
+     constructor(nome, idade, regiao){
+          super(nome, idade);
+          this.regiao = regiao;
+     }
+
+     // Novo método
+
+     fazerMassa(){
+          document.write(&quot;Massa&quot;);
+     }
+
+     // Método sobrescrito
+
+     fazerPratoEspecial(){
+          document.write(&quot;Lasanha&quot;);
+     }
+}
+
+var chef = new Chef(&quot;Gordon&quot;, 50);
+chef.fazerFrango();                   // Frango
+
+
+var chefItaliano = new ItalianChef(&quot;Bottura&quot;, 55, &quot;Sicília&quot;);
+chefItaliano.fazerFrango();           // Frango
+chefItaliano.fazerPratoEspecial();    // Lasanha
+
+</code></pre>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://amintasvrp.github.io/myDocs/hugo/" title="Hugo: Um Gerador de Sites Estáticos">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Hugo: Um Gerador de Sites Estáticos
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://amintasvrp.github.io/myDocs/less/" title="LESS: Folha de Estilo Pré-Processada para CSS">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              LESS: Folha de Estilo Pré-Processada para CSS
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

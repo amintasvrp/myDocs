@@ -67,6 +67,16 @@ Pré-requisitos Breves noções de HTML e Markdown.</description>
     </item>
     
     <item>
+      <title>JavaScript: Programando em Web</title>
+      <link>https://amintasvrp.github.io/myDocs/js/</link>
+      <pubDate>Sun, 17 Jun 2018 23:56:45 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/js/</guid>
+      <description>Introdução JavaScript é uma linguidadem de programação de alto nível, dinamicamente tipificada e interpretada. Foi criado com o único propósito de tornar os sites mais responsivos e dinâmicos. Como é capaz de responder às interações do usuário e acessar e manipular o modelo de objeto de documento (DOM), permite que os desenvolvedores da Web criem sites mais dinâmicos.
+Hoje JavaScript é usado em praticamente todos os sites modernos. Tornou-se uma das três principais tecnologias de desenvolvimento Web ao lado de HTML e CSS.</description>
+    </item>
+    
+    <item>
       <title>LESS: Folha de Estilo Pré-Processada para CSS</title>
       <link>https://amintasvrp.github.io/myDocs/less/</link>
       <pubDate>Sun, 17 Jun 2018 23:56:30 -0300</pubDate>
