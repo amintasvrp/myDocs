@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>HTML 5: Construindo um Website - myDocs</title>
+    <title>CSS 3: Estilizando seu Website - myDocs</title>
     <meta name="generator" content="Hugo 0.54.0" />
 
     
     <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
     
-    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/html/">
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/css/">
     
     <meta name="author" content="Amintas Victor">
     
 
-    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/html/">
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/css/">
     <meta property="og:title" content="myDocs">
     <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
     <meta name="apple-mobile-web-app-title" content="myDocs">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        HTML 5: Construindo um Website
+        CSS 3: Estilizando seu Website
       </div>
     </div>
 
@@ -218,11 +218,14 @@
 
 
 
-<a  title="CSS 3" href="https://amintasvrp.github.io/myDocs/css/">
+<a class="current" title="CSS 3" href="https://amintasvrp.github.io/myDocs/css/">
 	
 	CSS 3
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -236,14 +239,11 @@
 
 
 
-<a class="current" title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
+<a  title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
 	
 	HTML 5
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -466,342 +466,363 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>HTML 5: Construindo um Website </h1>
+			<h1>CSS 3: Estilizando seu Website </h1>
 
 			
 
-<h2 id="tags-básicas">Tags Básicas</h2>
-
-<h3 id="meta-tags">Meta Tags</h3>
+<h2 id="folha-de-estilo-interna">Folha de Estilo Interna</h2>
 
 <pre><code class="language-html">
-&lt;html&gt;
-     &lt;head&gt;
-           &lt;meta charset=&quot;UTF-8&quot;&gt;
-           &lt;meta name=&quot;description&quot; content=&quot;Descrição do website&quot;&gt;
-           &lt;meta name=&quot;keywords&quot; content=&quot;palavras,chave&quot;&gt;
-           &lt;meta name=&quot;author&quot; content=&quot;Autor do website&quot;&gt;
-           &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;!-- Janela de visualização--&gt;
-          &lt;title&gt;Título do Website&lt;/title&gt;
-     &lt;/head&gt;
-    &lt;body&gt;
-        Corpo do Website
-    &lt;/body&gt;
-&lt;/html&gt;
-
-
-&lt;head&gt;
-
-&lt;/head&gt;
-
-
-</code></pre>
-
-<h3 id="cabeçalhos">Cabeçalhos</h3>
-
-<pre><code class="language-html">
-&lt;h1&gt;Cabeçalho 1&lt;/h1&gt;
-
-&lt;h2&gt;Cabeçalho 2&lt;/h2&gt;
-
-&lt;h3&gt;Cabeçalho 3&lt;/h3&gt;
-
-&lt;h4&gt;Cabeçalho 4&lt;/h4&gt;
-
-&lt;h5&gt;Cabeçalho 5&lt;/h5&gt;
-
-&lt;h6&gt;Cabeçalho 6&lt;/h6&gt;
-
-</code></pre>
-
-<h3 id="linha-horizontal">Linha Horizontal</h3>
-
-<pre><code class="language-html">
-&lt;hr/&gt;
-
-</code></pre>
-
-<h3 id="quebra-de-linha">Quebra de Linha</h3>
-
-<pre><code class="language-html">
-&lt;br&gt;
-
-</code></pre>
-
-<h3 id="parágrafo">Parágrafo</h3>
-
-<pre><code class="language-html">
-&lt;p&gt;
-  Parágrafo 1
-&lt;/p&gt;
-
-</code></pre>
-
-<h3 id="formatadores-de-texto">Formatadores de Texto</h3>
-
-<pre><code class="language-html">
-&lt;p&gt;
-  &lt;big&gt;Texto Grande&lt;/big&gt;
-
-  &lt;small&gt;Texto Pequeno&lt;/small&gt;
-
-  &lt;b&gt;Texto em Negrito&lt;/b&gt;
-  &lt;strong&gt;Texto em Negrito&lt;/strong&gt;
-
-  &lt;i&gt;Texto em Itálico&lt;/i&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-  Escrita Normal &lt;sup&gt;Escrita Superior&lt;/sup&gt;
-&lt;/p&gt;
-
-</code></pre>
-
-<h2 id="comentários">Comentários</h2>
-
-<pre><code class="language-html">
-&lt;!--
-Isto é um comentário
-Que encobre mais de uma linha
---&gt;
-
-</code></pre>
-
-<h2 id="cores-e-estilos">Cores e Estilos</h2>
-
-<pre><code class="language-html">
-&lt;body style=&quot;background-color:cordefundo&quot;&gt;
-     &lt;h2 style=&quot;color:cordafonte&quot;&gt;
-          Cor de fundo e da fonte determinam um Estilo
-     &lt;/h2&gt;
-
-     &lt;p style=&quot;color: cordafonte; background-color:cordefundo&quot;&gt;
-          Podemos ter um estilo dentro de outro
-     &lt;/p&gt;
-&lt;/body&gt;
-
-</code></pre>
-
-<h2 id="formatando-a-página">Formatando a Página</h2>
-
-<pre><code class="language-html">
-&lt;body&gt;
+&lt;body style=&quot;color: blue; font-size:20px&quot;&gt;
      &lt;header&gt;
-          Cabeçalho
-          &lt;nav&gt;
-               Área de Navegação
-          &lt;/nav&gt;
+          &lt;h1 style=&quot;color: red;&quot;&gt; Título de fonte vermelha&lt;/h1&gt;
      &lt;/header&gt;
-     &lt;main&gt;
-          Parte principal (conteúdo)
-          &lt;article&gt;
-               Artigo
-               &lt;section&gt;
-                    Seção
-                    &lt;aside&gt;
-                         Exposto
-                    &lt;/aside&gt;
-               &lt;/section&gt;
-          &lt;/article&gt;
+
+     &lt;main style=&quot;border: 1px solid black; width: 80%; max-width:500px&quot;&gt;
+          &lt;p&gt;Parágrafo com fonte azul; borda fina, reta e preta ao redor, com tamanho responsivo de 80% e máximo de 500px&lt;/p&gt;
      &lt;/main&gt;
-     &lt;footer&gt;
-          Rodapé
-     &lt;/footer&gt;
 &lt;/body&gt;
 
 </code></pre>
 
-<h2 id="links">Links</h2>
+<h2 id="cores">Cores</h2>
 
 <pre><code class="language-html">
-
-&lt;a href=&quot;https://www.site.com&quot;&gt; Página externa &lt;/a&gt;
-
-&lt;a href=&quot;pagina.html&quot;&gt; Página no mesmo website &lt;/a&gt;
-
-&lt;a href=&quot;ebook.pdf&quot;&gt; Arquivo interno &lt;/a&gt;
-
+&lt;header&gt;
+     &lt;h1 style=&quot;color: CornflowerBlue;&quot;&gt;Configurando cor pelo nome&lt;/h1&gt;
+     &lt;h1 style=&quot;color: #ff0000;&quot;&gt;Configurando cor pelo código hexadecimal&lt;/h1&gt;
+     &lt;h1 style=&quot;color: rgb(255, 0, 0);&quot;&gt;Configurando cor pelo RGB&lt;/h1&gt;
+&lt;/header&gt;
 
 </code></pre>
 
-<h2 id="imagens">Imagens</h2>
+<h2 id="margens-e-preenchimentos">Margens e Preenchimentos</h2>
 
 <pre><code class="language-html">
-&lt;!--
-Podemos alterar configurações da imagem como comprimento e largura
---&gt;
+&lt;!-- Preenchimentos (espaço entre a margem e o elemento em si) --&gt;
+&lt;div style=&quot;padding: 50px;&quot;&gt;
+     Preenchimento geral
+&lt;/div&gt;
 
-&lt;img src=&quot;http://www.site.com/foto/&quot;
-     alt=&quot;Título da Imagem&quot;
-     width=&quot;200&quot;&gt;
+&lt;div style=&quot;padding-top: 50px; padding-bottom: 25px;padding-left: 50px; padding-right: 25px;&quot;&gt;
+     Preenchimento de apenas um lado
+&lt;/div&gt;
+
+&lt;div style=&quot;padding: 50px 25px 50px 25px;&quot;&gt;
+     Preenchimento de todos os lados
+&lt;/div&gt;
+
+&lt;!-- Margem --&gt;
+&lt;div style=&quot;margin: 50px;&quot;&gt;
+     Margem geral
+&lt;/div&gt;
+
+&lt;div style=&quot;margin-top: 50px; margin-bottom: 25px; margin-left: 50px; margin-right: 25px;&quot;&gt;
+     Margem de apenas um lado
+&lt;/div&gt;
+
+&lt;div style=&quot;margin: 50px 25px 50px 25px;&quot;&gt;
+     Margem de todos os lados
+&lt;/div&gt;
 
 </code></pre>
 
-<h2 id="vídeos">Vídeos</h2>
+<h2 id="displays-e-floats">Displays e Floats</h2>
 
 <pre><code class="language-html">
-&lt;!--
-Vídeos externos
---&gt;
-
-&lt;iframe width=&quot;560&quot;
-        height=&quot;315&quot;
-        src=&quot;https://www.site.com/video/&quot;
-        frameborder=&quot;0&quot;
-        gesture=&quot;media&quot;
-        allow=&quot;encrypted-media&quot;
-        allowfullscreen&gt;
-&lt;/iframe&gt;
-
-&lt;!--
-Vídeos internos
---&gt;
-
-&lt;video src=&quot;meuvideo.mp4&quot;
-       autoplay
-       controls
-       width=&quot;300&quot;
-       poster=&quot;thumbnail.jpg&quot;&gt;
-&lt;/video&gt;
-
-</code></pre>
-
-<h2 id="listas">Listas</h2>
-
-<pre><code class="language-html">
-&lt;!-- Lista não numerada --&gt;
-
-&lt;ul&gt;
-     &lt;li&gt;Ítem&lt;/li&gt;
+&lt;!--float: desloca o elemento para um dos lados (left ou right), abrindo espaço para que o elemento seguinte se coloque no outro lado --&gt;
+&lt;!-- display: determina se o elemento ocupará a linha toda (block) ou apenas o espaço necessário (inline) --&gt;
+&lt;ul style=&quot;float:left&quot;&gt;
+     &lt;li style=&quot;display:inline;&quot;&gt;Nomes&lt;/li&gt;
+     &lt;li style=&quot;display:inline;&quot;&gt;na&lt;/li&gt;
+     &lt;li style=&quot;display:inline;&quot;&gt;mesma&lt;/li&gt;
+     &lt;li style=&quot;display:inline;&quot;&gt;linha&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;!-- Lista numerada --&gt;
-
-&lt;ol&gt;
-     &lt;li&gt;1. Ítem&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ol type=&quot;A&quot;&gt;
-     &lt;li&gt;A. Ítem&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ol type=&quot;a&quot;&gt;
-     &lt;li&gt;a. Ítem&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ol type=&quot;I&quot;&gt;
-     &lt;li&gt;I. Ítem&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ol type=&quot;i&quot;&gt;
-     &lt;li&gt;i. Ítem&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;!-- Lista descritiva --&gt;
-
-&lt;dl&gt;
-     &lt;dt&gt;Ítem&lt;/dt&gt;
-     &lt;dd&gt;Descrição&lt;/dd&gt;
-&lt;/dl&gt;
-
+&lt;p&gt;Este parágrafo estará a direita da lista&lt;/p&gt;
 
 </code></pre>
 
-<h2 id="tabela">Tabela</h2>
+<h2 id="posição">Posição</h2>
 
 <pre><code class="language-html">
+&lt;div style=&quot;position: static&quot;&gt;
+  Elemento na posição padrão, seguindo o fluxo da página
+&lt;/div&gt;
 
-&lt;table&gt;
-     &lt;caption&gt;Minha Tabela&lt;/caption&gt;
-     &lt;thead&gt;
-          &lt;tr&gt;
-               &lt;th&gt;Cabeçalho 1&lt;/th&gt;
-               &lt;th&gt;Cabeçalho 2&lt;/th&gt;
-               &lt;th&gt;Cabeçalho 3&lt;/th&gt;
-          &lt;/tr&gt;
-     &lt;/thead&gt;
-     &lt;tbody&gt;
-          &lt;tr&gt;
-               &lt;td&gt;Linha 1 Coluna 1&lt;/td&gt;
-               &lt;td&gt;Linha 1 Coluna 2&lt;/td&gt;
-               &lt;td&gt;Linha 1 Coluna 3&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-               &lt;td&gt;Linha 2 Coluna 1&lt;/td&gt;
-               &lt;td&gt;Linha 2 Coluna 2&lt;/td&gt;
-               &lt;td colspan=&quot;2&quot;&gt;Linha 2 Coluna 3&lt;/td&gt;
-               &lt;td&gt;Linha 2 Coluna 6&lt;/td&gt;
-          &lt;/tr&gt;
-     &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;div style=&quot;position: relative; top: 10px; bottom: 10px; width:10px; height:10px&quot;&gt;
+  Deslocamento relativo a posição padrão
+&lt;/div&gt;
 
+&lt;div style=&quot;position: absolute; top: 10px; bottom: 10px; width:10px; height:10px&quot;&gt;
+  Deslocamento relativo a origem da página
+&lt;/div&gt;
+
+&lt;div style=&quot;position: fixed; top: 10px; bottom: 10px; width:10px; height:10px&quot;&gt;
+  Deslocamento relativo a origem da página, flutuando durante a navegação
+&lt;/div&gt;
 
 </code></pre>
 
-<h2 id="divs-e-spans">Divs e Spans</h2>
+<h2 id="estilização-avançada">Estilização Avançada</h2>
 
 <pre><code class="language-html">
-&lt;!-- Containers um abaixo do outro --&gt;
-&lt;div&gt;Div1&lt;/div&gt;
-&lt;div&gt;Div2&lt;/div&gt;
+&lt;!-- text-shadow e box-shadow: desloc.vertical desloc.horizontal blur cor --&gt;
+&lt;!-- opacity: de 0.0 a 1.0 --&gt;
+&lt;!-- border-radius (arredondado): pixels ou porcentagem --&gt;
 
-&lt;!-- Containers na mesma linha --&gt;
-&lt;span&gt;Span1&lt;/span&gt;
-&lt;span&gt;Span2&lt;/span&gt;
+&lt;h1 style=&quot;text-shadow: 2px 2px 2px red&quot;&gt;
+     Texto Estilizado
+&lt;/h1&gt;
 
-</code></pre>
-
-<h2 id="entradas-e-formulários">Entradas e Formulários</h2>
-
-<pre><code class="language-html">&lt;form&gt;
-
-    &lt;input type=&quot;text&quot; value=&quot;Insira aqui a entrada&quot;/&gt;
-
-    &lt;input type=&quot;password&quot; /&gt;
-
-    &lt;input type=&quot;number&quot; /&gt;
-
-    &lt;input type=&quot;checkbox&quot; /&gt;
-
-    &lt;input type=&quot;color&quot; /&gt;
-
-    &lt;input type=&quot;date&quot; /&gt;
-
-    &lt;input type=&quot;email&quot; /&gt;
-
-    &lt;input type=&quot;file&quot; /&gt;
-
-    &lt;!-- Botões multualmente excludentes --&gt;
-    &lt;input type=&quot;radio&quot; /&gt;
-
-    &lt;input type=&quot;submit&quot; /&gt;
-
-    &lt;input type=&quot;time&quot; /&gt;
-
-    &lt;input type=&quot;url&quot; /&gt;
-
-    &lt;textarea rows=&quot;10&quot; cols=&quot;200&quot;&gt;
-      Insira aqui um parágrafo
-    &lt;/textarea&gt;
-
-&lt;/form&gt;
+&lt;img style=&quot;box-shadow: 2px 2px 2px black;
+            opacity:0.4;
+            border-radius: 50%;&quot;
+     src=&quot;imagem.jpeg&quot;
+/&gt;
 
 </code></pre>
 
-<h2 id="iframe">Iframe</h2>
+<h2 id="texto-e-fontes">Texto e Fontes</h2>
 
 <pre><code class="language-html">
+&lt;!-- font-size: pixels ou em (1em = 16px) --&gt;
+&lt;!-- font-variant: maiúsculas e minúsculas--&gt;
 
-&lt;iframe src=&quot;http://www.site.com/&quot;
-         frameborder=&quot;0&quot;
-         width=&quot;1000&quot;
-         height=&quot;800&quot;&gt;
-     Aviso: Nem todo website suporta iframe
-&lt;/iframe&gt;
+&lt;p style=&quot;color: blue;
+          font-size:2em;
+          font-family: 'Arial Black', Gadget, sans-serif;
+          font-style: italic;
+          font-variant: small-caps;
+          font-weight: bold;&quot;&gt;
+     Texto Estilizado
+&lt;/p&gt;
 
 </code></pre>
 
-<p>##</p>
+<h2 id="tag-style">Tag Style</h2>
+
+<pre><code class="language-html">
+&lt;style&gt;
+     body {
+          color:blue;
+     }
+
+     h1 {
+          color:green;
+     }
+&lt;/style&gt;
+
+&lt;body&gt;
+  &lt;h1&gt; ... &lt;/h1&gt;
+  ...
+&lt;/body&gt;
+
+</code></pre>
+
+<h2 id="folha-de-estilo-externa">Folha de Estilo Externa</h2>
+
+<p>Em <strong>site.html</strong>:</p>
+
+<pre><code class="language-html">
+&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt; ... &lt;/h1&gt;
+  ...
+&lt;/body&gt;
+
+</code></pre>
+
+<p>Em <strong>style.css</strong>:</p>
+
+<pre><code class="language-css">
+body {
+     color:blue;
+}
+
+h1 {
+     color:green;
+}
+
+</code></pre>
+
+<h2 id="ids-e-classes">Ids e Classes</h2>
+
+<pre><code class="language-html">
+&lt;main class=&quot;fancy-border red-text&quot;&gt;
+     &lt;h1 id=&quot;title-id&quot; &gt; Título Azul &lt;/h1&gt;
+     &lt;p&gt;
+       Parágrafo Vermelho
+     &lt;/p&gt;     
+&lt;/main&gt;
+
+</code></pre>
+
+<p>Em <strong>style.css</strong>:</p>
+
+<pre><code class="language-css">
+/* O mais específico (no caso, o id) sempre tem prioridade*/
+
+#title-id {
+     color:blue;
+}
+
+.fancy-border {
+     border: 3px dashed red;
+}
+
+.red-text {
+     color:red;
+}
+
+</code></pre>
+
+<h2 id="manipulando-seletores">Manipulando Seletores</h2>
+
+<pre><code class="language-css">
+#id {
+  /* Elemento único */
+}
+
+.classe {
+  /* Todos os elementos que fazem parte de uma classe */
+}
+
+* {
+  /* Toda a página*/
+}
+
+h2 {
+  /* Todas as tags h2 */
+}
+
+h2, h1 {
+  /* Todas as tags h2 e as tags h1 */
+}
+
+ul &gt; li {
+  /* Todas as tags li que estão dentro de ul*/
+}
+
+p + h2 {
+  /* Todas as tags h2 que vem logo após uma tag p */
+}
+
+[title] {
+  /* Todas as tags que tem a propriedade title */
+}
+
+li[title=&quot;nome&quot;] {
+  /* Todas as tags li que tem a propriedade title com valor &quot;nome&quot; */
+}
+
+[title*=&quot;cabeçalho&quot;] {
+  /* Todas as tags que tem a propriedade title cujo valor tem a
+  substring &quot;cabeçalho&quot; */
+}
+
+input:checked{
+  /* Todas as tags que são input e estão com valor checked */
+}
+
+h2:hover {
+  /* Todas as tags h2 que estão sob o mouse */
+}
+
+ul &gt; li:nth-last-child(2) {
+  /* Para cada ul, a penúltima tag li */
+}
+
+</code></pre>
+
+<h2 id="flexbox">Flexbox</h2>
+
+<p>Consiste em containers de alinhamento responsivo. Para ver um diagrama completo sobre como configurar seu flexbox (em inglês), clique <a href="http://jonibologna.com/content/images/flexboxsheet.pdf">aqui</a> !</p>
+
+<p>Segue abaixo um exemplo de uso do flexbox:</p>
+
+<p>Em <strong>site.html</strong>:</p>
+
+<pre><code class="language-html">
+&lt;div class=&quot;flex-container&quot;&gt;
+     &lt;div class=&quot;flex-item&quot;&gt; Caixa 1 &lt;/div&gt;
+     &lt;div class=&quot;flex-item&quot;&gt; Caixa 2 &lt;/div&gt;
+     &lt;div class=&quot;flex-item&quot;&gt; Caixa 3 &lt;/div&gt;
+     &lt;div style=&quot;align-self:center;&quot; class=&quot;flex-item&quot;&gt; Caixa 4 &lt;/div&gt;
+     &lt;div class=&quot;flex-item&quot;&gt; Caixa 5 &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+<p>Em <strong>style.css</strong>:</p>
+
+<pre><code class="language-css">
+.flex-container {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     align-items: center;
+     align-content: space-between;
+}
+
+</code></pre>
+
+<h2 id="animações">Animações</h2>
+
+<p>Seguem abaixo exemplos de animações:</p>
+
+<pre><code class="language-css">
+@keyframes mudar-cor {
+     from {background-color: red;}
+     to {background-color: green;}
+}
+
+@keyframes arco-iris {
+     0% {background—color: red;}
+     15% {background—color: orange; top:10px; left:10px;}
+     30% {background—color: yellow; top:20px; left:20px;}
+     45% {background—color: green; top:30px; left:30px;}
+     60% {background—color: blue; top:40px; left:40px;}
+     80% {background—color: lightblue; top:50px; left:50px;}
+     100% {background—color: purple; top:60px; left:60;}
+}
+
+.box-animation{
+     animation-name: muda-cor;
+     animation-duration: 2s;
+     animation-delay: 2s;
+     animation-iteration-count: 2;
+}
+
+</code></pre>
+
+<h2 id="importar-outros-csss">Importar outros CSSs</h2>
+
+<pre><code class="language-css">
+@import &quot;style.css&quot;;
+
+</code></pre>
+
+<h2 id="suporte-de-navegadores">Suporte de Navegadores</h2>
+
+<p>Para saber quais navegadores suportam quais funcionalidades do CSS 3, basta consultar o guia (em inglês) clicando <a href="https://www.w3schools.com/cssref/css3_browsersupport.asp">aqui</a> !</p>
+
+<h2 id="frameworks">Frameworks</h2>
+
+<p>Ao invés de escrevermos CSSs do zero para estilizar nosso website, podemos usar frameworks que implementam esses CSSs por nós. Há várias formas de utilizar esses frameworks em nosso projeto: baixar os arquivos, instalar via gerenciador de pacotes&hellip; Mas a mais simples e recomendada é utilizar CDNs.</p>
+
+<p>Os CDNs são como APIs que nos retornam os serviços que necessitamos, no caso os arquivos CSS e JS que irão estilizar nosso site. Para tal, basta colar tags no head do arquivo html. Segue abaixo as tags para utiliar o <strong>Bootstrap</strong>, uma das mais comuns entre os iniciantes:</p>
+
+<pre><code class="language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+</code></pre>
+
+<p>Lembre-se de olhar a documentação para entender quais classes serão usadas e para quê elas servem.</p>
 
 
 		</br>
@@ -812,7 +833,7 @@ Vídeos internos
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://amintasvrp.github.io/myDocs/css/" title="CSS 3: Estilizando seu Website">
+      <a href="https://amintasvrp.github.io/myDocs/cpp/" title="C&#43;&#43;: Programação Imperativa e Orientada a Objetos">
         <span class="direction">
           Anterior
         </span>
@@ -822,7 +843,7 @@ Vídeos internos
           </div>
           <div class="stretch">
             <div class="title">
-              CSS 3: Estilizando seu Website
+              C&#43;&#43;: Programação Imperativa e Orientada a Objetos
             </div>
           </div>
         </div>
@@ -832,14 +853,14 @@ Vídeos internos
 
   <div class="next">
   
-      <a href="https://amintasvrp.github.io/myDocs/haskell/" title="Haskell I: Introdução ao Paradigma Funcional">
+      <a href="https://amintasvrp.github.io/myDocs/html/" title="HTML 5: Construindo um Website">
         <span class="direction">
           Próximo
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Haskell I: Introdução ao Paradigma Funcional
+              HTML 5: Construindo um Website
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
