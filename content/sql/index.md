@@ -456,3 +456,39 @@ Após obtermos o Diagrama ER, basta realizarmos o mapeamento para o modelo de im
    1. Um para um: incluir a chave primária de quem tem participação parcial na tabela de quem tem participação total, como chave estrangeira
    2. Um para muitos: incluir a chave primária de quem está no "lado um" na tabela de quem está no "lado muitos", como chave estrangeira
    3. Muitos para muitos: criamos uma nova tabela, onde a chave primária é formada pelas chaves primárias das entidades envolvidas, além de incluir os atributos do relacionamento
+
+## Problemas e Soluções
+
+### Acesso negado ao usuário 'root'@'localhost'
+
+Ao rodar uma API REST (um Back End implementado em Spring Boot por exemplo), ocorre o lançamento de uma excessão cuja mensagem é similar a esta:
+
+```bash
+
+Access denied for user 'root'@'localhost'
+
+```
+
+Como proceder ? Primeiro devemos nos conectar ao mySQL através do usuário root:
+
+
+```bash
+
+sudo mysql -u root
+
+```
+
+Depois, vamos verificar os usuários no mySQL. Em seguida vamos remover e recriar o usuário root. No fim, daremos a ele todas as permissões e atualizaremos os privilégios. Os comandos para realizar tudo isso no terminal do mySQL estão listados abaixo:
+
+```sql
+
+SELECT User,Host FROM mysql.user;
+DROP USER 'root'@'localhost';
+uninstall plugin validate_password;
+CREATE USER 'root'@'%' IDENTIFIED BY 'SENHA';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+```
+
+Créditos a [Amanda Luna](https://github.com/avdLuna).
