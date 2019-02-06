@@ -966,6 +966,38 @@ DROP TRIGGER nome_gatilho;
 </ol></li>
 </ol>
 
+<h2 id="problemas-e-soluções">Problemas e Soluções</h2>
+
+<h3 id="acesso-negado-ao-usuário-root-localhost">Acesso negado ao usuário &lsquo;root&rsquo;@&lsquo;localhost&rsquo;</h3>
+
+<p>Ao rodar uma API REST (um Back End implementado em Spring Boot por exemplo), ocorre o lançamento de uma excessão cuja mensagem é similar a esta:</p>
+
+<pre><code class="language-bash">
+Access denied for user 'root'@'localhost'
+
+</code></pre>
+
+<p>Como proceder ? Primeiro devemos nos conectar ao mySQL através do usuário root:</p>
+
+<pre><code class="language-bash">
+sudo mysql -u root
+
+</code></pre>
+
+<p>Depois, vamos verificar os usuários no mySQL. Em seguida vamos remover e recriar o usuário root. No fim, daremos a ele todas as permissões e atualizaremos os privilégios. Os comandos para realizar tudo isso no terminal do mySQL estão listados abaixo:</p>
+
+<pre><code class="language-sql">
+SELECT User,Host FROM mysql.user;
+DROP USER 'root'@'localhost';
+uninstall plugin validate_password;
+CREATE USER 'root'@'%' IDENTIFIED BY 'SENHA';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+</code></pre>
+
+<p>Créditos a <a href="https://github.com/avdLuna">Amanda Luna</a>.</p>
+
 
 		</br>
 
