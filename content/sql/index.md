@@ -491,4 +491,4 @@ FLUSH PRIVILEGES;
 
 ```
 
-Créditos a [Amanda Luna](https://github.com/avdLuna).
+Créditos à [Amanda Luna](https://github.com/avdLuna).
