@@ -125,6 +125,11 @@ googleAnalytics = ""
 		url    = "js/"
 		weight = 2
 
+[[menu.main]]
+		name   = "MongoDB"
+		url    = "mongo/"
+		weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
