@@ -117,6 +117,19 @@ Arquivos e Diretórios Para encontrar o diretório atual, use o comando:</descri
     </item>
     
     <item>
+      <title>MongoDB e os Bancos de Dados Não Relacionais (noSQL)</title>
+      <link>https://amintasvrp.github.io/myDocs/mongo/</link>
+      <pubDate>Sun, 17 Jun 2018 23:55:15 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/mongo/</guid>
+      <description>Instalação Primeiramente, baixamos o MongoDB:
+sudo apt update sudo apt install -y mongodb mongo --version  Depois, baixamos o MongoDB Compass na versão Community Edition Stable clicando aqui.
+Configurando o MongoDB Vamos criar na raiz o diretório /data/db e rodar o servidor com o comando a seguir:
+mongod  Podemos criar diretórios em outros lugares e rodar o servidor neles, basta utilizar o comando abaixo:
+mongod --dbpath /path/diretorio  Para nos conectarmos ao servidor, vamos utilizar (em outro terminal) o comando abaixo.</description>
+    </item>
+    
+    <item>
       <title>Prolog e o Paradigma Lógico</title>
       <link>https://amintasvrp.github.io/myDocs/prolog/</link>
       <pubDate>Sun, 17 Jun 2018 23:54:59 -0300</pubDate>

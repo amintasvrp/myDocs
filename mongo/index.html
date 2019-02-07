@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>MongoDB e os Bancos de Dados Não Relacionais (noSQL) - myDocs</title>
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/mongo/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/mongo/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        MongoDB e os Bancos de Dados Não Relacionais (noSQL)
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="CSS 3" href="https://amintasvrp.github.io/myDocs/css/">
+	
+	CSS 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
+	
+	HTML 5
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="JavaScript" href="https://amintasvrp.github.io/myDocs/js/">
+	
+	JavaScript
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="LESS" href="https://amintasvrp.github.io/myDocs/less/">
+	
+	LESS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
+	
+	Linux
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Markdown" href="https://amintasvrp.github.io/myDocs/markdown/">
+	
+	Markdown
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Marketing Digital" href="https://amintasvrp.github.io/myDocs/marketing-digital/">
+	
+	Marketing Digital
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="MongoDB" href="https://amintasvrp.github.io/myDocs/mongo/">
+	
+	MongoDB
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Python 3" href="https://amintasvrp.github.io/myDocs/python/">
+	
+	Python 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="R" href="https://amintasvrp.github.io/myDocs/r/">
+	
+	R
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SASS" href="https://amintasvrp.github.io/myDocs/sass/">
+	
+	SASS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>MongoDB e os Bancos de Dados Não Relacionais (noSQL) </h1>
+
+			
+
+<h2 id="instalação">Instalação</h2>
+
+<p>Primeiramente, baixamos o MongoDB:</p>
+
+<pre><code class="language-bash">
+sudo apt update
+sudo apt install -y mongodb
+mongo --version
+
+</code></pre>
+
+<p>Depois, baixamos o MongoDB Compass na versão Community Edition Stable clicando <a href="https://www.mongodb.com/download-center/compass?jmp=hero">aqui</a>.</p>
+
+<h2 id="configurando-o-mongodb">Configurando o MongoDB</h2>
+
+<p>Vamos criar na raiz o diretório /data/db e rodar o servidor com o comando a seguir:</p>
+
+<pre><code class="language-bash">
+mongod
+
+</code></pre>
+
+<p>Podemos criar diretórios em outros lugares e rodar o servidor neles, basta utilizar o comando abaixo:</p>
+
+<pre><code class="language-bash">
+mongod --dbpath /path/diretorio
+
+</code></pre>
+
+<p>Para nos conectarmos ao servidor, vamos utilizar (em outro terminal) o comando abaixo. A porta por padrão é 27017, mas devemos conferir no terminal em que está rodando o servidor.</p>
+
+<pre><code class="language-bash">
+mongo --host localhost:porta
+
+</code></pre>
+
+<p>Dessa forma, nos deparamos com o terminal de uso do Mongo BD, que suporta a linguagem BSON.</p>
+
+<h2 id="criando-banco-de-dados">Criando Banco de Dados</h2>
+
+<p>Criamos o análogo ao esquema em SQL:</p>
+
+<pre><code class="language-bash">
+use nome_do_banco
+
+</code></pre>
+
+<p>Assim que o BD é criado, somos mandados para ele.</p>
+
+<h2 id="criando-coleções">Criando Coleções</h2>
+
+<p>Criamos o análogo às tabelas em SQL:</p>
+
+<pre><code class="language-javascript">
+db.createCollection(&quot;nome_da_colecao&quot;)
+
+</code></pre>
+
+<p>Nós nos referimos a coleção como nome_do_banco.nome_da_colecao .</p>
+
+<h2 id="deletando-coleções">Deletando Coleções</h2>
+
+<pre><code class="language-javascript">
+db.nome_da_colecao.drop()
+
+</code></pre>
+
+<h2 id="inserindo-documentos">Inserindo Documentos</h2>
+
+<pre><code class="language-javascript">
+// Tipos de dados
+// Dados são sempre armazenados como objetos
+
+{
+     string: &quot;String of text&quot;,
+     inteiro: 405,
+     double: 3.565,
+     booleano: true,
+     array: [1, 2, 3],
+     objeto: {atr1: &quot;atr1&quot;, atr2: &quot;atr2&quot;},
+     data: new Date(&quot;&lt;YYYY-mm-dd&gt;&quot;),
+     id_objeto: &lt;IdObjeto&gt;,
+     sem_valor: null
+}
+
+/*
+Outros Tipos de dados
+---------------------
+Timestamp
+Binary data
+Regular expressions
+JS Code
+*/
+
+// Inserindo um objeto
+db.students.insertOne({name: &quot;Jack&quot;, major: &quot;Biology&quot;, gpa: 3.5})
+
+// Insreindo um objeto com id detreminado
+db.students.insertOne({_id: 4, name: &quot;John&quot;, major: &quot;Biology&quot;, gpa: 3.2})
+
+// Inserindo um objeto com um atributo a mais
+db.students.insertOne({name: &quot;Claire&quot;, major: &quot;Marketing&quot;, gpa: 3.7, awards: [&quot;Valedictorian&quot;, &quot;Summa Cum Laude&quot;]} )
+
+// Inserindo mais de um objeto
+db.students.insertMany([
+     {name: &quot;Mike&quot;, major: &quot;Computer Science&quot;, gpa: 2.7},
+     {name: &quot;Andrea&quot;, major: &quot;Math&quot;, gpa: 4.0, awards: [&quot;Summa Cum Laude&quot;]}
+])
+
+</code></pre>
+
+<h2 id="buscando-documentos">Buscando Documentos</h2>
+
+<pre><code class="language-javascript">
+// Obtendo todos os estudantes
+db.students.find( {} )
+
+// Obtendo todos os estudantes ignorando o id
+db.students.find( {} , {_id: 0})
+
+// Obtendo os primeiros 3 estudantes
+db.stuents.find( {} ).limit(3)
+
+// Obter todos os estudantes ordenados pelo nome
+db.students.find( {} ).sort( {name: 1} )
+
+// Obter todos os estudantes inversamente ordenados pelo gpa, e depois ordenados pelo nome
+db.students.find( {} ).sort( {gpa: -1, name: 1} )
+
+// Obter os estudantes graduados em Biologia
+db.students.find( {major: &quot;Biology&quot;} )
+
+// Obter os estudantes com nome Jack e graduação em Biologia
+db.students.find( {name: &quot;Jack&quot;, major: &quot;Biology&quot;} )
+
+// Obter os estudantes com o objeto contato gujo número é 333-3333 e o email é student@school.edu
+db.students.find( {contact: {phone: &quot;333-3333&quot;, email: &quot;student@school.edu&quot;} } )
+
+// Obter todos os estudantes com nome Jack ou graduação em Química
+db.students.find( { $or: [ {name: &quot;Jack&quot;}, {major: &quot;Chemistry&quot;} ] } )
+
+// Obter todos os estudantes com gpa maior do que 7.5
+// $eq, $ne, $lt, $lte, $gt, $gte
+db.students.find( {gpa: {$gt: 7.5} } )
+
+// Obter os estudantes com o nome contido no array
+// $in, $nin
+db.students.find( {name: {$in: [&quot;Kate&quot;, &quot;Claire&quot;]} } )   
+
+// Obter os estudantes que possuem o atributo awards
+db.students.find( {awards: {$exists: true} } )
+
+// Obter os estudantes cujo nome é uma string
+// Lista de Tipos e $types - https://docs.mongodb.com/manual/reference/bson-types/
+db.students.find({name: {$type: 2} })
+
+// Obter os estudantes em que o documento de índice 0 no array Notas é igual a 90
+db.students.find( {&quot;grades.0&quot;: 90 } )
+
+// Obter os estudantes que possuem no array Notas o elemento 80
+db.students.find( {grades: {$elemMatch: 80 } } )
+
+// Obter os estudantes que possuem no array Notas um elemento maior do que 80
+db.students.find( {grades: {$elemMatch: { $gt: 80} } } )
+
+// Obter os estudantes que possuem um array Notas de tamanho 4
+db.students.find( {grades: {$size: 4 } } )
+
+</code></pre>
+
+<h2 id="atualizando-documentos">Atualizando Documentos</h2>
+
+<pre><code class="language-javascript">
+// Mesmos filtros da inserção
+db.stuents.metodoAtualizar(filtro, atualização, opções)
+
+// Atualizar um atributo do primeiro documento
+db.students.updateOne(
+     {major: &quot;Biology&quot;},
+     {
+       $set:
+          {major: &quot;Bio&quot;}
+     }
+)
+
+// Atualizar um atributo de todos os documentos
+db.students.updateMany(
+     {major: &quot;Bio&quot;},
+     {
+       $set:
+          {major: &quot;Biology&quot;}
+     }
+)
+
+// Atualizar todo o primeiro documento
+db.students.replaceOne(
+     {major: &quot;Bio&quot;},
+     {name: &quot;new name&quot;, major: &quot;new major&quot;, gpa: 4.0}
+)
+
+// Atualizar todos os documentos por inteiro
+db.students.replaceMany(
+     {major: &quot;Bio&quot;},
+     {name: &quot;new name&quot;, major: &quot;new major&quot;, gpa: 4.0}
+)
+
+</code></pre>
+
+<h2 id="deletando-documentos">Deletando Documentos</h2>
+
+<pre><code class="language-javascript">
+// Deletar todos os documentos do banco
+db.students.deleteMany({})
+
+// Deletar apenas o primeiro documento
+db.students.deleteOne({major: &quot;Biology&quot;})
+
+// Deletar os documentos
+db.students.deleteMany({gpa: {$gte: 3.5}})
+
+</code></pre>
+
+<h2 id="ações-em-massa">Ações em Massa</h2>
+
+<pre><code class="language-javascript">
+db.students.bulkWrite(
+      [
+         { insertOne : // Inserindo um elemento
+            {
+               &quot;document&quot; :
+               {
+                  name: &quot;Andrew&quot;, major: &quot;Architecture&quot;, gpa: 3.2
+               }
+            }
+         },
+         { insertOne :
+            {
+               &quot;document&quot; :
+               {
+                  name: &quot;Terry&quot;, major: &quot;Math&quot;, gpa: 3.8
+               }
+            }
+         },
+         { updateOne : // Atualizando um elemento
+            {
+               filter : { name : &quot;Terry&quot; },
+               update : { $set : { gpa : 4.0 } }
+            }
+         },
+         { deleteOne : // Deletando um elemento
+            { filter : { name : &quot;Kate&quot;} }
+         },
+         { replaceOne : // Substituindo um elemento
+            {
+               filter : { name : &quot;Claire&quot; },
+               replacement : { name: &quot;Genny&quot;, major: &quot;Counsling&quot;, gpa: 2.4 }
+            }
+         }
+    ],
+    {ordered: true} // Indicando que as ações devem ser feitas na ordem. Por padrão: true
+   );
+
+</code></pre>
+
+<h2 id="indexando-texto">Indexando Texto</h2>
+
+<pre><code class="language-javascript">
+// Criando um index de Nomes e Descrições chamado &quot;text&quot;
+db.stores.createIndex( { name: &quot;text&quot;, description: &quot;text&quot; } )
+
+// Buscando, através de &quot;text&quot;, documentos com a substring &quot;Coffee&quot;
+db.stores.find({ $text: {$search: &quot;Coffee&quot; } })
+
+// Buscando, através de &quot;text&quot;, documentos com pelo menos uma das substrings: &quot;Java&quot;, &quot;Hut&quot;, &quot;Coffee&quot;
+db.stores.find({ $text: {$search: &quot;Java Hut Coffee&quot; } })
+
+// Buscando, através de &quot;text&quot;, documentos com pelo menos uma das substrings: &quot;Java&quot;, &quot;Hut&quot;, &quot;Coffee&quot;. Além disso, os documentos são rankeados pela proximidade com a pesquisa &quot;text&quot; (o score é &quot;pesquisa&quot; + &quot;Score&quot;)
+db.stores.find(
+   { $text: { $search: &quot;Java Hut Coffee&quot; } },
+   { score: { $meta: &quot;textScore&quot; } }
+)
+
+</code></pre>
+
+<h2 id="agregação">Agregação</h2>
+
+<pre><code class="language-javascript">
+db.purchase_orders.insertMany(
+     [
+          {product: &quot;toothbrush&quot;, total: 4.75, customer: &quot;Mike&quot;},
+          {product: &quot;guitar&quot;, total: 199.99, customer: &quot;Tom&quot;},
+          {product: &quot;milk&quot;, total: 11.33, customer: &quot;Mike&quot;},
+          {product: &quot;pizza&quot;, total: 8.50, customer: &quot;Karen&quot;},
+          {product: &quot;toothbrush&quot;, total: 4.75, customer: &quot;Karen&quot;},
+          {product: &quot;pizza&quot;, total: 4.75, customer: &quot;Dave&quot;}
+          {product: &quot;toothbrush&quot;, total: 4.75, customer: &quot;Mike&quot;},
+     ]
+)
+
+// Contar quantos documentos possuem determinado atributo
+db.purchase_orders.count({product: &quot;toothbrush&quot;})
+
+// Listar os documentos sem valores repetidos de um certo atributo
+db.purchase_orders.distinct(&quot;product&quot;)
+
+// Agrupar os documentos por um atributo e somar os valores de outro atributo
+db.purchase_orders.aggregate(
+     [
+          {$match: {} },
+          {$group: {_id: &quot;$customer&quot;, total: { $sum: &quot;$total&quot;} } }
+     ]
+)
+
+// Agrupar os documentos por um atributo, somar os valores de outro atributo e inversamente ordenar por ele
+db.purchase_orders.aggregate(
+     [
+          {$match: {} },
+          {$group: {_id: &quot;$product&quot;, total: { $sum: &quot;$total&quot;} } },
+          {$sort: {total: -1}}
+     ]
+)
+
+// Filtrar uma coleção, e em seguida agrupar os documentos por um atributo e somar os valores de outro atributo
+db.purchase_orders.aggregate(
+     [
+          {$match: {product: {$in: [&quot;toothbrush&quot;, &quot;pizza&quot;]} } },
+          {$group: {_id: &quot;$product&quot;, total: { $sum: &quot;$total&quot;} } },
+     ]
+)
+
+</code></pre>
+
+<p>Para consultar os outros operadores de agregação, segue a página (em inglês) clicando <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/">aqui</a>.</p>
+
+<h2 id="problemas-e-soluções">Problemas e Soluções</h2>
+
+<h3 id="endereço-já-em-uso">Endereço já em uso</h3>
+
+<p>Podemos nos deparar, ao tentar rodar o servidor do Mongo, com o seguinte erro:</p>
+
+<pre><code class="language-bash">
+Failed to set up listener: SocketException: Address already in use
+
+</code></pre>
+
+<p>Como proceder ? Basta matarmos o processo com o comando abaixo e rodar novamente o servidor.</p>
+
+<pre><code>
+sudo killall -15 mongod
+
+</code></pre>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://amintasvrp.github.io/myDocs/marketing-digital/" title="Introdução ao Marketing Digital">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Introdução ao Marketing Digital
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://amintasvrp.github.io/myDocs/prolog/" title="Prolog e o Paradigma Lógico">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Prolog e o Paradigma Lógico
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+
