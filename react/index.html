@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>React: Componentes Reutilizáveis para sua Webapp - myDocs</title>
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/react/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/react/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        React: Componentes Reutilizáveis para sua Webapp
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="CSS 3" href="https://amintasvrp.github.io/myDocs/css/">
+	
+	CSS 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
+	
+	HTML 5
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="JavaScript" href="https://amintasvrp.github.io/myDocs/js/">
+	
+	JavaScript
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="LESS" href="https://amintasvrp.github.io/myDocs/less/">
+	
+	LESS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
+	
+	Linux
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Markdown" href="https://amintasvrp.github.io/myDocs/markdown/">
+	
+	Markdown
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Marketing Digital" href="https://amintasvrp.github.io/myDocs/marketing-digital/">
+	
+	Marketing Digital
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="MongoDB" href="https://amintasvrp.github.io/myDocs/mongo/">
+	
+	MongoDB
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Python 3" href="https://amintasvrp.github.io/myDocs/python/">
+	
+	Python 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="R" href="https://amintasvrp.github.io/myDocs/r/">
+	
+	R
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="React" href="https://amintasvrp.github.io/myDocs/react/">
+	
+	React
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SASS" href="https://amintasvrp.github.io/myDocs/sass/">
+	
+	SASS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>React: Componentes Reutilizáveis para sua Webapp </h1>
+
+			
+
+<h2 id="criando-e-configurando-o-projeto">Criando e configurando o projeto</h2>
+
+<h3 id="configurando-ambiente">Configurando Ambiente</h3>
+
+<pre><code class="language-bash"># Instalando Node.js e o NPM
+sudo apt install nodejs
+sudo apt install npm
+# Instalar o create-react-app localmente
+npm install create-react-app
+# Criando o projeto
+./node_modules/.bin/create-react-app projeto
+# Rodando o projeto
+cd projeto
+npm start
+</code></pre>
+
+<h3 id="jsx-babel-e-webpack">JSX, Babel e Webpack</h3>
+
+<p>Com o React, nós escrevemos uma linguagem escrita sobre JS. Nós utilizamos a linguagem JSX que nos permite usar marcações XML. O Babel, instalado juntamente com o create-react-app, um compilador (ou um transpiler) de código fonte JavaScript. Ele pegará um código escrito com ECMAScript 6, que ainda só é exportada pelo Node.js, e irá suportar a sintaxe inválida do JS.</p>
+
+<p>Vamos conhecer a utilidade de outro plugin do Babel: ES2015 preset. Com ele, podemos fazer diversas conversões para versões antigas do JS. Ele ainda possui um script que ficar verificando se existem falhas no nosso código.</p>
+
+<p>Webpack é utilizado para converter arquivos e pacotes para algo que rode no browser (no caso, código JavaScript).</p>
+
+<h2 id="definindo-a-estrutura-do-html">Definindo a estrutura do HTML</h2>
+
+<h3 id="importando-css-e-colocando-html">Importando CSS e Colocando HTML</h3>
+
+<pre><code class="language-javascript">import './css/pure-min.css'; // Importando o Pure
+import './css/side-menu.css'; // Importando o tema do Pure: Responsive Layout
+</code></pre>
+
+<p>Para colocar o respectivo HTML, basta colocar o HTML padrão do tema a partir da div <strong>layout</strong>, contido no arquivo <code>index.html</code>, no método <code>render()</code> que é retornado pelo <strong>componente</strong> do <code>App.js</code>.</p>
+
+<h3 id="comentando-no-html-retornado-pelo-componente-js">Comentando no HTML retornado pelo Componente JS</h3>
+
+<pre><code class="language-javascript">{/* Comentário */}
+</code></pre>
+
+<h3 id="abre-e-fecha-tags">Abre e Fecha Tags</h3>
+
+<p>Em algumas situações devemos fechar tags que não são obrigatoriamente fechadas no HTML. Isso acontece porque estamos tratando o HTML como um XML, onde para o mesmo toda tag aberta deve ser fechada.</p>
+
+<h3 id="class-e-classname">Class e className</h3>
+
+<p>Dentro do HTML retornado devemos substituir o parâmetro <code>class</code> por <code>className</code>. Isso acontece porque class é uma palavra reservada do JS.</p>
+
+<h2 id="consumindo-api">Consumindo API</h2>
+
+<h3 id="manutenção-do-estado-do-componente">Manutenção do Estado do Componente</h3>
+
+<pre><code class="language-javascript">class App extends Component {
+constructor() {
+    super(); // Herdar construtor de componente
+    this.state = { lista: [{nome:'alberto', email:'alberto.souza@caelum.com.br',senha:'123456'}]}; // Variável para definir estado
+}
+....
+// Dentro do render()
+&lt;tbody&gt;
+  {
+    this.state.lista.map(function(autor){
+       return (
+         &lt;tr&gt;
+           &lt;td&gt;{autor.nome}&lt;/td&gt;
+           &lt;td&gt;{autor.email}&lt;/td&gt;
+         &lt;/tr&gt;
+       );
+     })
+  }
+&lt;/tbody&gt;
+</code></pre>
+
+<h3 id="atualizando-o-estado-do-componente">Atualizando o Estado do Componente</h3>
+
+<p>Primeiramente, devemos instalar o JQuery como dependência:</p>
+
+<pre><code class="language-bash">npm install jquery --save
+</code></pre>
+
+<p>E em seguida importar no componente:</p>
+
+<pre><code class="language-javascript">import $ from 'jquery';
+</code></pre>
+
+<p>Podemos usar duas funções de atualização de estado: <code>componentDidMount()</code>, usada quando o componente acabou de ser montado ( logo após o método <code>render()</code> ser invocado pela primeira vez), e o <code>componentWillMount()</code>, que será chamada antes da invocação do <code>render()</code>.</p>
+
+<pre><code class="language-javascript">constructor() {
+    super();    
+    this.state = {lista : []};
+}
+
+// Realizando requisições assíncronas
+componentDidMount(){  
+    $.ajax({
+        url:&quot;http://localhost:8080/api/autores&quot;,
+        dataType: 'json',
+        success:function(resposta){    
+          this.setState({lista:resposta});
+        }.bind(this)
+      }
+    );          
+}
+
+.......
+
+ &lt;tbody&gt;
+  {
+    this.state.lista.map(function(autor){
+      return (
+      // Em estados atualizados por ajax, devemos colocar uma key para otimizar a atualização dinâmica do DOM
+        &lt;tr key={autor.id}&gt;
+          &lt;td&gt;{autor.nome}&lt;/td&gt;
+          &lt;td&gt;{autor.email}&lt;/td&gt;
+        &lt;/tr&gt;
+      );
+    })
+  }
+&lt;/tbody&gt;
+</code></pre>
+
+<h2 id="cadastros-eventos-e-formulários">Cadastros: Eventos e Formulários</h2>
+
+<pre><code class="language-javascript"> constructor() {
+    super();    
+    this.state = {lista : [],nome:'',email:'',senha:''}; // Lista e dados do formulário
+    this.enviaForm = this.enviaForm.bind(this);
+    this.setNome = this.setNome.bind(this);
+    this.setEmail = this.setEmail.bind(this);
+    this.setSenha = this.setSenha.bind(this);
+  }
+
+ ....
+
+ // Evento ao submeter formulário
+   enviaForm(evento){
+    evento.preventDefault();    
+    $.ajax({
+      url:'http://localhost:8080/api/autores',
+      contentType:'application/json',
+      dataType:'json',
+      type:'post',
+      data:        JSON.stringify({nome:this.state.nome,email:this.state.email,senha:this.state.senha}),
+      success: function(resposta){
+        this.setState({lista:resposta});        
+      }.bind(this),
+      error: function(resposta){
+        console.log(&quot;erro&quot;);
+      }      
+    });
+  }
+
+// Alterar campo de nome
+  setNome(evento){
+    this.setState({nome:evento.target.value});
+  }
+
+// Alterar campo de email
+  setEmail(evento){
+    this.setState({email:evento.target.value});
+  }  
+
+// Alterar campo de senha
+  setSenha(evento){
+    this.setState({senha:evento.target.value});
+  }
+
+ .......
+
+ &lt;div className=&quot;pure-form pure-form-aligned&quot;&gt;
+    &lt;form className=&quot;pure-form pure-form-aligned&quot; onSubmit={this.enviaForm.bind(this)} method=&quot;post&quot;&gt;
+    &lt;label htmlFor=&quot;nome&quot;&gt;Nome&lt;/label&gt;
+        &lt;input id=&quot;nome&quot; type=&quot;text&quot; name=&quot;nome&quot; value={this.state.nome} onChange={this.setNome}/&gt;  
+ &lt;/div&gt;
+ &lt;div className=&quot;pure-control-group&quot;&gt;
+     &lt;label htmlFor=&quot;email&quot;&gt;Email&lt;/label&gt;
+     &lt;input id=&quot;email&quot; type=&quot;email&quot; value={this.state.email} onChange={this.setEmail} /&gt;           
+ &lt;/div&gt;
+ &lt;div className=&quot;pure-control-group&quot;&gt;
+     &lt;label htmlFor=&quot;senha&quot;&gt;Senha&lt;/label&gt;
+     &lt;input id=&quot;email&quot; type=&quot;password&quot; name=&quot;senha&quot; value={this.state.senha} onChange={this.setSenha} /&gt;
+ &lt;div className=&quot;pure-control-group&quot;&gt;                                  
+     &lt;label&gt;&lt;/label&gt;
+     &lt;button type=&quot;submit&quot; className=&quot;pure-button pure-button-primary&quot;&gt;Gravar&lt;/button&gt;                                    
+ &lt;/div&gt;
+ &lt;/form&gt;
+</code></pre>
+
+<p>Ou, de uma forma mais enxuta:</p>
+
+<pre><code class="language-javascript">class FormularioAutor extends Component {
+
+  constructor() {
+    super();    
+    this.state = {nome:'',email:'',senha:''};
+    this.enviaForm = this.enviaForm.bind(this);
+  }
+
+  enviaForm(evento){
+    evento.preventDefault();    
+    $.ajax({
+      url:'http://localhost:8080/api/autores',
+      contentType:'application/json',
+      dataType:'json',
+      type:'post',
+      data: JSON.stringify({nome:this.state.nome,email:this.state.email,senha:this.state.senha}),
+      success: function(novaListagem){
+        PubSub.publish('atualiza-lista-autores',novaListagem);        
+        this.setState({nome:'',email:'',senha:''});
+      }.bind(this),
+      error: function(resposta){
+        if(resposta.status === 400) {
+          new TratadorErros().publicaErros(resposta.responseJSON);
+        }
+      },
+      beforeSend: function(){
+        PubSub.publish(&quot;limpa-erros&quot;,{});
+      }      
+    });
+  }
+
+  salvaAlteracao(nomeInput,evento){
+    var campoSendoAlterado = {};
+    campoSendoAlterado[nomeInput] = evento.target.value;    
+    this.setState(campoSendoAlterado);   
+  }
+
+    render() {
+        return (
+            &lt;div className=&quot;pure-form pure-form-aligned&quot;&gt;
+              &lt;form className=&quot;pure-form pure-form-aligned&quot; onSubmit={this.enviaForm} method=&quot;post&quot;&gt;
+                &lt;InputCustomizado id=&quot;nome&quot; type=&quot;text&quot; name=&quot;nome&quot; value={this.state.nome} onChange={this.salvaAlteracao.bind(this,'nome')} label=&quot;Nome&quot;/&gt;                                              
+                &lt;InputCustomizado id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; value={this.state.email} onChange={this.salvaAlteracao.bind(this,'email')} label=&quot;Email&quot;/&gt;                                              
+                &lt;InputCustomizado id=&quot;senha&quot; type=&quot;password&quot; name=&quot;senha&quot; value={this.state.senha} onChange={this.salvaAlteracao.bind(this,'senha')} label=&quot;Senha&quot;/&gt;                                                                      
+                &lt;div className=&quot;pure-control-group&quot;&gt;                                  
+                  &lt;label&gt;&lt;/label&gt;
+                  &lt;button type=&quot;submit&quot; className=&quot;pure-button pure-button-primary&quot;&gt;Gravar&lt;/button&gt;                                    
+                &lt;/div&gt;
+              &lt;/form&gt;             
+
+            &lt;/div&gt;  
+
+        );
+    }
+}
+</code></pre>
+
+<h2 id="componentes-reutilizáveis">Componentes Reutilizáveis</h2>
+
+<p>Criamos primeiro o seguinte arquivo: <code>./componentes/InputCustomizado</code></p>
+
+<pre><code class="language-javascript">import React, { Component } from 'react';
+
+export default class InputCustomizado extends Component{
+
+	render() {
+		return (
+			&lt;div className=&quot;pure-control-group&quot;&gt;
+			  &lt;label htmlFor={this.props.id}&gt;{this.props.label}&lt;/label&gt;
+			  &lt;input id={this.props.id} type={this.props.type} name={this.props.name} value={this.props.value}  onChange={this.props.onChange}/&gt;                  
+			&lt;/div&gt;			
+		);
+	}
+}
+</code></pre>
+
+<p>De forma alternativa, podemos utilizar <strong>spread operators:</strong></p>
+
+<pre><code class="language-javascript">import React, { Component } from 'react';
+
+export default class InputCustomizado extends Component{
+
+	render() {
+        return (
+            &lt;div className=&quot;pure-control-group&quot;&gt;
+              &lt;label htmlFor={this.props.id}&gt;{this.props.label}&lt;/label&gt;
+              &lt;input {...this.props}/&gt;  // Spread Operator: mais enxuto                 
+              &lt;span className=&quot;error&quot;&gt;{this.state.msgErro}&lt;/span&gt;
+            &lt;/div&gt;            
+        );
+    }
+}
+</code></pre>
+
+<p>Importamos esse arquivo dessa forma em nosso <code>App.js</code>:</p>
+
+<pre><code class="language-javascript">import InputCustomizado from './componentes/InputCustomizado';
+</code></pre>
+
+<p>E utilizamos esse componente assim:</p>
+
+<pre><code class="language-javascript">&lt;form className=&quot;pure-form pure-form-aligned&quot; onSubmit={this.enviaForm} method=&quot;post&quot;&gt;
+     &lt;InputCustomizado id=&quot;nome&quot; type=&quot;text&quot; name=&quot;nome&quot; value={this.state.nome} onChange={this.setNome} label=&quot;Nome&quot;/&gt;                                              
+     &lt;InputCustomizado id=&quot;email&quot; type=&quot;email&quot; name=&quot;email&quot; value={this.state.email} onChange={this.setEmail} label=&quot;Email&quot;/&gt;                                              
+     &lt;InputCustomizado id=&quot;senha&quot; type=&quot;password&quot; name=&quot;senha&quot; value={this.state.senha} onChange={this.setSenha} label=&quot;Senha&quot;/&gt;                                                                      
+     &lt;div className=&quot;pure-control-group&quot;&gt;                                  
+         &lt;label&gt;&lt;/label&gt;
+         &lt;button type=&quot;submit&quot; className=&quot;pure-button pure-button-primary&quot;&gt;Gravar&lt;/button&gt;                                    
+     &lt;/div&gt;
+ &lt;/form&gt;
+</code></pre>
+
+<h2 id="comunicação-entre-componentes">Comunicação entre Componentes</h2>
+
+<p>Ao desacoplar funcionalidades de uma tela em outros componentes, podemos nos deparar com a situação de termos componentes diferentes que compartilham um mesmo estado. Para solucionar esta situação, temos a disposição 2 soluções: os High-Order Components e a biblioteca pubsub.</p>
+
+<p>Os primeiros, também chamados de wrappers ou boxes, são componentes que possuem um estado onde enquanto uns consomem outros modificam, de maineira que são simples de implementar, mas ainda possui um alto acoplamento. A segunda possui a seguinte ideia: Um componente publica um determinado objeto, enquanto outros se inscrevem para consumir esse objeto, sem saber da existência um do outro.</p>
+
+<h3 id="componente-de-alta-ordem">Componente de Alta Ordem</h3>
+
+<pre><code class="language-javascript">// Componente Modificador
+class FormularioAutor extends Component {
+
+  constructor() {
+    super();    
+    this.state = {nome:'',email:'',senha:''};
+    this.enviaForm = this.enviaForm.bind(this);
+    this.setNome = this.setNome.bind(this);
+    this.setEmail = this.setEmail.bind(this);
+    this.setSenha = this.setSenha.bind(this);
+  }
+
+    enviaForm(evento){
+    evento.preventDefault();    
+    $.ajax({
+      url:'http://localhost:8080/api/autores',
+      contentType:'application/json',
+      dataType:'json',
+      type:'post',
+      data: JSON.stringify({nome:this.state.nome,email:this.state.email,senha:this.state.senha}),
+      success: function(resposta){
+        this.props.callbackAtualizaListagem(resposta); // Atualizando a lista
+        this.setState({nome:'',email:'',senha:''});
+      }.bind(this),
+      error: function(resposta){
+         // Tratamento de Erros
+      }    
+    });
+  }
+
+  ....
+}
+
+// Componente Consumidor
+class TabelaAutores extends Component {
+
+    render() {
+        return(
+        .....
+                        &lt;tbody&gt;
+                          {
+                            this.props.lista.map(function(autor){
+                              return (
+                                &lt;tr key={autor.id}&gt;
+                                  &lt;td&gt;{autor.nome}&lt;/td&gt;
+                                  &lt;td&gt;{autor.email}&lt;/td&gt;
+                                &lt;/tr&gt;
+                              );
+                            })
+                          }
+                        &lt;/tbody&gt;
+       .......                   
+        );
+    }
+}
+
+// Componente de Alta Ordem
+export default class AutorBox extends Component {
+
+  constructor() {
+    super();    
+    this.state = {lista : []};
+    this.atualizaListagem = this.atualizaListagem.bind(this);    
+  }
+
+  componentDidMount(){  
+    $.ajax({
+        url:&quot;http://localhost:8080/api/autores&quot;,
+        dataType: 'json',
+        success:function(resposta){    
+          this.setState({lista:resposta});
+        }.bind(this)
+      }
+    );          
+  }   
+
+ atualizaListagem(novaLista) {
+  this.setState({lista:novaLista});
+}
+
+  render(){
+    return (
+      &lt;div&gt;
+        &lt;FormularioAutor callbackAtualizaListagem={this.atualizaListagem}/&gt;
+        &lt;TabelaAutores lista={this.state.lista}/&gt;
+
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+
+<h3 id="pubsub">PubSub</h3>
+
+<p>Instalamos como dependência usando o seguinte comando:</p>
+
+<pre><code class="language-bash">npm install --save pubsub-js
+</code></pre>
+
+<p>Realizamos o seguinte import em cada módulo que utiliza o PubSub:</p>
+
+<pre><code class="language-javascript">import PubSub from 'pubsub-js';
+</code></pre>
+
+<p>Usamos da seguinte forma:</p>
+
+<pre><code class="language-javascript">// Publisher
+class FormularioAutor extends Component {
+
+  constructor() {
+    super();    
+    this.state = {nome:'',email:'',senha:''};
+    this.enviaForm = this.enviaForm.bind(this);
+    this.setNome = this.setNome.bind(this);
+    this.setEmail = this.setEmail.bind(this);
+    this.setSenha = this.setSenha.bind(this);
+  }
+
+  enviaForm(evento){
+    evento.preventDefault();    
+    $.ajax({
+      url:'http://localhost:8080/api/autores',
+      contentType:'application/json',
+      dataType:'json',
+      type:'post',
+      data: JSON.stringify({nome:this.state.nome,email:this.state.email,senha:this.state.senha}),
+      success: function(novaListagem){
+        PubSub.publish('atualiza-lista-autores',novaListagem); // Publicando nova listagem       
+        this.setState({nome:'',email:'',senha:''});
+      }.bind(this),
+      error: function(resposta){
+        // Tratamento de Erros
+      }      
+    });
+    ....
+}
+
+....
+
+// Subscriber
+export default class AutorBox extends Component {
+
+  constructor() {
+    super();    
+    this.state = {lista : []};    
+  }
+
+  componentDidMount(){  
+    $.ajax({
+        url:&quot;http://localhost:8080/api/autores&quot;,
+        dataType: 'json',
+        success:function(resposta){    
+          this.setState({lista:resposta});
+        }.bind(this)
+      }
+    );          
+    // Atualizando a lista
+    PubSub.subscribe('atualiza-lista-autores',function(topico,novaLista){
+      this.setState({lista:novaLista});
+    }.bind(this));
+  }  
+}
+</code></pre>
+
+<h2 id="tratamento-de-erros">Tratamento de Erros</h2>
+
+<p>Em <code>InputCustomizado.js</code>:</p>
+
+<pre><code class="language-javascript">export default class InputCustomizado extends Component{
+
+    constructor(){
+        super();
+        this.state = {msgErro:''};  // Estado da msg de erro
+    }
+
+    render() {
+        return (
+            &lt;div className=&quot;pure-control-group&quot;&gt;
+              &lt;label htmlFor={this.props.id}&gt;{this.props.label}&lt;/label&gt;
+              &lt;input id={this.props.id} type={this.props.type} name={this.props.name} value={this.props.value}  onChange={this.props.onChange}/&gt;                  
+              &lt;span className=&quot;error&quot;&gt;{this.state.msgErro}&lt;/span&gt; // Mostrar Erro
+            &lt;/div&gt;            
+        );
+    }
+
+    componentDidMount() {
+        // Mostrar o erro apenas para o campo correto
+        PubSub.subscribe(&quot;erro-validacao&quot;,function(topico,erro){            
+            if(erro.field === this.props.name){
+                this.setState({msgErro:erro.defaultMessage});            
+            }
+        }.bind(this));
+
+        // Limpar msg ao ser clicado o botão de submissão
+        PubSub.subscribe(&quot;limpa-erros&quot;,function(topico){                        
+            this.setState({msgErro:''});                        
+        }.bind(this));        
+    }
+}
+</code></pre>
+
+<p>Em <code>Autor.js</code>:</p>
+
+<pre><code class="language-javascript">class FormularioAutor extends Component {
+
+  constructor() {
+    super();    
+    this.state = {nome:'',email:'',senha:''};
+    this.enviaForm = this.enviaForm.bind(this);
+    this.setNome = this.setNome.bind(this);
+    this.setEmail = this.setEmail.bind(this);
+    this.setSenha = this.setSenha.bind(this);
+  }
+
+  enviaForm(evento){
+    evento.preventDefault();    
+    $.ajax({
+      url:'http://localhost:8080/api/autores',
+      contentType:'application/json',
+      dataType:'json',
+      type:'post',
+      data: JSON.stringify({nome:this.state.nome,email:this.state.email,senha:this.state.senha}),
+      success: function(novaListagem){
+        PubSub.publish('atualiza-lista-autores',novaListagem);        
+        this.setState({nome:'',email:'',senha:''});
+      }.bind(this),
+      error: function(resposta){
+        if(resposta.status === 400) {
+          // Acionar tratador de erros
+          new TratadorErros().publicaErros(resposta.responseJSON);
+        }
+      },
+      beforeSend: function(){
+        PubSub.publish(&quot;limpa-erros&quot;,{}); // Sinal de apagar msg de erro
+      }      
+    });
+  }
+  .....
+}
+......
+</code></pre>
+
+<p>Em <code>TratadorErros.js</code>:</p>
+
+<pre><code class="language-javascript">export default class TratadorErros {
+    publicaErros(erros){
+        for(var i=0;i&lt;erros.errors.length;i++){
+            var erro = erros.errors[i];
+            PubSub.publish(&quot;erro-validacao&quot;,erro); // Publicar cada erro ocorrido
+        }
+    }
+}
+</code></pre>
+
+<h2 id="suporte-a-navegação">Suporte a Navegação</h2>
+
+<p>Basicamente o react-router possui componentes que nos permitem associar endereços com componentes específicos da aplicação.</p>
+
+<h3 id="instalação-do-react-router">Instalação do React Router</h3>
+
+<pre><code class="language-bash">npm install react-router-dom --save
+</code></pre>
+
+<h3 id="configurando-navegação">Configurando Navegação</h3>
+
+<p>Em <code>index.js</code>:</p>
+
+<pre><code class="language-javascript">// Imports padrão
+import React from 'react';
+import ReactDOM from 'react-dom';
+// Componentes da app
+import App from './App';
+import Autor from './Autor';
+import Livro from './Livro';
+import Home from './Home';
+// CSS
+import './index.css';
+// Importando o React Router
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+
+ReactDOM.render((
+        &lt;Router&gt; // Configurar rotas sem reload
+            &lt;App&gt; // Módulo central da app e suas rotas
+                    &lt;Switch&gt; // Declaração de rotas            
+                        &lt;Route exact path=&quot;/&quot; component={Home}/&gt; // Rota default
+                        &lt;Route path=&quot;/autor&quot; component={AutorAdmin}/&gt; // Rota comum
+                        &lt;Route path=&quot;/livro&quot; component={LivroAdmin}/&gt;                
+                    &lt;/Switch&gt;            
+            &lt;/App&gt;
+        &lt;/Router&gt;
+
+), document.getElementById('root'));
+</code></pre>
+
+<p>Em <code>App.js</code>:</p>
+
+<pre><code class="language-javascript">import AutorBox from './Autor';
+import { Link } from 'react-router-dom'; // Disparar rotas
+
+class App extends Component {
+
+  render() {    
+    return (
+      &lt;div id=&quot;layout&quot;&gt;
+
+          &lt;a href=&quot;#menu&quot; id=&quot;menuLink&quot; className=&quot;menu-link&quot;&gt;
+
+              &lt;span&gt;&lt;/span&gt;
+          &lt;/a&gt;
+
+          &lt;div id=&quot;menu&quot;&gt;
+              &lt;div className=&quot;pure-menu&quot;&gt;
+                  &lt;a className=&quot;pure-menu-heading&quot; href=&quot;#&quot;&gt;Company&lt;/a&gt;
+
+                  &lt;ul className=&quot;pure-menu-list&quot;&gt;
+
+                  // Botões que roteiam a página
+                      &lt;li className=&quot;pure-menu-item&quot;&gt;&lt;Link to=&quot;/&quot; className=&quot;pure-menu-link&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                      &lt;li className=&quot;pure-menu-item&quot;&gt;&lt;Link to=&quot;/autor&quot; className=&quot;pure-menu-link&quot;&gt;Autor&lt;/Link&gt;&lt;/li&gt;
+                      &lt;li className=&quot;pure-menu-item&quot;&gt;&lt;Link to=&quot;/livro&quot; className=&quot;pure-menu-link&quot;&gt;Livro&lt;/Link&gt;&lt;/li&gt;
+
+                  &lt;/ul&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+              &lt;div id=&quot;main&quot;&gt;
+                // Local de preenchimento pelos filhos
+                // As rotas determinam qual filho preencherá esta lacuna
+                {this.props.children}
+              &lt;/div&gt;            
+
+
+      &lt;/div&gt;     
+    );
+  }
+}
+
+export default App;
+</code></pre>
+
+<h2 id="preparando-para-produção">Preparando para produção</h2>
+
+<p>Para colocar em produção, basta utilizarmos o seguinte comando:</p>
+
+<pre><code class="language-bash">npm run build
+</code></pre>
+
+<p>Uma pasta, chamada<code>build</code>, foi gerada. Você pode usar a infraestrutura que quiser para rodar essa versão do projeto. Podemos usar o <strong>pushstate-server</strong>, que é escrito em Javascript e roda sobre o Node.js, como um teste de deploy. Basta irmos para a pasta do projeto e usarmos os seguintes comandos:</p>
+
+<pre><code class="language-bash">npm install pushstate-server
+./node_modules/.bin/pushstate-server build
+</code></pre>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://amintasvrp.github.io/myDocs/r/" title="R: Introdução a Ciência de Dados">
+        <span class="direction">
+          Anterior
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              R: Introdução a Ciência de Dados
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://amintasvrp.github.io/myDocs/sass/" title="SASS: CSS com Superpoderes">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              SASS: CSS com Superpoderes
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

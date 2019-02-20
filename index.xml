@@ -160,6 +160,15 @@ Tipos de Dados Básicos e Variáveis # Tipos de Dados numerico &amp;lt;- 10.5 # 
     </item>
     
     <item>
+      <title>React: Componentes Reutilizáveis para sua Webapp</title>
+      <link>https://amintasvrp.github.io/myDocs/react/</link>
+      <pubDate>Sun, 17 Jun 2018 23:53:22 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/react/</guid>
+      <description>Criando e configurando o projeto Configurando Ambiente # Instalando Node.js e o NPM sudo apt install nodejs sudo apt install npm # Instalar o create-react-app localmente npm install create-react-app # Criando o projeto ./node_modules/.bin/create-react-app projeto # Rodando o projeto cd projeto npm start  JSX, Babel e Webpack Com o React, nós escrevemos uma linguagem escrita sobre JS. Nós utilizamos a linguagem JSX que nos permite usar marcações XML. O Babel, instalado juntamente com o create-react-app, um compilador (ou um transpiler) de código fonte JavaScript.</description>
+    </item>
+    
+    <item>
       <title>SASS: CSS com Superpoderes</title>
       <link>https://amintasvrp.github.io/myDocs/sass/</link>
       <pubDate>Sun, 17 Jun 2018 23:53:15 -0300</pubDate>
