@@ -130,6 +130,11 @@ googleAnalytics = ""
 		url    = "mongo/"
 		weight = 2
 
+[[menu.main]]
+		name   = "React"
+		url    = "react/"
+		weight = 2
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
