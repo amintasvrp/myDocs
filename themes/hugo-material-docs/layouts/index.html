@@ -27,12 +27,7 @@
 			{{ range where .Site.Pages "Type" "index" }}
 				<h1>Uma Documentação em Português: Simples e Direta. {{ if .IsDraft }} (Draft){{ end }}</h1>
 				</br>
-				{{ with .Site.Params.roadmap }}
-					<div class="roadmap">
-						<img src="{{ $.Site.BaseURL }}{{ . }}">
-					</div>
-				{{ end }}
-
+				
 				{{ .Content }}
 
 			{{ end }}

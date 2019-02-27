@@ -1,6 +1,6 @@
 ---
 title: "C++: Programação Imperativa e Orientada a Objetos"
-date: 2018-06-17T23:58:59-03:00
+date: 2018-06-17T23:59:30-03:00
 author: "Amintas Victor"
 type: "post"
 ---

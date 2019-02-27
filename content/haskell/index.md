@@ -1,6 +1,6 @@
 ---
-title: "Haskell I: Introdução ao Paradigma Funcional"
-date: 2018-06-17T23:57:59-03:00
+title: "Haskell: Introdução ao Paradigma Funcional"
+date: 2018-06-17T23:58:30-03:00
 author: "Amintas Victor"
 type: "post"
 ---

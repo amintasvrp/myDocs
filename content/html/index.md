@@ -1,6 +1,6 @@
 ---
 title: "HTML 5: Construindo um Website"
-date: 2018-06-17T23:58:30-03:00
+date: 2018-06-17T23:58:00-03:00
 author: "Amintas Victor"
 type: "post"
 ---

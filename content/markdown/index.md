@@ -1,6 +1,6 @@
 ---
 title: "Markdown: Desenvolvendo conteúdo para websites"
-date: 2018-06-17T23:56:30-03:00
+date: 2018-06-17T23:55:30-03:00
 author: "Amintas Victor"
 type: "post"
 ---

@@ -1,6 +1,6 @@
 ---
-title: "React: Componentes Reutilizáveis para sua Webapp"
-date: 2018-06-17T23:53:22-03:00
+title: "ReactJS: Componentes Reutilizáveis para sua Webapp"
+date: 2018-06-17T23:52:00-03:00
 author: "Amintas Victor"
 type: "post"
 ---

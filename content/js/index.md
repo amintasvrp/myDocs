@@ -1,6 +1,6 @@
 ---
 title: "JavaScript: Programando em Web"
-date: 2018-06-17T23:56:45-03:00
+date: 2018-06-17T23:57:00-03:00
 author: "Amintas Victor"
 type: "post"
 ---

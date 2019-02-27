@@ -131,9 +131,15 @@ googleAnalytics = ""
 		weight = 2
 
 [[menu.main]]
-		name   = "React"
+		name   = "ReactJS"
 		url    = "react/"
 		weight = 2
+
+[[menu.main]]
+		name   = "NodeJS"
+		url    = "node/"
+		weight = 2
+
 
 [blackfriday]
 	smartypants	= true
