@@ -14,7 +14,7 @@
     <item>
       <title>C: Programação Imperativa em Baixo Nível</title>
       <link>https://amintasvrp.github.io/myDocs/c/</link>
-      <pubDate>Sun, 17 Jun 2018 23:59:59 -0300</pubDate>
+      <pubDate>Mon, 18 Jun 2018 00:00:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/c/</guid>
       <description>Introdução C é uma linguagem de programação imperativa de propósito geral, com tipagem estática. Além disso, é uma linguagem de baixo nível, o que significa que fornece construções que mapeiam de forma eficiente para as instruções típicas da máquina. Basicamente, é uma maneira mais fácil de escrever programas de baixo nível. Em vez de escrever código de baixo nível em uma linguagem de montagem, você pode abstrair muito e escrever programas equivalentes em C.</description>
@@ -23,7 +23,7 @@
     <item>
       <title>C&#43;&#43;: Programação Imperativa e Orientada a Objetos</title>
       <link>https://amintasvrp.github.io/myDocs/cpp/</link>
-      <pubDate>Sun, 17 Jun 2018 23:58:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:59:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/cpp/</guid>
       <description>Introdução C++ é uma linguagem de programação orientada a objetos, de tipagem estática, de uso geral. Por vários anos, a linguagem evoluiu até o lançamento oficial em 1985. C++ é essencialmente uma extensão da linguagem de programação C, portanto muitas das coisas que você pode fazer em C você também pode fazer em C++. Ambas são amplamente compatíveis e, em muitos casos, o código C pode ser usado com pouca ou nenhuma modificação como código C++.</description>
@@ -32,34 +32,34 @@
     <item>
       <title>CSS 3: Estilizando seu Website</title>
       <link>https://amintasvrp.github.io/myDocs/css/</link>
-      <pubDate>Sun, 17 Jun 2018 23:58:30 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:59:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/css/</guid>
       <description>Folha de Estilo Interna &amp;lt;body style=&amp;quot;color: blue; font-size:20px&amp;quot;&amp;gt; &amp;lt;header&amp;gt; &amp;lt;h1 style=&amp;quot;color: red;&amp;quot;&amp;gt; Título de fonte vermelha&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;main style=&amp;quot;border: 1px solid black; width: 80%; max-width:500px&amp;quot;&amp;gt; &amp;lt;p&amp;gt;Parágrafo com fonte azul; borda fina, reta e preta ao redor, com tamanho responsivo de 80% e máximo de 500px&amp;lt;/p&amp;gt; &amp;lt;/main&amp;gt; &amp;lt;/body&amp;gt;  Cores &amp;lt;header&amp;gt; &amp;lt;h1 style=&amp;quot;color: CornflowerBlue;&amp;quot;&amp;gt;Configurando cor pelo nome&amp;lt;/h1&amp;gt; &amp;lt;h1 style=&amp;quot;color: #ff0000;&amp;quot;&amp;gt;Configurando cor pelo código hexadecimal&amp;lt;/h1&amp;gt; &amp;lt;h1 style=&amp;quot;color: rgb(255, 0, 0);&amp;quot;&amp;gt;Configurando cor pelo RGB&amp;lt;/h1&amp;gt; &amp;lt;/header&amp;gt;  Margens e Preenchimentos &amp;lt;!</description>
     </item>
     
     <item>
-      <title>HTML 5: Construindo um Website</title>
-      <link>https://amintasvrp.github.io/myDocs/html/</link>
-      <pubDate>Sun, 17 Jun 2018 23:58:30 -0300</pubDate>
-      
-      <guid>https://amintasvrp.github.io/myDocs/html/</guid>
-      <description>Tags Básicas Meta Tags &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Descrição do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;palavras,chave&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Autor do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;!-- Janela de visualização--&amp;gt; &amp;lt;title&amp;gt;Título do Website&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Corpo do Website &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;  Cabeçalhos &amp;lt;h1&amp;gt;Cabeçalho 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Cabeçalho 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Cabeçalho 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Cabeçalho 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Cabeçalho 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Cabeçalho 6&amp;lt;/h6&amp;gt;  Linha Horizontal &amp;lt;hr/&amp;gt;  Quebra de Linha &amp;lt;br&amp;gt;  Parágrafo &amp;lt;p&amp;gt; Parágrafo 1 &amp;lt;/p&amp;gt;  Formatadores de Texto &amp;lt;p&amp;gt; &amp;lt;big&amp;gt;Texto Grande&amp;lt;/big&amp;gt; &amp;lt;small&amp;gt;Texto Pequeno&amp;lt;/small&amp;gt; &amp;lt;b&amp;gt;Texto em Negrito&amp;lt;/b&amp;gt; &amp;lt;strong&amp;gt;Texto em Negrito&amp;lt;/strong&amp;gt; &amp;lt;i&amp;gt;Texto em Itálico&amp;lt;/i&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Escrita Normal &amp;lt;sup&amp;gt;Escrita Superior&amp;lt;/sup&amp;gt; &amp;lt;/p&amp;gt;  Comentários &amp;lt;!</description>
-    </item>
-    
-    <item>
-      <title>Haskell I: Introdução ao Paradigma Funcional</title>
+      <title>Haskell: Introdução ao Paradigma Funcional</title>
       <link>https://amintasvrp.github.io/myDocs/haskell/</link>
-      <pubDate>Sun, 17 Jun 2018 23:57:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:58:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/haskell/</guid>
       <description>Básico Operadores Básicos  + - * / mod sqrt  Operadores Lógicos  &amp;amp;&amp;amp; || not  Operadores Relacionais  &amp;gt; &amp;lt; &amp;gt;= &amp;lt;= == /=  Declarando Valores  x = a  Comentários  -- linha comentada {- - bloco comentado -}  Funções Aplicação  f x y == (f x) y == x &#39;f&#39; y  Expressões Condicionais  nomeFuncao param = if cond then resultado1 else resultado2  Equações Guardadas  nomeFuncao param | cond = resultado1 | otherwise = resultado2  Expressões Case  funcao xs = case expression of pattern1 -&amp;gt; result1 pattern2 -&amp;gt; result2  Definição local  -- relacionamos expressões com variáveis, melhorando visibilidade e escopo locais -- (where) funcao xs = .</description>
     </item>
     
     <item>
+      <title>HTML 5: Construindo um Website</title>
+      <link>https://amintasvrp.github.io/myDocs/html/</link>
+      <pubDate>Sun, 17 Jun 2018 23:58:00 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/html/</guid>
+      <description>Tags Básicas Meta Tags &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Descrição do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;palavras,chave&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Autor do website&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;!-- Janela de visualização--&amp;gt; &amp;lt;title&amp;gt;Título do Website&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Corpo do Website &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;/head&amp;gt;  Cabeçalhos &amp;lt;h1&amp;gt;Cabeçalho 1&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;Cabeçalho 2&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;Cabeçalho 3&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;Cabeçalho 4&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;Cabeçalho 5&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;Cabeçalho 6&amp;lt;/h6&amp;gt;  Linha Horizontal &amp;lt;hr/&amp;gt;  Quebra de Linha &amp;lt;br&amp;gt;  Parágrafo &amp;lt;p&amp;gt; Parágrafo 1 &amp;lt;/p&amp;gt;  Formatadores de Texto &amp;lt;p&amp;gt; &amp;lt;big&amp;gt;Texto Grande&amp;lt;/big&amp;gt; &amp;lt;small&amp;gt;Texto Pequeno&amp;lt;/small&amp;gt; &amp;lt;b&amp;gt;Texto em Negrito&amp;lt;/b&amp;gt; &amp;lt;strong&amp;gt;Texto em Negrito&amp;lt;/strong&amp;gt; &amp;lt;i&amp;gt;Texto em Itálico&amp;lt;/i&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;p&amp;gt; Escrita Normal &amp;lt;sup&amp;gt;Escrita Superior&amp;lt;/sup&amp;gt; &amp;lt;/p&amp;gt;  Comentários &amp;lt;!</description>
+    </item>
+    
+    <item>
       <title>Hugo: Um Gerador de Sites Estáticos</title>
       <link>https://amintasvrp.github.io/myDocs/hugo/</link>
-      <pubDate>Sun, 17 Jun 2018 23:56:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:57:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/hugo/</guid>
       <description>Um site estático consiste em um aplicativo da Web simples, no qual o conteúdo exposto é o mesmo para todos os que acessam, como blogs, periódicos, portfólios e portais de notícias. No entanto, no WordPress encontramos uma plataforma muito robusta para tal, já no tumblr e no blogger encontramos o oposto: é por isso que usamos o Hugo, um gerador de site estático.
@@ -69,7 +69,7 @@ Pré-requisitos Breves noções de HTML e Markdown.</description>
     <item>
       <title>JavaScript: Programando em Web</title>
       <link>https://amintasvrp.github.io/myDocs/js/</link>
-      <pubDate>Sun, 17 Jun 2018 23:56:45 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:57:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/js/</guid>
       <description>Introdução JavaScript é uma linguidadem de programação de alto nível, dinamicamente tipificada e interpretada. Foi criado com o único propósito de tornar os sites mais responsivos e dinâmicos. Como é capaz de responder às interações do usuário e acessar e manipular o modelo de objeto de documento (DOM), permite que os desenvolvedores da Web criem sites mais dinâmicos.
@@ -89,18 +89,9 @@ lessc diretorio/arquivo.less diretorio/arquivo.css  Podemos instalar um plug-in,
     </item>
     
     <item>
-      <title>Markdown: Desenvolvendo conteúdo para websites</title>
-      <link>https://amintasvrp.github.io/myDocs/markdown/</link>
-      <pubDate>Sun, 17 Jun 2018 23:56:30 -0300</pubDate>
-      
-      <guid>https://amintasvrp.github.io/myDocs/markdown/</guid>
-      <description>Cabeçalhos # Cabeçalho 1 ## Cabeçalho 2 ### Cabeçalho 3 #### Cabeçalho 4 ##### Cabeçalho 5 ###### Cabeçalho 6  Linha Horizontal ---  Formatando Parágrafos Basta pular uma linha... Para separar parágrafos ! *itálico* _itálico_ **negrito** __negrito__  Links [Label do Site](www.site.com/) ![Imagem Externa](www.site.com/imagem.png &amp;quot;Label da Imagem&amp;quot;) ![Imagem Interna](./imagem.png &amp;quot;Label da Imagem&amp;quot;)  Listas * Lista não ordenada 1. Lista ordenada 1. Lista interna * Renderizar a lista sem se preocupar com a ordem  Tabelas | Tabelas | são | legais | |------------|:--------:|----------:| | Coluna 1 | Coluna 2 | Coluna 3 | | alinhada | alinhada | alinhada | | à esquerda | no meio | à direita |  Blocos de Código ~~~~</description>
-    </item>
-    
-    <item>
       <title>Linux: Conhecendo e Usando o Terminal</title>
       <link>https://amintasvrp.github.io/myDocs/linux/</link>
-      <pubDate>Sun, 17 Jun 2018 23:55:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:56:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/linux/</guid>
       <description>Para aqueles que agora estão sendo introduzidos ao Linux, o manuseio do terminal pode, ao mesmo tempo, fascinar e dar um frio na barriga. A fim de aprender o básico sobre como lidar com essa ferramenta muito importante no uso de qualquer distribuição Linux, e claro, de perdermos qualquer preconceito sobre o prompt de comando, veremos neste artigo os principais comandos no terminal Linux
@@ -108,9 +99,18 @@ Arquivos e Diretórios Para encontrar o diretório atual, use o comando:</descri
     </item>
     
     <item>
+      <title>Markdown: Desenvolvendo conteúdo para websites</title>
+      <link>https://amintasvrp.github.io/myDocs/markdown/</link>
+      <pubDate>Sun, 17 Jun 2018 23:55:30 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/markdown/</guid>
+      <description>Cabeçalhos # Cabeçalho 1 ## Cabeçalho 2 ### Cabeçalho 3 #### Cabeçalho 4 ##### Cabeçalho 5 ###### Cabeçalho 6  Linha Horizontal ---  Formatando Parágrafos Basta pular uma linha... Para separar parágrafos ! *itálico* _itálico_ **negrito** __negrito__  Links [Label do Site](www.site.com/) ![Imagem Externa](www.site.com/imagem.png &amp;quot;Label da Imagem&amp;quot;) ![Imagem Interna](./imagem.png &amp;quot;Label da Imagem&amp;quot;)  Listas * Lista não ordenada 1. Lista ordenada 1. Lista interna * Renderizar a lista sem se preocupar com a ordem  Tabelas | Tabelas | são | legais | |------------|:--------:|----------:| | Coluna 1 | Coluna 2 | Coluna 3 | | alinhada | alinhada | alinhada | | à esquerda | no meio | à direita |  Blocos de Código ~~~~</description>
+    </item>
+    
+    <item>
       <title>Introdução ao Marketing Digital</title>
       <link>https://amintasvrp.github.io/myDocs/marketing-digital/</link>
-      <pubDate>Sun, 17 Jun 2018 23:55:30 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:55:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/marketing-digital/</guid>
       <description> Imagens inspiradoras Autoridade no Ambiente Digital Conteúdo Base e Periférico Gestão de Conteúdo para Blog Infográfico como Conteúdo Criando o seu primeiro eBook </description>
@@ -119,7 +119,7 @@ Arquivos e Diretórios Para encontrar o diretório atual, use o comando:</descri
     <item>
       <title>MongoDB e os Bancos de Dados Não Relacionais (noSQL)</title>
       <link>https://amintasvrp.github.io/myDocs/mongo/</link>
-      <pubDate>Sun, 17 Jun 2018 23:55:15 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:54:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/mongo/</guid>
       <description>Instalação Primeiramente, baixamos o MongoDB:
@@ -130,9 +130,18 @@ mongod --dbpath /path/diretorio  Para nos conectarmos ao servidor, vamos utiliza
     </item>
     
     <item>
+      <title>NodeJS: desenvolvendo uma API REST</title>
+      <link>https://amintasvrp.github.io/myDocs/node/</link>
+      <pubDate>Sun, 17 Jun 2018 23:54:00 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/node/</guid>
+      <description>Instalando o NodeJS sudo apt install nodejs -y # Checando se o node foi instalado node -v # Checando se o npm foi instalado npm -v ## Se o npm não foi instalado, use o comando: sudo apt install npm -y  Criando Estrutura mkdir node-api # node-api é o nome do projeto cd node-api npm init -y # criando projeto node  Teremos um arquivo chamado package.json. Ele é responsável por manter metadados do projeto e informações sobre as dependências.</description>
+    </item>
+    
+    <item>
       <title>Prolog e o Paradigma Lógico</title>
       <link>https://amintasvrp.github.io/myDocs/prolog/</link>
-      <pubDate>Sun, 17 Jun 2018 23:54:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:53:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/prolog/</guid>
       <description>Mesmo diferentes paradigmas como Funcional e Imperativo têm algo em comum: ambos realizam mapeamento, isto é, lêem entradas e geram saídas. No entanto, um programa de acordo com o paradigma lógico implementa relacionamentos, que são mais gerais do que os mapeamentos. Em outras palavras, quando se trata de programação lógica, o nível é superior ao da programação imperativa ou funcional.
@@ -143,7 +152,7 @@ Paradigma Lógico Definimos as relações da seguinte forma:
     <item>
       <title>Python 3: Minimalismo e Legibilidade</title>
       <link>https://amintasvrp.github.io/myDocs/python/</link>
-      <pubDate>Sun, 17 Jun 2018 23:53:59 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:53:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/python/</guid>
       <description>Introdução a Python Python é uma linguagem de programação orientada a objetos, dinamicamente tipificada e interpretada. A filosofia de design do Python é baseada em uma sintaxe não-tradicional e minimalista, girando em torno da legibilidade. Isso é feito usando-se espaço em branco para delinear escopos em vez das mais tradicionais chaves e ponto-e-vírgula. Geralmente todo o código python é executado usando um interpretador, sendo o mais popular e original chamado CPython, porque é implementado utilizando C e usa um coletor de lixo automático para gerenciar a memória.</description>
@@ -152,7 +161,7 @@ Paradigma Lógico Definimos as relações da seguinte forma:
     <item>
       <title>R: Introdução a Ciência de Dados</title>
       <link>https://amintasvrp.github.io/myDocs/r/</link>
-      <pubDate>Sun, 17 Jun 2018 23:53:30 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:52:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/r/</guid>
       <description>Preparando o Ambiente sudo apt update sudo apt install r-base r-base-dev  O uso da linguagem pode se dar tanto via terminal, ao utilizar o comando R, quanto através da IDE RStudio, sendo este último a maneira recomendada.
@@ -160,9 +169,9 @@ Tipos de Dados Básicos e Variáveis # Tipos de Dados numerico &amp;lt;- 10.5 # 
     </item>
     
     <item>
-      <title>React: Componentes Reutilizáveis para sua Webapp</title>
+      <title>ReactJS: Componentes Reutilizáveis para sua Webapp</title>
       <link>https://amintasvrp.github.io/myDocs/react/</link>
-      <pubDate>Sun, 17 Jun 2018 23:53:22 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:52:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/react/</guid>
       <description>Criando e configurando o projeto Configurando Ambiente # Instalando Node.js e o NPM sudo apt install nodejs sudo apt install npm # Instalar o create-react-app localmente npm install create-react-app # Criando o projeto ./node_modules/.bin/create-react-app projeto # Rodando o projeto cd projeto npm start  JSX, Babel e Webpack Com o React, nós escrevemos uma linguagem escrita sobre JS. Nós utilizamos a linguagem JSX que nos permite usar marcações XML. O Babel, instalado juntamente com o create-react-app, um compilador (ou um transpiler) de código fonte JavaScript.</description>
@@ -171,7 +180,7 @@ Tipos de Dados Básicos e Variáveis # Tipos de Dados numerico &amp;lt;- 10.5 # 
     <item>
       <title>SASS: CSS com Superpoderes</title>
       <link>https://amintasvrp.github.io/myDocs/sass/</link>
-      <pubDate>Sun, 17 Jun 2018 23:53:15 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:51:30 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/sass/</guid>
       <description>Instalando SASS Primeiramente devemos instalar o Ruby, linguagem de programação que implementa SASS, e o gem, gerenciador de pacotes do Ruby. Fazemos ambas as instalações com o seguinte comando:
@@ -182,7 +191,7 @@ sudo apt install ruby-sass  SASS X SCSS O framework SASS comporta duas sintaxes 
     <item>
       <title>SQL e os Bancos de Dados Relacionais</title>
       <link>https://amintasvrp.github.io/myDocs/sql/</link>
-      <pubDate>Sun, 17 Jun 2018 23:53:00 -0300</pubDate>
+      <pubDate>Sun, 17 Jun 2018 23:51:00 -0300</pubDate>
       
       <guid>https://amintasvrp.github.io/myDocs/sql/</guid>
       <description>Introdução a Banco de Dados O que é um Banco de Dados ? Se trata de qualquer coleção de dados que possui relação entre si. Bancos de dados podem ser armazenados de diversas formas, sendo mais úteis (potencialmente em larga escala) e seguros se forem guardados em computadores.
