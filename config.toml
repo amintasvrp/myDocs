@@ -140,6 +140,10 @@ googleAnalytics = ""
 		url    = "node/"
 		weight = 2
 
+[[menu.main]]
+		name   = "Angular"
+		url    = "angular/"
+		weight = 2
 
 [blackfriday]
 	smartypants	= true
