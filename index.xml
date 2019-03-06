@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Angular 7</title>
+      <link>https://amintasvrp.github.io/myDocs/angular/</link>
+      <pubDate>Mon, 18 Jun 2018 01:00:00 -0300</pubDate>
+      
+      <guid>https://amintasvrp.github.io/myDocs/angular/</guid>
+      <description>Instalando Angular CLI sudo npm install @angular/cli  Criando Projeto Angular ng new nome_do_projeto  É recomendado escolher usar Angular Router e usar o SASS.
+Subir Projeto Angular Podemos subir nosso projeto Angular, através de um servidor node.js local, através do seguinte comando:
+ng serve -o  Podemos acessar através do link http://localhost:4200/.
+Criando Componente ng generate component nome_do_componente # ou ng g c nome_do_componente  Estrutura do Projeto # Os componentes estão em negrito src |_ app |_ about |_ contact |_ home |_ nav  Implementando Componente Eis o exemplo da implementação de um componente .</description>
+    </item>
+    
+    <item>
       <title>C: Programação Imperativa em Baixo Nível</title>
       <link>https://amintasvrp.github.io/myDocs/c/</link>
       <pubDate>Mon, 18 Jun 2018 00:00:00 -0300</pubDate>

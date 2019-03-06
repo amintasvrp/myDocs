@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>Angular 7 - myDocs</title>
+    <meta name="generator" content="Hugo 0.54.0" />
+
+    
+    <meta name="description" content="Uma Documentação em Português: Simples e Direta.">
+    
+    <link rel="canonical" href="https://amintasvrp.github.io/myDocs/angular/">
+    
+    <meta name="author" content="Amintas Victor">
+    
+
+    <meta property="og:url" content="https://amintasvrp.github.io/myDocs/angular/">
+    <meta property="og:title" content="myDocs">
+    <meta property="og:image" content="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+    <meta name="apple-mobile-web-app-title" content="myDocs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+    <link rel="icon" type="image/x-icon" href="https://amintasvrp.github.io/myDocs/images/round.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot');
+        src: url('https://amintasvrp.github.io/myDocs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.woff')
+               format('woff'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://amintasvrp.github.io/myDocs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://amintasvrp.github.io/myDocs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/googlecode.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-blue palette-accent-light-blue">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Angular 7
+      </div>
+    </div>
+
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/amintasvrp/myDocs" title="Repositório no GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  
+  <a href="https://amintasvrp.github.io/myDocs/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://amintasvrp.github.io/myDocs/images/logo.jpeg">
+        </div>
+      
+      <div class="name">
+        <strong>myDocs <span class="version">1.0.0</span></strong>
+        
+          <br>
+          @amintasvrp
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/amintasvrp/myDocs/archive/master.zip" target="_blank" title="Baixar o Projeto" data-action="download">
+              <i class="icon icon-download"></i> Baixar
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/amintasvrp/myDocs/stargazers" target="_blank" title="Favoritar o Projeto" data-action="star">
+              <i class="icon icon-star"></i> Estrelas
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a class="current" title="Angular" href="https://amintasvrp.github.io/myDocs/angular/">
+	
+	Angular
+</a>
+
+
+<ul id="scrollspy">
+</ul>
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C" href="https://amintasvrp.github.io/myDocs/c/">
+	
+	C
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="C&#43;&#43;" href="https://amintasvrp.github.io/myDocs/cpp/">
+	
+	C&#43;&#43;
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="CSS 3" href="https://amintasvrp.github.io/myDocs/css/">
+	
+	CSS 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HTML 5" href="https://amintasvrp.github.io/myDocs/html/">
+	
+	HTML 5
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Haskell" href="https://amintasvrp.github.io/myDocs/haskell/">
+	
+	Haskell
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Hugo" href="https://amintasvrp.github.io/myDocs/hugo/">
+	
+	Hugo
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="JavaScript" href="https://amintasvrp.github.io/myDocs/js/">
+	
+	JavaScript
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="LESS" href="https://amintasvrp.github.io/myDocs/less/">
+	
+	LESS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Linux" href="https://amintasvrp.github.io/myDocs/linux/">
+	
+	Linux
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Markdown" href="https://amintasvrp.github.io/myDocs/markdown/">
+	
+	Markdown
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Marketing Digital" href="https://amintasvrp.github.io/myDocs/marketing-digital/">
+	
+	Marketing Digital
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="MongoDB" href="https://amintasvrp.github.io/myDocs/mongo/">
+	
+	MongoDB
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="NodeJS" href="https://amintasvrp.github.io/myDocs/node/">
+	
+	NodeJS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Prolog" href="https://amintasvrp.github.io/myDocs/prolog/">
+	
+	Prolog
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Python 3" href="https://amintasvrp.github.io/myDocs/python/">
+	
+	Python 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="R" href="https://amintasvrp.github.io/myDocs/r/">
+	
+	R
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="ReactJS" href="https://amintasvrp.github.io/myDocs/react/">
+	
+	ReactJS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SASS" href="https://amintasvrp.github.io/myDocs/sass/">
+	
+	SASS
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="SQL" href="https://amintasvrp.github.io/myDocs/sql/">
+	
+	SQL
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">O autor</span>
+
+        <ul>
+          
+
+          
+          <li>
+            <a href="https://github.com/amintasvrp" target="_blank" title="https://github.com/amintasvrp">
+              Perfil no GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:amintas.pereira@ccc.ufcg.edu.br" title="amintas.pereira@ccc.ufcg.edu.br">
+              Contato via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Angular 7 </h1>
+
+			
+
+<h2 id="instalando-angular-cli">Instalando Angular CLI</h2>
+
+<pre><code class="language-bash">sudo npm install @angular/cli
+</code></pre>
+
+<h2 id="criando-projeto-angular">Criando Projeto Angular</h2>
+
+<pre><code class="language-bash">ng new nome_do_projeto
+</code></pre>
+
+<p>É recomendado escolher <strong>usar Angular Router</strong> e usar o <strong>SASS</strong>.</p>
+
+<h2 id="subir-projeto-angular">Subir Projeto Angular</h2>
+
+<p>Podemos subir nosso projeto Angular, através de um servidor node.js local, através do seguinte comando:</p>
+
+<pre><code class="language-bash">ng serve -o
+</code></pre>
+
+<p>Podemos acessar através do link <strong><a href="http://localhost:4200/">http://localhost:4200/</a></strong>.</p>
+
+<h2 id="criando-componente">Criando Componente</h2>
+
+<pre><code class="language-bash">ng generate component nome_do_componente
+# ou
+ng g c nome_do_componente
+</code></pre>
+
+<h2 id="estrutura-do-projeto">Estrutura do Projeto</h2>
+
+<pre><code class="language-bash"># Os componentes estão em negrito
+src
+|_ app
+    |_ about
+    |_ contact
+    |_ home
+    |_ nav
+</code></pre>
+
+<h2 id="implementando-componente">Implementando Componente</h2>
+
+<p>Eis o exemplo da implementação de um componente <code>./src/app/nav</code>:</p>
+
+<p>Em <code>./src/app/app.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;app-nav&gt;&lt;/app-nav&gt;
+
+&lt;section&gt;
+  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+&lt;/section&gt;
+</code></pre>
+
+<p>Em <code>./src/app/nav/nav.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;header&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;a routerLink=&quot;/&quot; class=&quot;logo&quot;&gt;{{ myTitle }}&lt;/a&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a routerLink=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a routerLink=&quot;/about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a routerLink=&quot;/contact&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+
+<p>Em <code>./src/app/nav/nav.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
+})
+export class NavComponent implements OnInit {
+
+  myTitle: string = 'myapp';
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+</code></pre>
+
+<p>Podemos aplicar um <strong>scss geral para os componentes</strong> através do arquivo <code>./src/styles.scss</code>, da mesma forma que podemos aplicar um <strong>scss particular a um componente</strong> através do arquivo <code>./src/app/nome_comp/nome_comp.component.scss</code>.</p>
+
+<h2 id="implementando-rotas">Implementando Rotas</h2>
+
+<p>Eis a implementação de rotas para os componentes <code>./home/home.component</code>, <code>./about/about.component</code>, e <code>./contact/contact.component</code>:</p>
+
+<p>Em <code>./src/app/app-routing.module.ts</code>:</p>
+
+<pre><code class="language-javascript">import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'contact', component: ContactComponent}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+
+<h2 id="eventos-dinâmicos">Eventos Dinâmicos</h2>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1&gt;Home&lt;/h1&gt;
+
+&lt;button (click)=&quot;firstClick()&quot;&gt;Click me&lt;/button&gt;
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  firstClick(){
+    console.log('clicked');
+  }
+
+}
+</code></pre>
+
+<p>Outros tipos de eventos:</p>
+
+<pre><code class="language-markdown">(focus)=&quot;myMethod()&quot;
+(blur)=&quot;myMethod()&quot;
+(submit)=&quot;myMethod()&quot;  
+(scroll)=&quot;myMethod()&quot;
+
+(cut)=&quot;myMethod()&quot;
+(copy)=&quot;myMethod()&quot;
+(paste)=&quot;myMethod()&quot;
+
+(keydown)=&quot;myMethod()&quot;
+(keypress)=&quot;myMethod()&quot;
+(keyup)=&quot;myMethod()&quot;
+
+(mouseenter)=&quot;myMethod()&quot;
+(mousedown)=&quot;myMethod()&quot;
+(mouseup)=&quot;myMethod()&quot;
+
+(click)=&quot;myMethod()&quot;
+(dblclick)=&quot;myMethod()&quot;
+
+(drag)=&quot;myMethod()&quot;
+(dragover)=&quot;myMethod()&quot;
+(drop)=&quot;myMethod()&quot;
+</code></pre>
+
+<h2 id="classe-e-estilos-dinâmicos">Classe e Estilos Dinâmicos</h2>
+
+<h3 id="uma-classe">Uma classe</h3>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1 [class.gray]='h1Style'&gt;Home&lt;/h1&gt;
+
+&lt;button (click)=&quot;firstClick()&quot;&gt;Click me&lt;/button&gt;
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  h1Style: boolean = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  firstClick(){
+    this.h1Style = !this.h1Style;
+  }
+
+}
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.scss</code>:</p>
+
+<pre><code class="language-scss">.gray{
+  color: gray;
+}
+</code></pre>
+
+<h3 id="várias-classes">Várias classes</h3>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1 [ngClass]=&quot;{
+  'gray': h1Style,
+  'large': !h1Style
+}&quot;&gt;Home&lt;/h1&gt;
+
+&lt;button (click)=&quot;firstClick()&quot;&gt;Click me&lt;/button&gt;
+
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  h1Style: boolean = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  firstClick(){
+    this.h1Style = !this.h1Style;
+  }
+
+}
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.scss</code>:</p>
+
+<pre><code class="language-scss">.gray{
+  color: gray;
+}
+
+.large{
+  font-size: 4em
+}
+</code></pre>
+
+<h3 id="um-estilo">Um estilo</h3>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1 [style.color]=&quot;h1Style ? 'blue': 'red'&quot;&gt;Home&lt;/h1&gt;
+
+&lt;button (click)=&quot;firstClick()&quot;&gt;Click me&lt;/button&gt;
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  h1Style: boolean = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  firstClick(){
+    this.h1Style = !this.h1Style;
+  }
+
+}
+</code></pre>
+
+<h3 id="vários-estilos">Vários estilos</h3>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1 [ngStyle]=&quot;{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '4em'
+}&quot;&gt;Home&lt;/h1&gt;
+
+&lt;button (click)=&quot;firstClick()&quot;&gt;Click me&lt;/button&gt;
+
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  h1Style: boolean = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  firstClick(){
+    this.h1Style = !this.h1Style;
+  }
+
+}
+</code></pre>
+
+<h2 id="services">Services</h2>
+
+<h3 id="criando-services">Criando Services</h3>
+
+<pre><code class="language-bash">ng generate service nome_do_service
+# ou
+ng g s nome_do_service
+</code></pre>
+
+<h3 id="oferecendo-funcionalidades-a-outros-componentes">Oferecendo funcionalidades a outros componentes</h3>
+
+<p>Podemos oferecer funções a todos os outros componentes da aplicação através do service. Um exemplo de uma simples implementação se encontra aqui:</p>
+
+<p>Em <code>./src/app/data.service.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  constructor() { }
+
+  firstClick() {
+    return console.log('clicked');
+  }
+}
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+// Importando service
+import { DataService } from '../data.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+// Injetando service
+  constructor(private data: DataService) { }
+
+  ngOnInit() {
+  }
+
+  firstClick() {
+    this.data.firstClick();
+  }
+
+}
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1&gt;Home&lt;/h1&gt;
+
+&lt;button (click)=&quot;firstClick()&quot;&gt;Click me&lt;/button&gt;
+</code></pre>
+
+<h2 id="cliente-http">Cliente HTTP</h2>
+
+<p>Importamos o cliente HTTP fazendo as seguintes modificações em <code>.src/app/app.module.ts</code>:</p>
+
+<pre><code class="language-javascript">import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+// Outros imports
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,    // &lt;-- Import manual aqui
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</code></pre>
+
+<p>Em <code>./src/app/data.service.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Injectable } from '@angular/core';
+// Importando Cliente HTTP
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  // Injetando Cliente HTTP
+  constructor(private http: HttpClient) { }
+
+  getUsers() {
+    return this.http.get('https://api/users');
+  }
+}
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit {
+
+  users: Object;
+
+  constructor(private data: DataService) { }
+
+  ngOnInit() {
+    this.data.getUsers().subscribe(data =&gt; {
+        this.users = data
+        console.log(this.users);
+      }
+    );
+  }
+
+}
+</code></pre>
+
+<p>Em <code>./src/app/home/home.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1&gt;Home&lt;/h1&gt;
+
+&lt;ul *ngIf=&quot;users&quot;&gt;
+  &lt;li *ngFor=&quot;let user of users.data&quot;&gt;
+    &lt;img [src]=&quot;user.avatar&quot;&gt;
+    &lt;p&gt;{{ user.first_name }} {{ user.last_name }}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h2 id="formulários">Formulários</h2>
+
+<p>Primeiramente importamos o <strong>módulo de formulários reativos</strong> do <strong>Angular Forms</strong> da seguinte forma:</p>
+
+<p>Em <code>./src/app/app.module.ts</code>:</p>
+
+<pre><code class="language-javascript">import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+// Outros imports
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,       // Importando Cliente HTTP
+    ReactiveFormsModule     // Importando Módulo de Formulários Reativos
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</code></pre>
+
+<p>Depois implementamos o formulário propriamente dito:</p>
+
+<p>Em <code>./src/app/contact/contact.component.ts</code>:</p>
+
+<pre><code class="language-javascript">import { Component, OnInit } from '@angular/core';
+// Importando módulos do Angular Forms
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
+})
+export class ContactComponent implements OnInit {
+
+  // Instanciando Formulário
+  messageForm: FormGroup;
+  // Booleanos de confirmação
+  submitted = false;
+  success = false;
+
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit() {
+    // Construindo formulário e suas validações
+    this.messageForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      message: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true;
+
+    if (this.messageForm.invalid) {
+        return;
+    }
+
+    this.success = true;
+  }
+}
+</code></pre>
+
+<p>Em <code>./src/app/contact/contact.component.html</code>:</p>
+
+<pre><code class="language-html">&lt;h1&gt;Contact us&lt;/h1&gt;
+
+&lt;form [formGroup]=&quot;messageForm&quot; (ngSubmit)=&quot;onSubmit()&quot;&gt;
+
+    &lt;h5 *ngIf=&quot;success&quot;&gt;Your form is valid!&lt;/h5&gt;
+
+    &lt;label&gt;
+      Name:
+      &lt;input type=&quot;text&quot; formControlName=&quot;name&quot;&gt;
+      &lt;!-- Se o formulário for submetido e houverem erros quanto ao nome --&gt;
+      &lt;div *ngIf=&quot;submitted &amp;&amp; messageForm.controls.name.errors&quot; class=&quot;error&quot;&gt;
+        &lt;!-- Se houver o erro na validação required do nome --&gt;
+        &lt;div *ngIf=&quot;messageForm.controls.name.errors.required&quot;&gt;
+            Your name is required
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+
+    &lt;label&gt;
+      Message:
+      &lt;textarea formControlName=&quot;message&quot;&gt;&lt;/textarea&gt;
+      &lt;!-- Se o formulário for submetido e houverem erros quanto à messagem --&gt;
+      &lt;div *ngIf=&quot;submitted &amp;&amp; messageForm.controls.message.errors&quot; class=&quot;error&quot;&gt;
+        &lt;!-- Se houver o erro na validação required do nome --&gt;
+        &lt;div *ngIf=&quot;messageForm.controls.message.errors.required&quot;&gt;
+            A message is required
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+
+    &lt;input type=&quot;submit&quot; value=&quot;Send message&quot; class=&quot;cta&quot;&gt;
+
+  &lt;/form&gt;
+
+  &lt;div *ngIf=&quot;submitted&quot; class=&quot;results&quot;&gt;
+    &lt;strong&gt;Name:&lt;/strong&gt;
+    &lt;span&gt;{{ messageForm.controls.name.value }}&lt;/span&gt;
+
+    &lt;strong&gt;Message:&lt;/strong&gt;
+    &lt;span&gt;{{ messageForm.controls.message.value }}&lt;/span&gt;
+  &lt;/div&gt;
+</code></pre>
+
+<h2 id="subindo-o-projeto">Subindo o Projeto</h2>
+
+<pre><code class="language-bash">ng build --prod
+</code></pre>
+
+<p>Será criado o diretório <code>./dist</code>, basta hospedá-lo como quiser.</p>
+
+
+		</br>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="https://amintasvrp.github.io/myDocs/c/" title="C: Programação Imperativa em Baixo Nível">
+        <span class="direction">
+          Próximo
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              C: Programação Imperativa em Baixo Nível
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/amintasvrp.github.io\/myDocs\/';
+      var repo_id  = 'amintasvrp\/myDocs';
+    
+    </script>
+
+    <script src="https://amintasvrp.github.io/myDocs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+
