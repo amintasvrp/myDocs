@@ -9,6 +9,7 @@
 
 <p align="center">
   <img alt="Hugo" src="https://img.shields.io/badge/-Hugo-FF4088?style=for-the-badge&logo=hugo&logoColor=white" />
+  <img alt="GitHub Pages" src="https://img.shields.io/badge/-GitHub Pages-181717?style=for-the-badge&logo=github&logoColor=white" />
 </p>
 
 
