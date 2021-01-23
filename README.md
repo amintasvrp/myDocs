@@ -23,11 +23,6 @@ Anyway, this programmer hopes that you, who are reading this right now, can abso
 ## Contributing
 Make a pull request and make clear what changes have been made and which bugs persist. Do not introduce bugs, be proactive!
 
-### **Contributors**
-* **Amintas Victor** - *Initial work* - [GitHub](https://github.com/amintasvrp)
-
- If you contributed with this project, your name will be placed here. Welcome to the hall of fame :)
-
 ### Acknowledgments
 * Markdown
 * Knowledge about Hugo
@@ -42,11 +37,6 @@ De qualquer forma, este programador espera que você, que está lendo isso no mo
 
 ## Contribuindo
 Faça um pull request e deixe claro quais alterações foram feitas e quais bugs persistem. Não introduza bugs, seja proativo!
-
-### **Contribuidores**
-* **Amintas Victor** - *Trabalho Inicial* - [GitHub](https://github.com/amintasvrp)
-
-Se você contribuiu com este projeto, seu nome será colocado aqui. Bem vindo ao hall da fama :)
 
 ### Conhecimentos
 * Markdown
