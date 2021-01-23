@@ -13,7 +13,7 @@
 </p>
 
 
-## English :uk:
+## :uk: English
 First, this application was created to record my notes and observations on what I have learned since the beginning of my career in Computer Science.
 
 Secondly, the subjects discussed in this documentation range from those I learned in college to online courses, some available on YouTube, others under subscription.
@@ -28,7 +28,7 @@ Make a pull request and make clear what changes have been made and which bugs pe
 * Knowledge about Hugo
 * Willingness to learn, research and develop (no laziness!)
 
-## Brazilian Portuguese :brazil:
+## :brazil: Brazilian Portuguese
 Primeiramente, esta aplicação foi criada para registrar minhas anotações e observações sobre o que aprendi desde o início da minha carreira em Ciência da Computação.
 
 Em segundo lugar, os assuntos discutidos nesta documentação vão desde aqueles que aprendi em cursos universitários a cursos online, alguns disponíveis no YouTube, outros sob assinatura.
