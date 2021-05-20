@@ -19,3 +19,6 @@ De qualquer forma, este programador espera que você, que está lendo isso no mo
 
 ## Contribuindo
 Faça um pull request e deixe claro quais alterações foram feitas e quais bugs persistem. Não introduza bugs, seja proativo!
+
+### Licença
+* **MIT License** - [*Ver detalhes*](./LICENSE.txt)
